@@ -19,8 +19,6 @@ public:
 	virtual int run(void);
 
 protected:
-
-	virtual int server(void);
 };
 
 #endif /* SYSTOOL_HPP_ */

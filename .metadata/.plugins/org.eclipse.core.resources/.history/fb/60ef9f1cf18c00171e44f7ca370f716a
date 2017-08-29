@@ -1,0 +1,68 @@
+/*
+ * tread.hpp
+ *
+ *  Created on: Aug 29, 2017
+ *      Author: root
+ */
+
+#ifndef TREAD_HPP_
+#define TREAD_HPP_
+
+#include <pthread.h>
+
+class Runnable
+{
+public:
+	virtual int run() = 0;
+};
+
+class Thread
+{
+public:
+	Thread(Runnable * obj = NULL):
+	thread(0),
+	obj(obj)
+	{}
+
+	virtual ~Thread()
+	{}
+
+	virtual int start(void)
+	{
+		return pthread_create(&thread, NULL, process_trigger, obj);
+	}
+
+	virtual int start(Runnable * obj)
+	{
+		Thread::obj = obj;
+		return start();
+	}
+
+	virtual int quit()
+	{
+		return pthread_cancel(thread);
+	}
+
+	virtual bool isRunning(void)
+	{
+		return flags & RUNNING;
+	}
+
+private:
+	typedef enum
+	{
+		RUNNING = 0x01
+	} Flags;
+
+	static void * process_trigger(void * obj)
+	{
+		if (obj != NULL)
+			((Runnable *) obj)->run();
+		return NULL;
+	}
+	pthread_t	thread;
+	Runnable *	obj;
+	unsigned	flags;
+};
+
+#endif /* TREAD_HPP_ */

@@ -1,0 +1,21 @@
+01:48:34 **** Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app_workspace/framework/src" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/src/devicehandler.o ./framework/src/devices.o ./framework/src/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 593064	   6352	  33544	 632960	  9a880	systool.elf
+Finished building: systool.elf.size
+ 
+
+01:48:34 Build Finished (took 329ms)
+

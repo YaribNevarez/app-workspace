@@ -1,9 +1,9 @@
-08:11:53 **** Auto Build of configuration Debug for project perftool ****
+23:52:18 **** Auto Build of configuration Debug for project perftool ****
 make all 
-Building file: ../src/perftool.cpp
+Building file: ../src/main.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app_workspace -c -fmessage-length=0 -MT"src/perftool.o" -MMD -MP -MF"src/perftool.d" -MT"src/perftool.d" -o "src/perftool.o" "../src/perftool.cpp"
-Finished building: ../src/perftool.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app_workspace -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
  
 Building target: perftool.elf
 Invoking: ARM Linux g++ linker
@@ -13,9 +13,9 @@ Finished building target: perftool.elf
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size perftool.elf  |tee "perftool.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1019640	  14832	  39920	1074392	 1064d8	perftool.elf
+1020568	  14832	  39920	1075320	 106878	perftool.elf
 Finished building: perftool.elf.size
  
 
-08:11:53 Build Finished (took 790ms)
+23:52:18 Build Finished (took 628ms)
 

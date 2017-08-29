@@ -1,15 +1,34 @@
-00:08:19 **** Auto Build of configuration Debug for project framework ****
+01:48:33 **** Auto Build of configuration Debug for project framework ****
 make all 
+Building file: ../src/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/devicehandler.o" -MMD -MP -MF"src/devicehandler.d" -MT"src/devicehandler.d" -o "src/devicehandler.o" "../src/devicehandler.cpp"
+Finished building: ../src/devicehandler.cpp
+ 
+Building file: ../src/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/devices.o" -MMD -MP -MF"src/devices.d" -MT"src/devices.d" -o "src/devices.o" "../src/devices.cpp"
+Finished building: ../src/devices.cpp
+ 
+Building file: ../src/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/systembox.o" -MMD -MP -MF"src/systembox.d" -MT"src/systembox.d" -o "src/systembox.o" "../src/systembox.cpp"
+Finished building: ../src/systembox.cpp
+ 
 Building target: libframework.elf
 Invoking: ARM Linux archiver
-arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"   
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./src/devicehandler.o ./src/devices.o ./src/systembox.o   
 arm-xilinx-linux-gnueabi-ar: creating libframework.elf
 Finished building target: libframework.elf
  
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2344	      0	      0	   2344	    928	devicehandler.o (ex libframework.elf)
+   3276	      0	      0	   3276	    ccc	devices.o (ex libframework.elf)
+   4056	      0	      0	   4056	    fd8	systembox.o (ex libframework.elf)
 Finished building: libframework.elf.size
  
 
-00:08:19 Build Finished (took 131ms)
+01:48:34 Build Finished (took 469ms)
 
