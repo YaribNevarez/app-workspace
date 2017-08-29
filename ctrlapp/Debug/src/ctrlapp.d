@@ -1,15 +1,18 @@
 src/ctrlapp.o src/ctrlapp.d: ../src/ctrlapp.cpp ../src/ctrlapp.hpp \
- ../src/systembox.hpp ../src/thread.hpp ../src/devices.hpp \
- ../src/devicehandler.hpp ../src/iodef.hpp
+ /home/yarib/ZYBO_projects/app_workspace/framework/src/systembox.hpp \
+ /home/yarib/ZYBO_projects/app_workspace/framework/src/thread.hpp \
+ /home/yarib/ZYBO_projects/app_workspace/framework/src/devices.hpp \
+ /home/yarib/ZYBO_projects/app_workspace/framework/src/devicehandler.hpp \
+ /home/yarib/ZYBO_projects/app_workspace/framework/src/iodef.hpp
 
 ../src/ctrlapp.hpp:
 
-../src/systembox.hpp:
+/home/yarib/ZYBO_projects/app_workspace/framework/src/systembox.hpp:
 
-../src/thread.hpp:
+/home/yarib/ZYBO_projects/app_workspace/framework/src/thread.hpp:
 
-../src/devices.hpp:
+/home/yarib/ZYBO_projects/app_workspace/framework/src/devices.hpp:
 
-../src/devicehandler.hpp:
+/home/yarib/ZYBO_projects/app_workspace/framework/src/devicehandler.hpp:
 
-../src/iodef.hpp:
+/home/yarib/ZYBO_projects/app_workspace/framework/src/iodef.hpp:

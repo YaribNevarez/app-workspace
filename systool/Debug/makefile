@@ -39,29 +39,29 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 ELFSIZE += \
-ctrlapp.elf.size \
+systool.elf.size \
 
 
 # All Target
-all: ctrlapp.elf secondary-outputs
+all: systool.elf secondary-outputs
 
 # Tool invocations
-ctrlapp.elf: $(OBJS)  $(USER_OBJS)
+systool.elf: $(OBJS)  $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linux g++ linker'
-	arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-ctrlapp.elf.size: ctrlapp.elf
+systool.elf.size: systool.elf
 	@echo 'Invoking: ARM Linux Print Size'
-	arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+	arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(EXECUTABLES)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS)$(ELFSIZE) ctrlapp.elf
+	-$(RM) $(CC_DEPS)$(EXECUTABLES)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS)$(ELFSIZE) systool.elf
 	-@echo ' '
 
 secondary-outputs: $(ELFSIZE)

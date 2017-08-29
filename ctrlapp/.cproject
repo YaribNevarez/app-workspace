@@ -29,6 +29,9 @@
 							<tool id="xilinx.gnu.armlinux.cxx.toolchain.compiler.debug.485079839" name="ARM Linux g++ compiler" superClass="xilinx.gnu.armlinux.cxx.toolchain.compiler.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1395778245" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.384922351" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="xilinx.gnu.compiler.dircategory.includes.1546115999" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/framework/src}&quot;"/>
+								</option>
 								<inputType id="xilinx.gnu.armlinux.cxx.compiler.input.1196513202" name="C++ source files" superClass="xilinx.gnu.armlinux.cxx.compiler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.armlinux.toolchain.archiver.1999062079" name="ARM Linux archiver" superClass="xilinx.gnu.armlinux.toolchain.archiver"/>
@@ -44,6 +47,10 @@
 							<tool id="xilinx.gnu.armlinux.size.debug.1412104680" name="ARM Linux Print Size" superClass="xilinx.gnu.armlinux.size.debug"/>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="framework" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="framework"/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>

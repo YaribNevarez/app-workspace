@@ -4,16 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/ctrlapp.cpp \
-../src/main.cpp 
+../src/main.cpp \
+../src/systool.cpp 
 
 OBJS += \
-./src/ctrlapp.o \
-./src/main.o 
+./src/main.o \
+./src/systool.o 
 
 CPP_DEPS += \
-./src/ctrlapp.d \
-./src/main.d 
+./src/main.d \
+./src/systool.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
