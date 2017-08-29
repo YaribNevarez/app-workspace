@@ -1,11 +1,12 @@
 /*
  * Empty C++ Application
  */
-#include "perftool.hpp"
+
+#include "systool.hpp"
 
 int main()
 {
-	PerformanceTool app;
+	SystemTool app;
 
 	return app.run();
 }

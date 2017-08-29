@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>perftool</name>
+	<name>systool</name>
 	<comment>Created by SDK v2015.4</comment>
 	<projects>
 	</projects>
@@ -25,9 +25,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>ctrlapp</name>
+			<name>framework</name>
 			<type>2</type>
-			<location>/home/yarib/ZYBO_projects/app_workspace/ctrlapp/src</location>
+			<location>/home/yarib/ZYBO_projects/app_workspace/framework</location>
 		</link>
 	</linkedResources>
 </projectDescription>
