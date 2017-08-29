@@ -11,11 +11,11 @@
 #include "thread.hpp"
 #include "devices.hpp"
 
-class SystemBox: public Runnable
+class SystemFeature: public Runnable
 {
 public:
-	SystemBox(DeviceHandler *);
-	virtual ~SystemBox();
+	SystemFeature(DeviceHandler *);
+	virtual ~SystemFeature();
 
 protected:
 	LevelSensor     wasteTankSensor;

@@ -19,20 +19,20 @@ ControlApp::ControlApp()
 {
 ///////////////////////////////////////////////////////////////////////////////
 
-	processes.push_back(new DrainProcess(&ZYNQ_PMOD_HANDLER));
-	processes.push_back(new FlushProcess(&ZYNQ_PMOD_HANDLER));
-	processes.push_back(new IRProcess(&ZYNQ_PMOD_HANDLER));
-	processes.push_back(new LeakageProcess(&ZYNQ_PMOD_HANDLER));
-	processes.push_back(new RelayProcess(&ZYNQ_PMOD_HANDLER));
+	features.push_back(new DrainFeature(&ZYNQ_PMOD_HANDLER));
+	features.push_back(new FlushFeature(&ZYNQ_PMOD_HANDLER));
+	features.push_back(new IRFeature(&ZYNQ_PMOD_HANDLER));
+	features.push_back(new LeakageFeature(&ZYNQ_PMOD_HANDLER));
+	features.push_back(new RelayFeature(&ZYNQ_PMOD_HANDLER));
 
 ///////////////////////////////////////////////////////////////////////////////
-	for (unsigned int i = 0; i < processes.size(); i ++)
+	for (unsigned int i = 0; i < features.size(); i ++)
 	{
-		threads.push_back(new Thread(processes[i]));
+		threads.push_back(new Thread(features[i]));
 	}
 }
 
-int ControlApp::DrainProcess::run(void)
+int ControlApp::DrainFeature::run(void)
 {
 	typedef enum
 	{
@@ -105,7 +105,7 @@ int ControlApp::DrainProcess::run(void)
 	return 0;
 }
 
-int ControlApp::FlushProcess::run(void)
+int ControlApp::FlushFeature::run(void)
 {
 	LevelSensor::Status topSensor;
 	LevelSensor::Status bottomSensor;
@@ -148,7 +148,7 @@ int ControlApp::FlushProcess::run(void)
 	return 0;
 }
 
-int ControlApp::IRProcess::run(void)
+int ControlApp::IRFeature::run(void)
 {
 	typedef enum
 	{
@@ -203,7 +203,7 @@ int ControlApp::IRProcess::run(void)
 	return 0;
 }
 
-int ControlApp::LeakageProcess::run(void)
+int ControlApp::LeakageFeature::run(void)
 {
 	for (;;)
 	{
@@ -220,7 +220,7 @@ int ControlApp::LeakageProcess::run(void)
 	return 0;
 }
 
-int ControlApp::RelayProcess::run(void)
+int ControlApp::RelayFeature::run(void)
 {
 	for (;;);
 	return 0;
@@ -251,11 +251,11 @@ ControlApp::~ControlApp()
 		threads.pop_back();
 	}
 
-	while (!processes.empty())
+	while (!features.empty())
 	{
-		if (processes.back() != NULL)
-			delete processes.back();
+		if (features.back() != NULL)
+			delete features.back();
 
-		processes.pop_back();
+		features.pop_back();
 	}
 }

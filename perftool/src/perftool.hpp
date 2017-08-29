@@ -10,7 +10,7 @@
 
 #include "ctrlapp/src/systembox.hpp"
 
-class PerformanceTool: protected SystemBox
+class PerformanceTool: protected SystemFeature
 {
 public:
 	PerformanceTool();

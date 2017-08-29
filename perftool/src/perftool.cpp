@@ -9,7 +9,7 @@
 
 
 PerformanceTool::PerformanceTool():
-SystemBox(0)
+SystemFeature(0)
 {
 }
 
@@ -23,11 +23,11 @@ int PerformanceTool::server(void)
 
 int PerformanceTool::run(void)
 {
-
 	for (;;);
 
 	return 0;
 }
 
 PerformanceTool::~PerformanceTool()
-{}
+{
+}

@@ -9,6 +9,8 @@
 #define TREAD_HPP_
 
 #include <pthread.h>
+#include <errno.h>
+#include <stdlib.h>
 
 class Runnable
 {
@@ -27,31 +29,61 @@ public:
 	virtual ~Thread()
 	{}
 
-	virtual int start(void)
+	virtual int start(Runnable * obj = NULL)
 	{
-		return pthread_create(&thread, NULL, process_trigger, obj);
-	}
+		int result = -1;
+		if (!isRunning())
+		{
+			if (obj != NULL)
+				Thread::obj = obj;
 
-	virtual int start(Runnable * obj)
-	{
-		Thread::obj = obj;
-		return start();
+			if (Thread::obj != NULL)
+				result = pthread_create(&thread,
+										NULL,
+										process_trigger,
+										Thread::obj);
+		}
+		return result;
 	}
 
 	virtual int quit()
 	{
-		return pthread_cancel(thread);
+		int result = EXIT_SUCCESS;
+		if (isRunning())
+		{
+			pthread_cancel(thread);
+			pthread_join(thread, (void **)&result);
+
+			if (result == (int)PTHREAD_CANCELED)
+			{
+				result = EXIT_SUCCESS;
+			}
+		}
+		return result;
+	}
+
+	virtual bool isRunning(void)
+	{
+		int result = -1;
+		if (thread != 0)
+		{
+			pthread_tryjoin_np(thread, (void **)&result);
+		}
+		return result == EBUSY;
 	}
 
 private:
+
 	static void * process_trigger(void * obj)
 	{
 		if (obj != NULL)
-			((Runnable *) obj)->run();
-		return NULL;
+		{
+			pthread_exit((void *)((Runnable *) obj)->run());
+		}
+		return EXIT_SUCCESS;
 	}
-	pthread_t  thread;
-	Runnable * obj;
+	pthread_t	thread;
+	Runnable *	obj;
 };
 
 #endif /* TREAD_HPP_ */

@@ -6,7 +6,7 @@
  */
 #include "systembox.hpp"
 
-SystemBox::SystemBox(DeviceHandler * device_handler):
+SystemFeature::SystemFeature(DeviceHandler * device_handler):
 	wasteTankSensor(WASTETLEVEL, device_handler),
 	chamberTopSensor(LEVELSENSOR_1, device_handler),
 	chamberBottomSensor(LEVELSENSOR_0, device_handler),
@@ -29,5 +29,5 @@ SystemBox::SystemBox(DeviceHandler * device_handler):
 	relay_1(RELAY_0, device_handler)
 {}
 
-SystemBox::~SystemBox()
+SystemFeature::~SystemFeature()
 {}

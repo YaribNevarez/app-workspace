@@ -23,53 +23,53 @@ public:
 
 protected:
 
-	class DrainProcess: public SystemBox
+	class DrainFeature: public SystemFeature
 	{
 	public:
-		DrainProcess(DeviceHandler * device_handler):
-		SystemBox(device_handler)
+		DrainFeature(DeviceHandler * device_handler):
+			SystemFeature(device_handler)
 		{}
 		virtual int run(void);
 	};
 
-	class FlushProcess: public SystemBox
+	class FlushFeature: public SystemFeature
 	{
 	public:
-		FlushProcess(DeviceHandler * device_handler):
-		SystemBox(device_handler)
+		FlushFeature(DeviceHandler * device_handler):
+			SystemFeature(device_handler)
 		{}
 		virtual int run(void);
 	};
 
-	class IRProcess: public SystemBox
+	class IRFeature: public SystemFeature
 	{
 	public:
-		IRProcess(DeviceHandler * device_handler):
-		SystemBox(device_handler)
+		IRFeature(DeviceHandler * device_handler):
+			SystemFeature(device_handler)
 		{}
 		virtual int run(void);
 	};
 
-	class LeakageProcess: public SystemBox
+	class LeakageFeature: public SystemFeature
 	{
 	public:
-		LeakageProcess(DeviceHandler * device_handler):
-		SystemBox(device_handler)
+		LeakageFeature(DeviceHandler * device_handler):
+			SystemFeature(device_handler)
 		{}
 		virtual int run(void);
 	};
 
-	class RelayProcess: public SystemBox
+	class RelayFeature: public SystemFeature
 	{
 	public:
-		RelayProcess(DeviceHandler * device_handler):
-		SystemBox(device_handler)
+		RelayFeature(DeviceHandler * device_handler):
+			SystemFeature(device_handler)
 		{}
 		virtual int run(void);
 	};
 
-	std::vector<SystemBox *> processes;
-	std::vector<Thread *> 	 threads;
+	std::vector<SystemFeature *> features;
+	std::vector<Thread *>        threads;
 };
 
 
