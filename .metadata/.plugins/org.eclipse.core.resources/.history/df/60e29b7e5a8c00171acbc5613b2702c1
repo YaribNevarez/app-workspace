@@ -1,0 +1,100 @@
+/*
+ * cccapp.hpp
+ *
+ *  Created on: Aug 7, 2017
+ *      Author: root
+ */
+
+#ifndef CCCAPP_HPP_
+#define CCCAPP_HPP_
+#include <pthread.h>
+#include "devices.hpp"
+
+class Runnable
+{
+public:
+	virtual int run() = 0;
+};
+
+class Thread
+{
+public:
+	Thread(Runnable * obj NULL):
+	thread(0),
+	obj(obj)
+	{}
+
+	virtual int start(void)
+	{
+		return pthread_create(&thread, NULL, process_trigger, obj);
+	}
+
+	virtual int start(Runnable * obj)
+	{
+		Thread::obj = obj;
+		return start();
+	}
+
+	virtual int quit()
+	{
+		pthread_cancel(thread);
+	}
+
+private:
+	static void * process_trigger(void * obj)
+	{
+		((Runnable *) obj)->run();
+		return NULL;
+	}
+	pthread_t  thread;
+	Runnable * obj;
+};
+
+class SystemBox: public Runnable
+{
+public:
+	SystemBox(DeviceHandler *);
+	~SystemBox();
+protected:
+	LevelSensor     wasteTankSensor;
+	LevelSensor     chamberTopSensor;
+	LevelSensor     chamberBottomSensor;
+	LeakageSensor	leakageSensor_0;
+	LeakageSensor   leakageSensor_1;
+	IRSensor        irSensor;
+	Valve           flushValve;
+	Valve           drainValve;
+	Valve           shutOffValve;
+	InputPin        drainLocalReq;
+	InputVector     emergencySwitch;
+	InputVector     appSelection;
+	InputVector     drainDelaySelection;
+	OutputPin       vacumGenerator;
+	OutputPin       drainIndicator;
+	OutputPin       leakageIndicator;
+	OutputVector    pwm_0;
+	OutputVector    pwm_1;
+	OutputPin       relay_0;
+	OutputPin       relay_1;
+};
+
+// Multiple inheritance of two different concepts
+class ControlApp: public SystemBox
+{
+public:
+	ControlApp();
+	~ControlApp();
+
+	virtual int run(void);
+
+protected:
+
+	virtual int drain(void);
+	virtual int flush(void);
+	virtual int ir(void);
+	virtual int leakage(void);
+	virtual int relay(void);
+};
+
+
+#endif /* CCCAPP_HPP_ */

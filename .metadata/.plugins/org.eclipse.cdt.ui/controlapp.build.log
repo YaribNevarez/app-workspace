@@ -1,0 +1,16 @@
+18:35:08 **** Auto Build of configuration Debug for project controlapp ****
+make all 
+Building target: controlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "controlapp.elf"  ./src/ctrlapp.o ./src/devicehandler.o ./src/devices.o ./src/main.o   
+Finished building target: controlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size controlapp.elf  |tee "controlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 593748	   6408	  33784	 633940	  9ac54	controlapp.elf
+Finished building: controlapp.elf.size
+ 
+
+18:35:08 Build Finished (took 298ms)
+

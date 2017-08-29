@@ -16,7 +16,8 @@ SystemBox(0)
 int PerformanceTool::server(void)
 {
 	for (;;)
-	{}
+	{
+	}
 
 	return 0;
 }

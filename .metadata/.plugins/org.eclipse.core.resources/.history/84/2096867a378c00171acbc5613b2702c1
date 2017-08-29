@@ -1,0 +1,10 @@
+/*
+ * Empty C++ Application
+ */
+#include "perftool.hpp"
+
+int main()
+{
+	PerformanceTool tool;
+	return 0;
+}

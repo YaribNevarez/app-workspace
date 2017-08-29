@@ -1,0 +1,11 @@
+/*
+ * Empty C++ Application
+ */
+#include "ctrlapp.hpp"
+#include <stdio.h>
+int main()
+{
+	ControlApp app;
+
+	return app.run();
+}

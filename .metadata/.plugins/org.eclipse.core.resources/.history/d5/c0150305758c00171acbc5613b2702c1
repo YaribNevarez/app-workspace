@@ -1,0 +1,261 @@
+/*
+ * cccapp.cpp
+ *
+ *  Created on: Aug 7, 2017
+ *      Author: root
+ */
+#include <stdio.h>
+#include <unistd.h>
+#include <iostream>
+#include "ctrlapp.hpp"
+
+/* Device handler instances */
+static DeviceHandler ZYNQ_BTN_HANDLER(ZYNQ_BTN_FILE);
+static DeviceHandler ZYNQ_LED_HANDLER(ZYNQ_LED_FILE);
+static DeviceHandler ZYNQ_SW_HANDLER(ZYNQ_SW_FILE);
+static DeviceHandler ZYNQ_PMOD_HANDLER(ZYNQ_PMOD_FILE);
+
+ControlApp::ControlApp()
+{
+///////////////////////////////////////////////////////////////////////////////
+
+	processes.push_back(new DrainProcess(&ZYNQ_PMOD_HANDLER));
+	processes.push_back(new FlushProcess(&ZYNQ_PMOD_HANDLER));
+	processes.push_back(new IRProcess(&ZYNQ_PMOD_HANDLER));
+	processes.push_back(new LeakageProcess(&ZYNQ_PMOD_HANDLER));
+	processes.push_back(new RelayProcess(&ZYNQ_PMOD_HANDLER));
+
+///////////////////////////////////////////////////////////////////////////////
+	for (unsigned int i = 0; i < processes.size(); i ++)
+	{
+		threads.push_back(new Thread(processes[i]));
+	}
+}
+
+int ControlApp::DrainProcess::run(void)
+{
+	typedef enum
+	{
+		START_SEQUENCE,
+		ACTIVATE_VG,
+		OPEN_FLUSH_VALVE,
+		CLOSE_FLUSH_VALVE,
+		DEACTIVATE_VG,
+		STOP_SEQUENCE,
+		END_SEQUENCE
+	} DrainSequenceState;
+
+	DrainSequenceState sequence_state;
+
+	for (;;)
+	{
+		if (drainLocalReq.get_status() && (LevelSensor::FULL != wasteTankSensor.get_level()))
+		{
+			int time_delay = drainDelaySelection.get_value();
+
+			sequence_state = START_SEQUENCE;
+
+			while (sequence_state != END_SEQUENCE)
+			{
+				switch (sequence_state)
+				{
+				case START_SEQUENCE:
+				case ACTIVATE_VG:
+					vacumGenerator.set_status(OutputPin::ON);
+					sleep(time_delay); // TODO: Implement interruption
+					if (sequence_state != STOP_SEQUENCE) // TODO: Only UART command
+					{
+						sequence_state = OPEN_FLUSH_VALVE;
+					}
+					break;
+
+				case OPEN_FLUSH_VALVE:
+					flushValve.set_position(Valve::OPEN);
+					sleep(20);
+					if (sequence_state != STOP_SEQUENCE)
+					{
+						sequence_state = CLOSE_FLUSH_VALVE;
+					}
+					break;
+
+				case CLOSE_FLUSH_VALVE:
+					flushValve.set_position(Valve::CLOSE);
+					sleep(10);
+					if (sequence_state != STOP_SEQUENCE)
+					{
+						sequence_state = DEACTIVATE_VG;
+					}
+					break;
+
+				case DEACTIVATE_VG:
+					vacumGenerator.set_status(OutputPin::OFF);
+					sequence_state = END_SEQUENCE;
+					break;
+				case STOP_SEQUENCE:
+					flushValve.set_position(Valve::CLOSE);
+					sleep(20);
+					vacumGenerator.set_status(OutputPin::OFF);
+					sequence_state = END_SEQUENCE;
+				case END_SEQUENCE:
+					break;
+				}
+			}
+		}
+	}
+	return 0;
+}
+
+int ControlApp::FlushProcess::run(void)
+{
+	LevelSensor::Status topSensor;
+	LevelSensor::Status bottomSensor;
+	bool flushFlag = false;
+
+	for (;;)
+	{
+		topSensor    = chamberTopSensor.get_level();
+		bottomSensor = chamberBottomSensor.get_level();
+
+		if ((topSensor == LevelSensor::FULL) && (bottomSensor == LevelSensor::FULL))
+		{	// Chamber is FULL !!!!!
+			if (LevelSensor::FULL != wasteTankSensor.get_level())
+			{
+				vacumGenerator.set_status(OutputPin::ON);
+				flushValve.set_position(Valve::OPEN);
+				flushFlag = true;
+			}
+		}
+		else if ((topSensor == LevelSensor::FULL) && (bottomSensor == LevelSensor::LOW))
+		{
+
+		}
+		else if ((topSensor == LevelSensor::LOW) && (bottomSensor == LevelSensor::FULL))
+		{
+
+		}
+		else // if ((topSensor == LevelSensor::LOW) && (bottomSensor == LevelSensor::LOW))
+		{
+			if (flushFlag)
+			{
+				sleep(5);
+				flushValve.set_position(Valve::CLOSE);
+
+				sleep(20);
+				vacumGenerator.set_status(OutputPin::OFF);
+			}
+		}
+	}
+	return 0;
+}
+
+int ControlApp::IRProcess::run(void)
+{
+	typedef enum
+	{
+		IR_MODE = 0,
+		EMERGENCY,
+		SOV_OPEN
+	} ESwitchState;
+
+	ESwitchState status;
+	const unsigned int ABSENCE_TIMEOUT = 60;
+	unsigned int timer = 0;
+
+	for (;;)
+	{
+		status = (ESwitchState) emergencySwitch.get_value();
+		switch(status)
+		{
+		case IR_MODE:
+			switch (irSensor.get_status())
+			{
+			case IRSensor::PRESENCE:
+				shutOffValve.set_position(Valve::OPEN);
+				timer = ABSENCE_TIMEOUT;
+				break;
+			case IRSensor::ABSENCE:
+				if (timer == 0)
+				{
+					shutOffValve.set_position(Valve::CLOSE);
+				}
+				else
+				{
+					shutOffValve.set_position(Valve::OPEN);
+					sleep(1);
+					timer --;
+				}
+				break;
+			default:;
+			}
+			break;
+		case EMERGENCY:
+			shutOffValve.set_position(Valve::CLOSE);
+			timer = 0;
+			break;
+		case SOV_OPEN:
+			shutOffValve.set_position(Valve::OPEN);
+			timer = 0;
+			break;
+		default:;
+			timer = 0;
+		}
+	}
+	return 0;
+}
+
+int ControlApp::LeakageProcess::run(void)
+{
+	for (;;)
+	{
+		if (LeakageSensor::LEAKING == leakageSensor_0.get_status()
+		 || LeakageSensor::LEAKING == leakageSensor_1.get_status())
+		{
+			leakageIndicator.set_status(OutputPin::ON);
+		}
+		else
+		{
+			leakageIndicator.set_status(OutputPin::OFF);
+		}
+	}
+	return 0;
+}
+
+int ControlApp::RelayProcess::run(void)
+{
+	for (;;);
+	return 0;
+}
+
+int ControlApp::run(void)
+{
+	for (int i = 0; i < threads.size(); i ++);
+	{
+		threads[i]->start();
+	}
+
+	for (;;);
+
+	return 0;
+}
+
+ControlApp::~ControlApp()
+{
+	while (!threads.empty())
+	{
+		if (threads.back() != NULL)
+		{
+			threads.back()->quit();
+			delete threads.back();
+		}
+
+		threads.pop_back();
+	}
+
+	while (!processes.empty())
+	{
+		if (processes.back() != NULL)
+			delete processes.back();
+
+		processes.pop_back();
+	}
+}

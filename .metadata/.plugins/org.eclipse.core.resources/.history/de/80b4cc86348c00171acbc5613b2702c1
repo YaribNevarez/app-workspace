@@ -1,0 +1,28 @@
+/*
+ * perftool.cpp
+ *
+ *  Created on: Aug 27, 2017
+ *      Author: root
+ */
+
+#include "perftool.hpp"
+
+
+PerformanceTool::PerformanceTool():
+ControlApp()
+{
+	serverProcess = new ProcessTrigger(SERVER, this);
+}
+
+int PerformanceTool::run(ProcessID)
+{
+	return 0;
+}
+
+int PerformanceTool::run(void)
+{
+	return 0;
+}
+
+PerformanceTool::~PerformanceTool()
+{}

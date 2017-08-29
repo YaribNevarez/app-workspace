@@ -1,0 +1,13 @@
+/*
+ * Empty C++ Application
+ */
+#include "ctrlapp.hpp"
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+int main()
+{
+	ControlApp app;
+
+	return app.run();
+}

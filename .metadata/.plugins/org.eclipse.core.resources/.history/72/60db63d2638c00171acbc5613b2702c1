@@ -1,0 +1,62 @@
+/*
+ * cccapp.hpp
+ *
+ *  Created on: Aug 7, 2017
+ *      Author: root
+ */
+
+#ifndef CCCAPP_HPP_
+#define CCCAPP_HPP_
+
+#include "thread"
+#include "systembox.hpp"
+
+// Multiple inheritance of two different concepts
+class ControlApp: public SystemBox
+{
+public:
+	ControlApp();
+	~ControlApp();
+
+	virtual int run(void);
+
+protected:
+
+	virtual int drain(void);
+	class DrainProcess: public Runnable
+	{
+	public:
+		virtual int run(void);
+	};
+
+	virtual int flush(void);
+	class FlushProcess: public Runnable
+	{
+	public:
+		virtual int run(void);
+	};
+
+	virtual int ir(void);
+	class IRProcess: public Runnable
+	{
+	public:
+		virtual int run(void);
+	};
+
+	virtual int leakage(void);
+	class LeakageProcess: public Runnable
+	{
+	public:
+		virtual int run(void);
+	};
+
+	virtual int relay(void);
+	class RelayProcess: public Runnable
+	{
+	public:
+		virtual int run(void);
+	};
+};
+
+
+#endif /* CCCAPP_HPP_ */

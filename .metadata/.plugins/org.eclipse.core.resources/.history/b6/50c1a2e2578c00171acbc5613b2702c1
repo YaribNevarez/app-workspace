@@ -1,0 +1,28 @@
+/*
+ * perftool.hpp
+ *
+ *  Created on: Aug 27, 2017
+ *      Author: root
+ */
+
+#ifndef PERFTOOL_HPP_
+#define PERFTOOL_HPP_
+
+#include "ctrlapp/src/ctrlapp.hpp"
+
+class PerformanceTool: protected SystemBox, public Runnable
+{
+public:
+	PerformanceTool();
+	~PerformanceTool();
+
+	virtual int run(void);
+
+protected:
+
+	virtual int server(void);
+};
+
+
+
+#endif /* PERFTOOL_HPP_ */

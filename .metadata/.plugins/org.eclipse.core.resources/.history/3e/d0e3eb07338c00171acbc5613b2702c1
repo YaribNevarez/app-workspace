@@ -1,0 +1,17 @@
+/*
+ * perftool.cpp
+ *
+ *  Created on: Aug 27, 2017
+ *      Author: root
+ */
+
+#include "perftool.hpp"
+
+
+PerformanceTool::PerformanceTool():
+ControlApp()
+{
+}
+
+PerformanceTool::~PerformanceTool()
+{}

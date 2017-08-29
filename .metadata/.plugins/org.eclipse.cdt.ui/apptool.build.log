@@ -1,0 +1,12 @@
+18:37:20 **** Auto Build of configuration Debug for project apptool ****
+make all 
+Building target: apptool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++  -o "apptool.elf"   
+arm-xilinx-linux-gnueabi-g++: fatal error: no input files
+compilation terminated.
+makefile:48: recipe for target 'apptool.elf' failed
+make: *** [apptool.elf] Error 1
+
+18:37:20 Build Finished (took 106ms)
+

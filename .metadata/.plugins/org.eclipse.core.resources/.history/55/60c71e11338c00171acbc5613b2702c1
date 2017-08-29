@@ -1,0 +1,22 @@
+/*
+ * perftool.cpp
+ *
+ *  Created on: Aug 27, 2017
+ *      Author: root
+ */
+
+#include "perftool.hpp"
+
+
+PerformanceTool::PerformanceTool():
+ControlApp()
+{
+}
+
+virtual int run(void)
+{
+	return 0;
+}
+
+PerformanceTool::~PerformanceTool()
+{}

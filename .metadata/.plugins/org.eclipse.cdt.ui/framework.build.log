@@ -1,0 +1,15 @@
+00:08:19 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+Finished building: libframework.elf.size
+ 
+
+00:08:19 Build Finished (took 131ms)
+

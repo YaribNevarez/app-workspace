@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ctrlapp/src/tread.hpp&apos; to &apos;thread.hpp&apos;" description="Rename resource &apos;tread.hpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/tread.hpp" name="thread.hpp" stamp="1503974328484" updateReferences="true"/>
+</session>

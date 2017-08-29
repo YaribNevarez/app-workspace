@@ -1,0 +1,48 @@
+/*
+ * perftool.cpp
+ *
+ *  Created on: Aug 27, 2017
+ *      Author: root
+ */
+
+#include "perftool.hpp"
+
+
+PerformanceTool::PerformanceTool():
+ControlApp()
+{
+	serverProcess = new ProcessTrigger(SERVER, this);
+}
+
+int PerformanceTool::run(ProcessID)
+{
+	int rc = -1;
+	switch(ID)
+	{
+	case DRAIN:
+		rc = drain();
+		break;
+	case FLUSH:
+		rc = flush();
+		break;
+	case IR:
+		rc = ir();
+		break;
+	case LEAKAGE:
+		rc = leakage();
+		break;
+	case RELAY:
+		rc = relay();
+		break;
+	default:;
+	}
+	return rc;
+}
+
+int PerformanceTool::run(void)
+{
+	return 0;
+}
+
+PerformanceTool::~PerformanceTool()
+{}

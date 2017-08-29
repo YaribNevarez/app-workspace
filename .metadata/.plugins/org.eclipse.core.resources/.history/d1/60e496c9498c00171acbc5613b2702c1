@@ -1,0 +1,100 @@
+/*
+ * cccapp.hpp
+ *
+ *  Created on: Aug 7, 2017
+ *      Author: root
+ */
+
+#ifndef CCCAPP_HPP_
+#define CCCAPP_HPP_
+#include <pthread.h>
+#include "devices.hpp"
+
+class Runnable
+{
+	virtual int run() = 0;
+};
+
+class Thread
+{
+public:
+	Thread(Runnable *);
+	~Thread();
+	virtual int run() = 0;
+};
+
+class SystemBox
+{
+public:
+	SystemBox(DeviceHandler *);
+	~SystemBox();
+protected:
+	LevelSensor     wasteTankSensor;
+	LevelSensor     chamberTopSensor;
+	LevelSensor     chamberBottomSensor;
+	LeakageSensor	leakageSensor_0;
+	LeakageSensor   leakageSensor_1;
+	IRSensor        irSensor;
+	Valve           flushValve;
+	Valve           drainValve;
+	Valve           shutOffValve;
+	InputPin        drainLocalReq;
+	InputVector     emergencySwitch;
+	InputVector     appSelection;
+	InputVector     drainDelaySelection;
+	OutputPin       vacumGenerator;
+	OutputPin       drainIndicator;
+	OutputPin       leakageIndicator;
+	OutputVector    pwm_0;
+	OutputVector    pwm_1;
+	OutputPin       relay_0;
+	OutputPin       relay_1;
+};
+
+class ControlApp : private SystemBox
+{
+public:
+	ControlApp();
+	~ControlApp();
+
+	virtual int run(void);
+
+protected:
+	typedef enum
+	{
+		DRAIN,
+		FLUSH,
+		IR,
+		LEAKAGE,
+		RELAY
+	} ProcessID;
+
+	class ProcessTrigger
+	{
+	public:
+		ProcessTrigger(int, void *);
+		int run(void);
+	private:
+		static void * task(void *);
+		pthread_t thread;
+		int       ID;
+		void *    data;
+	};
+
+	virtual int  run(ProcessID);
+
+	virtual int drain(void);
+	virtual int flush(void);
+	virtual int ir(void);
+	virtual int leakage(void);
+	virtual int relay(void);
+
+	ProcessTrigger * drainProcess;
+	ProcessTrigger * flushProcess;
+	ProcessTrigger * irProcess;
+	ProcessTrigger * leakageProcess;
+	ProcessTrigger * relayProcess;
+};
+
+
+#endif /* CCCAPP_HPP_ */
