@@ -7,3 +7,5 @@
 08:11:30 INFO  : XSDB server has started successfully.
 01:48:15 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
 01:48:17 INFO  : XSDB server has started successfully.
+22:31:25 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:31:27 INFO  : XSDB server has started successfully.

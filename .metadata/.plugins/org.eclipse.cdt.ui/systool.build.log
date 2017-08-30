@@ -1,8 +1,13 @@
-01:48:34 **** Build of configuration Debug for project systool ****
+22:33:08 **** Incremental Build of configuration Debug for project systool ****
 make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/root/app-workspace/framework/src" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
 Building file: ../src/systool.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app_workspace/framework/src" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/root/app-workspace/framework/src" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
 Finished building: ../src/systool.cpp
  
 Building target: systool.elf
@@ -17,5 +22,5 @@ arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
 Finished building: systool.elf.size
  
 
-01:48:34 Build Finished (took 329ms)
+22:33:08 Build Finished (took 483ms)
 
