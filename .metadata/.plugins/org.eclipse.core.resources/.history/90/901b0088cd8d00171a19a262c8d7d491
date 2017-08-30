@@ -10,7 +10,7 @@
 
 #include <vector>
 
-#include "framework/systembox.hpp"
+#include "systembox.hpp"
 
 // Multiple inheritance of two different concepts
 class ControlApp: public Runnable

@@ -14,37 +14,47 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="elf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="xilinx.gnu.armlinux.exe.debug.2118429787" name="Debug" parent="xilinx.gnu.armlinux.exe.debug">
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser" id="xilinx.gnu.armlinux.exe.debug.2118429787" name="Debug" parent="xilinx.gnu.armlinux.exe.debug" postannouncebuildStep="" postbuildStep="" preannouncebuildStep="" prebuildStep="">
 					<folderInfo id="xilinx.gnu.armlinux.exe.debug.2118429787." name="/" resourcePath="">
-						<toolChain id="xilinx.gnu.armlinux.exe.debug.toolchain.1338004675" name="Xilinx ARM GNU/Linux Toolchain" superClass="xilinx.gnu.armlinux.exe.debug.toolchain">
+						<toolChain errorParsers="" id="xilinx.gnu.armlinux.exe.debug.toolchain.1338004675" name="Xilinx ARM GNU/Linux Toolchain" superClass="xilinx.gnu.armlinux.exe.debug.toolchain">
 							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.armlinux" id="xilinx.armlinux.target.gnu.base.debug.1211181392" isAbstract="false" name="Debug Platform" superClass="xilinx.armlinux.target.gnu.base.debug"/>
-							<builder buildPath="${workspace_loc:/ctrlapp}/Debug" enableAutoBuild="true" id="xilinx.gnu.armlinux.toolchain.builder.debug.1622943746" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" superClass="xilinx.gnu.armlinux.toolchain.builder.debug"/>
-							<tool id="xilinx.gnu.armlinux.c.toolchain.assembler.debug.1722899066" name="ARM Linux gcc assembler" superClass="xilinx.gnu.armlinux.c.toolchain.assembler.debug">
+							<builder buildPath="${workspace_loc:/ctrlapp}/Debug" enableAutoBuild="true" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator" id="xilinx.gnu.armlinux.toolchain.builder.debug.1622943746" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" superClass="xilinx.gnu.armlinux.toolchain.builder.debug">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Release"/>
+								</outputEntries>
+							</builder>
+							<tool command="arm-xilinx-linux-gnueabi-gcc" commandLinePattern="${COMMAND} -c ${FLAGS} ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="xilinx.gnu.armlinux.c.toolchain.assembler.debug.1722899066" name="ARM Linux gcc assembler" superClass="xilinx.gnu.armlinux.c.toolchain.assembler.debug">
+								<option id="xilinx.gnu.both.asm.option.include.paths.901698733" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ctrlapp/framework/src}&quot;"/>
+								</option>
 								<inputType id="xilinx.gnu.assembler.input.1977546621" superClass="xilinx.gnu.assembler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.armlinux.c.toolchain.compiler.debug.1901535616" name="ARM Linux gcc compiler" superClass="xilinx.gnu.armlinux.c.toolchain.compiler.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1069998629" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.786866534" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 							</tool>
-							<tool id="xilinx.gnu.armlinux.cxx.toolchain.compiler.debug.485079839" name="ARM Linux g++ compiler" superClass="xilinx.gnu.armlinux.cxx.toolchain.compiler.debug">
+							<tool command="arm-xilinx-linux-gnueabi-g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="xilinx.gnu.armlinux.cxx.toolchain.compiler.debug.485079839" name="ARM Linux g++ compiler" superClass="xilinx.gnu.armlinux.cxx.toolchain.compiler.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1395778245" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.384922351" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
-								<option id="xilinx.gnu.compiler.dircategory.includes.1546115999" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/framework/src}&quot;"/>
+								<option id="xilinx.gnu.compiler.dircategory.includes.1546115999" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/framework}&quot;"/>
 								</option>
 								<inputType id="xilinx.gnu.armlinux.cxx.compiler.input.1196513202" name="C++ source files" superClass="xilinx.gnu.armlinux.cxx.compiler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.armlinux.toolchain.archiver.1999062079" name="ARM Linux archiver" superClass="xilinx.gnu.armlinux.toolchain.archiver"/>
 							<tool id="xilinx.gnu.armlinux.c.toolchain.linker.debug.1333752783" name="ARM Linux gcc linker" superClass="xilinx.gnu.armlinux.c.toolchain.linker.debug"/>
-							<tool id="xilinx.gnu.armlinux.cxx.toolchain.linker.debug.1784157632" name="ARM Linux g++ linker" superClass="xilinx.gnu.armlinux.cxx.toolchain.linker.debug">
+							<tool command="arm-xilinx-linux-gnueabi-g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="xilinx.gnu.armlinux.cxx.toolchain.linker.debug.1784157632" name="ARM Linux g++ linker" superClass="xilinx.gnu.armlinux.cxx.toolchain.linker.debug">
 								<option id="xilinx.gnu.c.link.option.ldflags.243119602" name="Linker Flags" superClass="xilinx.gnu.c.link.option.ldflags" value="-pthread -static" valueType="string"/>
+								<option id="xilinx.gnu.c.link.option.libs.1659542072" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs" valueType="libs"/>
+								<option id="xilinx.gnu.c.link.option.paths.2084162261" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths"/>
 								<inputType id="xilinx.gnu.linker.input.856767797" superClass="xilinx.gnu.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
 								</inputType>
 								<inputType id="xilinx.gnu.linker.input.lscript.1975015674" name="Linker Script" superClass="xilinx.gnu.linker.input.lscript"/>
 							</tool>
-							<tool id="xilinx.gnu.armlinux.size.debug.1412104680" name="ARM Linux Print Size" superClass="xilinx.gnu.armlinux.size.debug"/>
+							<tool command="arm-xilinx-linux-gnueabi-size" commandLinePattern="${COMMAND} ${FLAGS} ${INPUTS} |tee ${OUTPUT}" errorParsers="" id="xilinx.gnu.armlinux.size.debug.1412104680" name="ARM Linux Print Size" superClass="xilinx.gnu.armlinux.size.debug"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>

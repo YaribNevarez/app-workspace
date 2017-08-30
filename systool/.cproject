@@ -31,7 +31,7 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1906729041" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.755964888" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.dircategory.includes.269646495" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/framework/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/framework}&quot;"/>
 								</option>
 								<inputType id="xilinx.gnu.armlinux.cxx.compiler.input.1592227095" name="C++ source files" superClass="xilinx.gnu.armlinux.cxx.compiler.input"/>
 							</tool>
@@ -39,7 +39,8 @@
 							<tool id="xilinx.gnu.armlinux.c.toolchain.linker.debug.1022563220" name="ARM Linux gcc linker" superClass="xilinx.gnu.armlinux.c.toolchain.linker.debug"/>
 							<tool id="xilinx.gnu.armlinux.cxx.toolchain.linker.debug.1305034161" name="ARM Linux g++ linker" superClass="xilinx.gnu.armlinux.cxx.toolchain.linker.debug">
 								<option id="xilinx.gnu.c.link.option.ldflags.1774890683" name="Linker Flags" superClass="xilinx.gnu.c.link.option.ldflags" value="-pthread -static" valueType="string"/>
-								<option id="xilinx.gnu.c.link.option.paths.1130902267" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths"/>
+								<option id="xilinx.gnu.c.link.option.paths.1130902267" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths"/>
+								<option id="xilinx.gnu.c.link.option.libs.1554771395" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs" valueType="libs"/>
 								<inputType id="xilinx.gnu.linker.input.385599439" superClass="xilinx.gnu.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -50,7 +51,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="framework|ctrlapp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="framework" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="framework"/>
 					</sourceEntries>
 				</configuration>
@@ -90,6 +91,9 @@
 							<tool id="xilinx.gnu.armlinux.toolchain.archiver.1669750984" name="ARM Linux archiver" superClass="xilinx.gnu.armlinux.toolchain.archiver"/>
 							<tool id="xilinx.gnu.armlinux.c.toolchain.linker.release.1407859696" name="ARM Linux gcc linker" superClass="xilinx.gnu.armlinux.c.toolchain.linker.release"/>
 							<tool id="xilinx.gnu.armlinux.cxx.toolchain.linker.release.743957921" name="ARM Linux g++ linker" superClass="xilinx.gnu.armlinux.cxx.toolchain.linker.release">
+								<option id="xilinx.gnu.c.link.option.paths.1466833751" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/framework/Debug/src}&quot;"/>
+								</option>
 								<inputType id="xilinx.gnu.linker.input.1632809941" superClass="xilinx.gnu.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>

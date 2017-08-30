@@ -1,18 +1,18 @@
 src/main.o src/main.d: ../src/main.cpp ../src/ctrlapp.hpp \
- /root/app-workspace/framework/src/systembox.hpp \
- /root/app-workspace/framework/src/thread.hpp \
- /root/app-workspace/framework/src/devices.hpp \
- /root/app-workspace/framework/src/devicehandler.hpp \
- /root/app-workspace/framework/src/iodef.hpp
+ /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/framework/thread.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/framework/iodef.hpp
 
 ../src/ctrlapp.hpp:
 
-/root/app-workspace/framework/src/systembox.hpp:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:
 
-/root/app-workspace/framework/src/thread.hpp:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/thread.hpp:
 
-/root/app-workspace/framework/src/devices.hpp:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:
 
-/root/app-workspace/framework/src/devicehandler.hpp:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.hpp:
 
-/root/app-workspace/framework/src/iodef.hpp:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/iodef.hpp:
