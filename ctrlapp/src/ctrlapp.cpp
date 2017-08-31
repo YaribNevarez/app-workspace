@@ -8,28 +8,15 @@
 #include <unistd.h>
 #include <iostream>
 #include "ctrlapp.hpp"
-
-/* Device handler instances */
-static DeviceHandler ZYNQ_BTN_HANDLER(ZYNQ_BTN_FILE);
-static DeviceHandler ZYNQ_LED_HANDLER(ZYNQ_LED_FILE);
-static DeviceHandler ZYNQ_SW_HANDLER(ZYNQ_SW_FILE);
-static DeviceHandler ZYNQ_PMOD_HANDLER(ZYNQ_PMOD_FILE);
+#include "framework/zybo.hpp"
 
 ControlApp::ControlApp()
 {
-///////////////////////////////////////////////////////////////////////////////
-
-	features.push_back(new DrainFeature(&ZYNQ_PMOD_HANDLER));
-	features.push_back(new FlushFeature(&ZYNQ_PMOD_HANDLER));
-	features.push_back(new IRFeature(&ZYNQ_PMOD_HANDLER));
-	features.push_back(new LeakageFeature(&ZYNQ_PMOD_HANDLER));
-	features.push_back(new RelayFeature(&ZYNQ_PMOD_HANDLER));
-
-///////////////////////////////////////////////////////////////////////////////
-	for (unsigned int i = 0; i < features.size(); i ++)
-	{
-		threads.push_back(new Thread(features[i]));
-	}
+	register_feature(new DrainFeature(&ZYNQ_PMOD_HANDLER));
+	register_feature(new FlushFeature(&ZYNQ_PMOD_HANDLER));
+	register_feature(new IRFeature(&ZYNQ_PMOD_HANDLER));
+	register_feature(new LeakageFeature(&ZYNQ_PMOD_HANDLER));
+	register_feature(new RelayFeature(&ZYNQ_PMOD_HANDLER));
 }
 
 int ControlApp::DrainFeature::run(void)
@@ -228,10 +215,7 @@ int ControlApp::RelayFeature::run(void)
 
 int ControlApp::run(void)
 {
-	for (unsigned int i = 0; i < threads.size(); i ++)
-	{
-		threads[i]->start();
-	}
+	start();
 
 	for (;;);
 
@@ -239,23 +223,4 @@ int ControlApp::run(void)
 }
 
 ControlApp::~ControlApp()
-{
-	while (!threads.empty())
-	{
-		if (threads.back() != NULL)
-		{
-			threads.back()->quit();
-			delete threads.back();
-		}
-
-		threads.pop_back();
-	}
-
-	while (!features.empty())
-	{
-		if (features.back() != NULL)
-			delete features.back();
-
-		features.pop_back();
-	}
-}
+{}

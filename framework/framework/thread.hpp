@@ -18,35 +18,29 @@ public:
 	virtual int run() = 0;
 };
 
-class Thread
+class Thread: public Runnable
 {
 public:
-	Thread(Runnable * obj = NULL):
-	thread(0),
-	obj(obj)
+	Thread(void):
+	thread(0)
 	{}
 
-	virtual ~Thread()
-	{}
+	virtual ~Thread(void)
+	{
+		quit();
+	}
 
-	virtual int start(Runnable * obj = NULL)
+	virtual int start(void)
 	{
 		int result = -1;
 		if (!isRunning())
 		{
-			if (obj != NULL)
-				Thread::obj = obj;
-
-			if (Thread::obj != NULL)
-				result = pthread_create(&thread,
-										NULL,
-										process_trigger,
-										Thread::obj);
+			result = pthread_create(&thread, NULL, process_trigger, this);
 		}
 		return result;
 	}
 
-	virtual int quit()
+	virtual int quit(void)
 	{
 		int result = EXIT_SUCCESS;
 		if (isRunning())
@@ -74,16 +68,15 @@ public:
 
 private:
 
-	static void * process_trigger(void * obj)
+	static void * process_trigger(void * runnable)
 	{
-		if (obj != NULL)
+		if (runnable != NULL)
 		{
-			pthread_exit((void *)((Runnable *) obj)->run());
+			pthread_exit((void *)((Runnable *) runnable)->run());
 		}
 		return EXIT_SUCCESS;
 	}
 	pthread_t	thread;
-	Runnable *	obj;
 };
 
 #endif /* TREAD_HPP_ */

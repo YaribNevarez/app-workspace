@@ -1,308 +1,698 @@
-23:43:00 **** Clean-only build of configuration Debug for project framework ****
+04:10:41 **** Clean-only build of configuration Debug for project ctrlapp ****
 make clean 
-rm -rf  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o  ./framework/devicehandler.d ./framework/devices.d ./framework/systembox.d  libframework.elf.size  libframework.elf
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o  ./src/ctrlapp.d ./src/main.d  ./framework/application.d ./framework/devicehandler.d ./framework/devices.d ./framework/systembox.d  ctrlapp.elf.size  ctrlapp.elf
  
-23:43:00 **** Build of configuration Debug for project framework ****
+04:10:42 **** Build of configuration Debug for project ctrlapp ****
 make all 
-Building file: ../framework/devicehandler.cpp
+Building file: ../src/ctrlapp.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "../framework/devicehandler.cpp"
-Finished building: ../framework/devicehandler.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
  
-Building file: ../framework/devices.cpp
+Building file: ../src/main.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "../framework/devices.cpp"
-Finished building: ../framework/devices.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
  
-Building file: ../framework/systembox.cpp
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "../framework/systembox.cpp"
-Finished building: ../framework/systembox.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+./src/ctrlapp.o: In function `ControlApp::ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:13: undefined reference to `Application::Application()'
+collect2: error: ld returned 1 exit status
+makefile:49: recipe for target 'ctrlapp.elf' failed
+make: *** [ctrlapp.elf] Error 1
+04:11:58 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o  ./src/ctrlapp.d ./src/main.d  ./framework/application.d ./framework/devicehandler.d ./framework/devices.d ./framework/systembox.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+04:11:58 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:37: fatal error: framework/application.hpp: No such file or directory
+ #include "framework/application.hpp"
+                                     ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+04:12:25 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o   
+./src/ctrlapp.o: In function `ControlApp::ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:13: undefined reference to `Application::Application()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:13: undefined reference to `Application::~Application()'
+./src/ctrlapp.o: In function `ControlApp::DrainFeature::run()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:43: undefined reference to `InputPin::get_status()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:43: undefined reference to `LevelSensor::get_level()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:45: undefined reference to `InputVector::get_value()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:55: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:64: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:73: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:82: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:86: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:88: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+./src/ctrlapp.o: In function `ControlApp::FlushFeature::run()':
+makefile:48: recipe for target 'ctrlapp.elf' failed
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:107: undefined reference to `LevelSensor::get_level()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:108: undefined reference to `LevelSensor::get_level()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:112: undefined reference to `LevelSensor::get_level()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:114: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:115: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:132: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:135: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+./src/ctrlapp.o: In function `ControlApp::IRFeature::run()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:157: undefined reference to `InputVector::get_value()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:161: undefined reference to `IRSensor::get_status()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:164: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:170: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:174: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:183: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:187: undefined reference to `Valve::set_position(Valve::Position)'
+./src/ctrlapp.o: In function `ControlApp::LeakageFeature::run()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:201: undefined reference to `LeakageSensor::get_status()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:202: undefined reference to `LeakageSensor::get_status()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:204: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:208: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+./src/ctrlapp.o: In function `ControlApp::~ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:232: undefined reference to `Application::~Application()'
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:232: undefined reference to `Application::~Application()'
+./src/ctrlapp.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:20: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:20: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:20: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:21: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:21: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:21: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:22: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:22: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:22: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:23: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:23: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:23: undefined reference to `DeviceHandler::~DeviceHandler()'
+./src/ctrlapp.o: In function `ControlApp::DrainFeature::DrainFeature(DeviceHandler*)':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:30: undefined reference to `SystemFeature::SystemFeature(DeviceHandler*)'
+./src/ctrlapp.o: In function `ControlApp::FlushFeature::FlushFeature(DeviceHandler*)':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:39: undefined reference to `SystemFeature::SystemFeature(DeviceHandler*)'
+./src/ctrlapp.o: In function `ControlApp::IRFeature::IRFeature(DeviceHandler*)':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:48: undefined reference to `SystemFeature::SystemFeature(DeviceHandler*)'
+./src/ctrlapp.o: In function `ControlApp::LeakageFeature::LeakageFeature(DeviceHandler*)':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:57: undefined reference to `SystemFeature::SystemFeature(DeviceHandler*)'
+./src/ctrlapp.o: In function `ControlApp::RelayFeature::RelayFeature(DeviceHandler*)':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:66: undefined reference to `SystemFeature::SystemFeature(DeviceHandler*)'
+./src/ctrlapp.o: In function `.LC0':
+ctrlapp.cpp:(.rodata+0xd8): undefined reference to `typeinfo for Application'
+ctrlapp.cpp:(.rodata+0xf4): undefined reference to `typeinfo for SystemFeature'
+ctrlapp.cpp:(.rodata+0x120): undefined reference to `typeinfo for SystemFeature'
+ctrlapp.cpp:(.rodata+0x14c): undefined reference to `typeinfo for SystemFeature'
+ctrlapp.cpp:(.rodata+0x174): undefined reference to `typeinfo for SystemFeature'
+ctrlapp.cpp:(.rodata+0x1a0): undefined reference to `typeinfo for SystemFeature'
+./src/ctrlapp.o: In function `ControlApp::RelayFeature::~RelayFeature()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:62: undefined reference to `SystemFeature::~SystemFeature()'
+./src/ctrlapp.o: In function `ControlApp::LeakageFeature::~LeakageFeature()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:53: undefined reference to `SystemFeature::~SystemFeature()'
+./src/ctrlapp.o: In function `ControlApp::IRFeature::~IRFeature()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:44: undefined reference to `SystemFeature::~SystemFeature()'
+./src/ctrlapp.o: In function `ControlApp::FlushFeature::~FlushFeature()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:35: undefined reference to `SystemFeature::~SystemFeature()'
+./src/ctrlapp.o: In function `ControlApp::DrainFeature::~DrainFeature()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.hpp:26: undefined reference to `SystemFeature::~SystemFeature()'
+collect2: error: ld returned 1 exit status
+make: *** [ctrlapp.elf] Error 1
+04:12:36 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./src/ctrlapp.d ./src/main.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+04:12:36 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/framework/application.o" -MMD -MP -MF"framework/framework/application.d" -MT"framework/framework/application.d" -o "framework/framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/framework/devicehandler.o" -MMD -MP -MF"framework/framework/devicehandler.d" -MT"framework/framework/devicehandler.d" -o "framework/framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/framework/devices.o" -MMD -MP -MF"framework/framework/devices.d" -MT"framework/framework/devices.d" -o "framework/framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/framework/systembox.o" -MMD -MP -MF"framework/framework/systembox.d" -MT"framework/framework/systembox.d" -o "framework/framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/framework/application.o ./framework/framework/devicehandler.o ./framework/framework/devices.o ./framework/framework/systembox.o   
+./src/ctrlapp.o: In function `ControlApp::ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:13: undefined reference to `Application::Application()'
+collect2: error: ld returned 1 exit status
+makefile:50: recipe for target 'ctrlapp.elf' failed
+make: *** [ctrlapp.elf] Error 1
+04:13:00 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./framework/framework/application.o ./framework/framework/devicehandler.o ./framework/framework/devices.o ./framework/framework/systembox.o  ./src/ctrlapp.d ./src/main.d  ./framework/framework/application.d ./framework/framework/devicehandler.d ./framework/framework/devices.d ./framework/framework/systembox.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+04:13:00 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/framework/application.o" -MMD -MP -MF"framework/framework/application.d" -MT"framework/framework/application.d" -o "framework/framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/framework/devicehandler.o" -MMD -MP -MF"framework/framework/devicehandler.d" -MT"framework/framework/devicehandler.d" -o "framework/framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/framework/devices.o" -MMD -MP -MF"framework/framework/devices.d" -MT"framework/framework/devices.d" -o "framework/framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I../ctrlapp/framework -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/framework/systembox.o" -MMD -MP -MF"framework/framework/systembox.d" -MT"framework/framework/systembox.d" -o "framework/framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/framework/application.o ./framework/framework/devicehandler.o ./framework/framework/devices.o ./framework/framework/systembox.o   
+./src/ctrlapp.o: In function `ControlApp::ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:13: undefined reference to `Application::Application()'
+collect2: error: ld returned 1 exit status
+makefile:50: recipe for target 'ctrlapp.elf' failed
+make: *** [ctrlapp.elf] Error 1
+04:13:15 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./framework/framework/application.o ./framework/framework/devicehandler.o ./framework/framework/devices.o ./framework/framework/systembox.o  ./src/ctrlapp.d ./src/main.d  ./framework/framework/application.d ./framework/framework/devicehandler.d ./framework/framework/devices.d ./framework/framework/systembox.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+04:13:16 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework -I../ctrlapp/framework -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:37: fatal error: framework/application.hpp: No such file or directory
+ #include "framework/application.hpp"
+                                     ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+04:13:32 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework -I../ctrlapp/framework -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:37: fatal error: framework/application.hpp: No such file or directory
+ #include "framework/application.hpp"
+                                     ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+04:13:41 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./src/ctrlapp.d ./src/main.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+04:13:41 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework -I../ctrlapp/framework -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:37: fatal error: framework/application.hpp: No such file or directory
+ #include "framework/application.hpp"
+                                     ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+04:13:46 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework -I../ctrlapp/framework -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:37: fatal error: framework/application.hpp: No such file or directory
+ #include "framework/application.hpp"
+                                     ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+04:13:47 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o  ./src/ctrlapp.d ./src/main.d  ./framework/application.d ./framework/devicehandler.d ./framework/devices.d ./framework/systembox.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+04:13:47 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework/src -I/home/yarib/ZYBO_projects/app-workspace/ctrlapp/ctrlapp/framework -I../ctrlapp/framework -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:37: fatal error: framework/application.hpp: No such file or directory
+ #include "framework/application.hpp"
+                                     ^
+compilation terminated.
+make: *** [src/ctrlapp.o] Error 1
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+04:15:17 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+./src/ctrlapp.o: In function `ControlApp::ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:13: undefined reference to `Application::Application()'
+collect2: error: ld returned 1 exit status
+makefile:49: recipe for target 'ctrlapp.elf' failed
+make: *** [ctrlapp.elf] Error 1
+04:15:31 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+./src/ctrlapp.o: In function `ControlApp::ControlApp()':
+makefile:49: recipe for target 'ctrlapp.elf' failed
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:13: undefined reference to `Application::Application()'
+collect2: error: ld returned 1 exit status
+make: *** [ctrlapp.elf] Error 1
+04:16:29 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+./src/ctrlapp.o: In function `ControlApp::ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:13: undefined reference to `Application::Application()'
+collect2: error: ld returned 1 exit status
+makefile:49: recipe for target 'ctrlapp.elf' failed
+make: *** [ctrlapp.elf] Error 1
+04:17:07 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1014460	  14832	  39920	1069212	 10509c	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+04:17:08 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "../framework/application.cpp"
+Finished building: ../framework/application.cpp
  
 Building target: libframework.elf
 Invoking: ARM Linux archiver
-arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
 arm-xilinx-linux-gnueabi-ar: creating libframework.elf
 Finished building target: libframework.elf
  
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   2344	      0	      0	   2344	    928	devicehandler.o (ex libframework.elf)
-   3276	      0	      0	   3276	    ccc	devices.o (ex libframework.elf)
-   4056	      0	      0	   4056	    fd8	systembox.o (ex libframework.elf)
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+   2264	      0	      0	   2264	    8d8	devicehandler.o (ex libframework.elf)
+   3100	      0	      0	   3100	    c1c	devices.o (ex libframework.elf)
+   4760	      0	      0	   4760	   1298	systembox.o (ex libframework.elf)
 Finished building: libframework.elf.size
  
-23:46:35 **** Auto Build of configuration Debug for project systool ****
+04:17:08 **** Auto Build of configuration Debug for project systool ****
 make all 
-Building target: systool.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   -l/home/yarib/ZYBO_projects/app-workspace/framework/Debug/libframework.elf
-/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/../../../../arm-xilinx-linux-gnueabi/bin/ld: cannot find -l/home/yarib/ZYBO_projects/app-workspace/framework/Debug/libframework.elf
-collect2: error: ld returned 1 exit status
-makefile:48: recipe for target 'systool.elf' failed
-make: *** [systool.elf] Error 1
-23:48:02 **** Auto Build of configuration Debug for project systool ****
-make all 
-Building target: systool.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -L/home/yarib/ZYBO_projects/app-workspace/framework/Debug/ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   
-./src/systool.o: In function `SystemTool::SystemTool()':
-/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:20: undefined reference to `SystemFeature::SystemFeature(DeviceHandler*)'
-./src/systool.o: In function `SystemTool::~SystemTool()':
-/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:89: undefined reference to `SystemFeature::~SystemFeature()'
-./src/systool.o: In function `.LC8':
-systool.cpp:(.rodata+0xd4): undefined reference to `typeinfo for SystemFeature'
-collect2: error: ld returned 1 exit status
-make: *** [systool.elf] Error 1
-makefile:48: recipe for target 'systool.elf' failed
-23:49:30 **** Auto Build of configuration Debug for project systool ****
-make all 
-Building target: systool.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -L"/home/yarib/ZYBO_projects/app-workspace/framework" -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   
-./src/systool.o: In function `SystemTool::SystemTool()':
-/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:20: undefined reference to `SystemFeature::SystemFeature(DeviceHandler*)'
-makefile:48: recipe for target 'systool.elf' failed
-./src/systool.o: In function `SystemTool::~SystemTool()':
-/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:89: undefined reference to `SystemFeature::~SystemFeature()'
-./src/systool.o: In function `.LC8':
-systool.cpp:(.rodata+0xd4): undefined reference to `typeinfo for SystemFeature'
-collect2: error: ld returned 1 exit status
-make: *** [systool.elf] Error 1
-23:49:43 **** Auto Build of configuration Debug for project systool ****
-make all 
-Building target: systool.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -L"/home/yarib/ZYBO_projects/app-workspace/framework/Debug" -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   
-./src/systool.o: In function `SystemTool::SystemTool()':
-/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:20: undefined reference to `SystemFeature::SystemFeature(DeviceHandler*)'
-./src/systool.o: In function `SystemTool::~SystemTool()':
-/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:89: undefined reference to `SystemFeature::~SystemFeature()'
-./src/systool.o: In function `.LC8':
-systool.cpp:(.rodata+0xd4): undefined reference to `typeinfo for SystemFeature'
-collect2: error: ld returned 1 exit status
-makefile:48: recipe for target 'systool.elf' failed
-make: *** [systool.elf] Error 1
-23:50:00 **** Auto Build of configuration Debug for project systool ****
-make all 
-Building target: systool.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   -l"/home/yarib/ZYBO_projects/app-workspace/framework/Debug/libframework.elf"
-/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/../../../../arm-xilinx-linux-gnueabi/bin/ld: cannot find -l/home/yarib/ZYBO_projects/app-workspace/framework/Debug/libframework.elf
-collect2: error: ld returned 1 exit status
-makefile:48: recipe for target 'systool.elf' failed
-make: *** [systool.elf] Error 1
-23:50:41 **** Auto Build of configuration Debug for project systool ****
-make all 
-Building file: ../src/main.cpp
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building file: ../src/systool.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
-Finished building: ../src/systool.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
  
 Building target: systool.elf
 Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   -l"/home/yarib/ZYBO_projects/app-workspace/framework/Debug/libframework.elf"
-/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/../../../../arm-xilinx-linux-gnueabi/bin/ld: cannot find -l/home/yarib/ZYBO_projects/app-workspace/framework/Debug/libframework.elf
-collect2: error: ld returned 1 exit status
-makefile:49: recipe for target 'systool.elf' failed
-make: *** [systool.elf] Error 1
-23:50:52 **** Clean-only build of configuration Debug for project systool ****
-make clean 
-rm -rf  ./src/main.o ./src/systool.o  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o  ./src/main.d ./src/systool.d  ./framework/devicehandler.d ./framework/devices.d ./framework/systembox.d  systool.elf.size  systool.elf
- 
-23:50:52 **** Auto Build of configuration Debug for project systool ****
-make all 
-Building file: ../src/main.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building file: ../src/systool.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
-Finished building: ../src/systool.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
- 
-Building target: systool.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
 Finished building target: systool.elf
  
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 593064	   6352	  33544	 632960	  9a880	systool.elf
+ 893180	  12480	  37448	 943108	  e6404	systool.elf
 Finished building: systool.elf.size
  
-23:50:57 **** Clean-only build of configuration Debug for project systool ****
-make clean 
-rm -rf  ./src/main.o ./src/systool.o  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o  ./src/main.d ./src/systool.d  ./framework/devicehandler.d ./framework/devices.d ./framework/systembox.d  systool.elf.size  systool.elf
- 
-23:50:57 **** Auto Build of configuration Debug for project systool ****
-make all 
-Building file: ../src/main.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building file: ../src/systool.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
-Finished building: ../src/systool.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
- 
-Building target: systool.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
-Finished building target: systool.elf
- 
-Invoking: ARM Linux Print Size
-arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 593064	   6352	  33544	 632960	  9a880	systool.elf
-Finished building: systool.elf.size
- 
-23:52:11 **** Auto Build of configuration Debug for project ctrlapp ****
+04:17:35 **** Auto Build of configuration Debug for project ctrlapp ****
 make all 
 Building target: ctrlapp.elf
 Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o   -l"/home/yarib/ZYBO_projects/app-workspace/framework/Debug/libframework.elf"
-/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/../../../../arm-xilinx-linux-gnueabi/bin/ld: cannot find -l/home/yarib/ZYBO_projects/app-workspace/framework/Debug/libframework.elf
-collect2: error: ld returned 1 exit status
-make: *** [ctrlapp.elf] Error 1
-makefile:48: recipe for target 'ctrlapp.elf' failed
-23:52:20 **** Clean-only build of configuration Debug for project ctrlapp ****
-make clean 
-rm -rf  ./src/ctrlapp.o ./src/main.o  ./src/ctrlapp.d ./src/main.d  ctrlapp.elf.size  ctrlapp.elf
- 
-23:52:20 **** Auto Build of configuration Debug for project ctrlapp ****
-make all 
-Building file: ../src/ctrlapp.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
-In file included from ../src/ctrlapp.cpp:10:0:
-../src/ctrlapp.hpp:13:25: fatal error: systembox.hpp: No such file or directory
- #include "systembox.hpp"
-                         ^
-compilation terminated.
-src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
-make: *** [src/ctrlapp.o] Error 1
-23:52:25 **** Clean-only build of configuration Debug for project ctrlapp ****
-make clean 
-rm -rf  ./src/ctrlapp.o ./src/main.o  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o  ./src/ctrlapp.d ./src/main.d  ./framework/devicehandler.d ./framework/devices.d ./framework/systembox.d  ctrlapp.elf.size  ctrlapp.elf
- 
-23:52:25 **** Auto Build of configuration Debug for project ctrlapp ****
-make all 
-Building file: ../src/ctrlapp.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
-In file included from ../src/ctrlapp.cpp:10:0:
-../src/ctrlapp.hpp:13:25: fatal error: systembox.hpp: No such file or directory
- #include "systembox.hpp"
-                         ^
-compilation terminated.
-make: *** [src/ctrlapp.o] Error 1
-src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
-23:52:35 **** Auto Build of configuration Debug for project ctrlapp ****
-make all 
-Building file: ../src/ctrlapp.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
-In file included from ../src/ctrlapp.cpp:10:0:
-../src/ctrlapp.hpp:13:35: fatal error: framework/systembox.hpp: No such file or directory
- #include "framework/systembox.hpp"
-                                   ^
-compilation terminated.
-src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
-make: *** [src/ctrlapp.o] Error 1
-23:53:18 **** Auto Build of configuration Debug for project ctrlapp ****
-make all 
-Building file: ../src/ctrlapp.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
-Finished building: ../src/ctrlapp.cpp
- 
-Building file: ../src/main.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
- 
-Building target: ctrlapp.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
 Finished building target: ctrlapp.elf
  
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1020092	  14832	  39920	1074844	 10669c	ctrlapp.elf
+1014460	  14832	  39920	1069212	 10509c	ctrlapp.elf
 Finished building: ctrlapp.elf.size
  
-23:53:22 **** Auto Build of configuration Debug for project ctrlapp ****
+04:17:37 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1014460	  14832	  39920	1069212	 10509c	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+04:18:09 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp: In constructor 'ControlApp::ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:17:2: error: within this context
+  features.push_back(new DrainFeature(&ZYNQ_PMOD_HANDLER));
+  ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:18:2: error: within this context
+  features.push_back(new FlushFeature(&ZYNQ_PMOD_HANDLER));
+  ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:19:2: error: within this context
+  features.push_back(new IRFeature(&ZYNQ_PMOD_HANDLER));
+  ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:20:2: error: within this context
+  features.push_back(new LeakageFeature(&ZYNQ_PMOD_HANDLER));
+  ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:21:2: error: within this context
+  features.push_back(new RelayFeature(&ZYNQ_PMOD_HANDLER));
+  ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp: In member function 'virtual int ControlApp::run()':
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:222:31: error: within this context
+  for (unsigned int i = 0; i < features.size(); i ++)
+                               ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:224:3: error: within this context
+   features[i]->start();
+   ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp: In destructor 'virtual ControlApp::~ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:234:10: error: within this context
+  while (!features.empty())
+          ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:236:7: error: within this context
+   if (features.back() != NULL)
+       ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:237:11: error: within this context
+    delete features.back();
+           ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:239:3: error: within this context
+   features.pop_back();
+   ^
+make: *** [src/ctrlapp.o] Error 1
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+04:18:38 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp: In member function 'virtual int ControlApp::run()':
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:222:31: error: within this context
+  for (unsigned int i = 0; i < features.size(); i ++)
+                               ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:224:3: error: within this context
+   features[i]->start();
+   ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp: In destructor 'virtual ControlApp::~ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:234:10: error: within this context
+  while (!features.empty())
+          ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:236:7: error: within this context
+   if (features.back() != NULL)
+       ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:237:11: error: within this context
+    delete features.back();
+           ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:239:3: error: within this context
+   features.pop_back();
+   ^
+make: *** [src/ctrlapp.o] Error 1
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+04:19:10 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp: In destructor 'virtual ControlApp::~ControlApp()':
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:228:10: error: within this context
+  while (!features.empty())
+          ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:230:7: error: within this context
+   if (features.back() != NULL)
+       ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:231:11: error: within this context
+    delete features.back();
+           ^
+In file included from ../src/ctrlapp.hpp:13:0,
+                 from ../src/ctrlapp.cpp:10:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:27:31: error: 'std::vector<SystemFeature*> Application::features' is private
+  std::vector<SystemFeature *> features;
+                               ^
+../src/ctrlapp.cpp:233:3: error: within this context
+   features.pop_back();
+   ^
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+04:19:17 **** Auto Build of configuration Debug for project ctrlapp ****
 make all 
 Building file: ../src/ctrlapp.cpp
 Invoking: ARM Linux g++ compiler
@@ -314,29 +704,32 @@ Invoking: ARM Linux g++ compiler
 arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
 Finished building: ../src/main.cpp
  
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
- 
 Building target: ctrlapp.elf
 Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
 Finished building target: ctrlapp.elf
  
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1020092	  14832	  39920	1074844	 10669c	ctrlapp.elf
+1013944	  14832	  39920	1068696	 104e98	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+04:20:56 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1013944	  14832	  39920	1068696	 104e98	ctrlapp.elf
 Finished building: ctrlapp.elf.size
  

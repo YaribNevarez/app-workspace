@@ -7,11 +7,12 @@
 
 #ifndef DEVICES_HPP_
 #define DEVICES_HPP_
+
 #include "devicehandler.hpp"
 
 ///////////////////////////////////////////////////////////////////////////////
 
-class LevelSensor : private Device
+class LevelSensor : public Device
 {
 public:
 	LevelSensor(DeviceID ID, DeviceHandler * device_handler);
@@ -27,7 +28,7 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 
-class LeakageSensor : private Device
+class LeakageSensor : public Device
 {
 public:
 	LeakageSensor(DeviceID ID, DeviceHandler * device_handler);
@@ -43,7 +44,7 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 
-class IRSensor : private Device
+class IRSensor : public Device
 {
 public:
 	IRSensor(DeviceID ID, DeviceHandler * device_handler);
@@ -59,7 +60,7 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 
-class Valve : private Device
+class Valve : public Device
 {
 public:
 	Valve(DeviceID ID, DeviceHandler * device_handler);
@@ -76,7 +77,7 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 
-class OutputPin: private Device
+class OutputPin: public Device
 {
 public:
 	OutputPin(DeviceID ID, DeviceHandler * device_handler);
@@ -92,7 +93,7 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 
-class InputPin : private Device
+class InputPin : public Device
 {
 public:
 	InputPin(DeviceID ID, DeviceHandler * device_handler);
@@ -108,7 +109,7 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 
-class OutputVector : private Device
+class OutputVector : public Device
 {
 public:
 	OutputVector(DeviceID ID, DeviceHandler * device_handler);
@@ -118,7 +119,7 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 
-class InputVector : private Device
+class InputVector : public Device
 {
 public:
 	InputVector(DeviceID ID, DeviceHandler * device_handler);

@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;ctrlapp/src/tread.hpp&apos; to &apos;thread.hpp&apos;" description="Rename resource &apos;tread.hpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/tread.hpp" name="thread.hpp" stamp="1503974328484" updateReferences="true"/>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ctrlapp/src/tread.hpp&apos; to &apos;thread.hpp&apos;" description="Rename resource &apos;tread.hpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/tread.hpp" name="thread.hpp" stamp="1503974328484" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ctrlapp/framework/zybo/devices.hpp&apos; to &apos;resources.hpp&apos;" description="Rename resource &apos;devices.hpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="framework/zybo/devices.hpp" name="resources.hpp" stamp="1504140498700" updateReferences="true"/>
 </session>

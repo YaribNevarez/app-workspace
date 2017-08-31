@@ -10,10 +10,10 @@
 
 #include <vector>
 
-#include "framework/systembox.hpp"
+#include "framework/application.hpp"
 
 // Multiple inheritance of two different concepts
-class ControlApp: public Runnable
+class ControlApp: public Application
 {
 public:
 	ControlApp();
@@ -67,9 +67,6 @@ protected:
 		{}
 		virtual int run(void);
 	};
-
-	std::vector<SystemFeature *> features;
-	std::vector<Thread *>        threads;
 };
 
 

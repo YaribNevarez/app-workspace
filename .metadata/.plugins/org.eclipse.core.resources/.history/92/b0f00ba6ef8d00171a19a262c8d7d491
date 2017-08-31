@@ -1,0 +1,31 @@
+/*
+ * application.cpp
+ *
+ *  Created on: Aug 31, 2017
+ *      Author: root
+ */
+
+#include "application.hpp"
+
+Application::~Application()
+{
+	while (!features.empty())
+	{
+		if (features.back() != NULL)
+			delete features.back();
+
+		features.pop_back();
+	}
+}
+
+void Application::register_feature(SystemFeature * feature)
+{
+}
+
+int Application::start(void)
+{
+	for (unsigned int i = 0; i < features.size(); i ++)
+	{
+		features[i]->start();
+	}
+}

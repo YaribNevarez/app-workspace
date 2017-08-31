@@ -10,38 +10,35 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
+
 
 #include "systool.hpp"
 
 
-SystemTool::SystemTool():
-SystemFeature(0)
+SystemTool::SystemTool()
 {
 }
 
-int SystemTool::run(void)
+int SystemTool::Server::run(void)
 {
-    int socket_desc , client_sock , c , read_size;
-    struct sockaddr_in server , client;
+	int addr_len, read_size;
     char client_message[2000];
 
     //Create socket
-    socket_desc = socket(AF_INET , SOCK_STREAM , 0);
-    if (socket_desc == -1)
+    server_socket = socket(AF_INET , SOCK_STREAM , 0);
+    if (server_socket == -1)
     {
-        printf("Could not create socket");
+    	puts("Could not create socket");
     }
     puts("Socket created");
 
     //Prepare the sockaddr_in structure
-    server.sin_family = AF_INET;
-    server.sin_addr.s_addr = INADDR_ANY;
-    server.sin_port = htons( 8888 );
+    server_address.sin_family = AF_INET;
+    server_address.sin_addr.s_addr = INADDR_ANY;
+    server_address.sin_port = htons( 8888 );
 
     //Bind
-    if( bind(socket_desc,(struct sockaddr *)&server , sizeof(server)) < 0)
+    if( bind(server_socket, (struct sockaddr *)&server_address , sizeof(server_address)) < 0)
     {
         //print the error message
         perror("bind failed. Error");
@@ -50,15 +47,15 @@ int SystemTool::run(void)
     puts("bind done");
 
     //Listen
-    listen(socket_desc , 3);
+    listen(server_socket , 1);
 
     //Accept and incoming connection
     puts("Waiting for incoming connections...");
-    c = sizeof(struct sockaddr_in);
+    addr_len = sizeof(struct sockaddr_in);
 
     //accept connection from an incoming client
-    client_sock = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&c);
-    if (client_sock < 0)
+    client_socket = accept(server_socket, (struct sockaddr *)&client_address, (socklen_t*)&addr_len);
+    if (client_socket < 0)
     {
         perror("accept failed");
         return 1;
@@ -66,11 +63,17 @@ int SystemTool::run(void)
     puts("Connection accepted");
 
     //Receive a message from client
-    while( (read_size = recv(client_sock , client_message , 2000 , 0)) > 0 )
+    while( (read_size = recv(client_socket , client_message , sizeof(client_message) , 0)) > 0 )
     {
-        //Send the message back to client
+    	if (1)
+    	{
+    		//relay_0.get_ID();
+    	}
+    	else if (1)
+    	{}
+
     	puts(client_message);
-        write(client_sock , client_message , strlen(client_message));
+        write(client_socket , client_message , strlen(client_message));
     }
 
     if(read_size == 0)
@@ -82,6 +85,13 @@ int SystemTool::run(void)
     {
         perror("recv failed");
     }
+
+    return 0;
+}
+
+int SystemTool::run(void)
+{
+
 
     return 0;
 }
