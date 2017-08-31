@@ -10,10 +10,9 @@
 
 #include <sys/socket.h>
 #include <arpa/inet.h>
+#include "framework/application.hpp"
 
-#include "framework/systembox.hpp"
-
-class SystemTool: public Runnable
+class SystemTool: public Application
 {
 public:
 	SystemTool();
@@ -22,10 +21,10 @@ public:
 	virtual int run(void);
 
 protected:
-	class Server: protected SystemFeature
+	class ServerFeature: protected SystemFeature
 	{
 	public:
-		Server(DeviceHandler * device_handler):
+		ServerFeature(DeviceHandler * device_handler):
 			SystemFeature(device_handler)
 		{}
 		virtual int run(void);
@@ -37,7 +36,7 @@ protected:
 		struct sockaddr_in client_address;
 	};
 
-	Server * serverFeature;
+	ServerFeature * server;
 };
 
 #endif /* SYSTOOL_HPP_ */

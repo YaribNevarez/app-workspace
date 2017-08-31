@@ -733,3 +733,704 @@ arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
 1013944	  14832	  39920	1068696	 104e98	ctrlapp.elf
 Finished building: ctrlapp.elf.size
  
+04:29:28 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1013944	  14832	  39920	1068696	 104e98	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+04:29:34 **** Incremental Build of configuration Debug for project ctrlapp ****
+make all 
+make: Nothing to be done for 'all'.
+04:33:52 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893356	  12480	  37448	 943284	  e64b4	systool.elf
+Finished building: systool.elf.size
+ 
+04:34:49 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+./src/systool.o: In function `SystemTool::Server::~Server()':
+/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:18: multiple definition of `ZYNQ_BTN_HANDLER'
+./src/main.o:/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/main.cpp:8: first defined here
+./src/systool.o: In function `Thread::process_trigger(void*)':
+/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:23: multiple definition of `ZYNQ_LED_HANDLER'
+./src/main.o:/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/main.cpp:11: first defined here
+makefile:49: recipe for target 'systool.elf' failed
+./src/systool.o: In function `Thread::quit()':
+/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:29: multiple definition of `ZYNQ_SW_HANDLER'
+./src/main.o:/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/main.cpp:12: first defined here
+./src/systool.o: In function `SystemTool::Server::run()':
+/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:38: multiple definition of `ZYNQ_PMOD_HANDLER'
+./src/main.o:/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:20: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [systool.elf] Error 1
+04:35:20 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+./src/systool.o: In function `SystemTool::Server::~Server()':
+/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:15: multiple definition of `ZYNQ_BTN_HANDLER'
+./src/main.o:/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/main.cpp:8: first defined here
+./src/systool.o: In function `Thread::process_trigger(void*)':
+/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:20: multiple definition of `ZYNQ_LED_HANDLER'
+./src/main.o:/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/main.cpp:11: first defined here
+./src/systool.o: In function `Thread::quit()':
+/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:26: multiple definition of `ZYNQ_SW_HANDLER'
+./src/main.o:/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/main.cpp:12: first defined here
+makefile:49: recipe for target 'systool.elf' failed
+./src/systool.o: In function `SystemTool::Server::run()':
+/home/yarib/ZYBO_projects/app-workspace/systool/Debug/../src/systool.cpp:35: multiple definition of `ZYNQ_PMOD_HANDLER'
+./src/main.o:/home/yarib/ZYBO_projects/app-workspace/framework/framework/zybo.hpp:20: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [systool.elf] Error 1
+04:35:40 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893356	  12480	  37448	 943284	  e64b4	systool.elf
+Finished building: systool.elf.size
+ 
+04:35:47 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893740	  12484	  37688	 943912	  e6728	systool.elf
+Finished building: systool.elf.size
+ 
+04:36:40 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp:19:17: error: 'SystemTool::Server' has not been declared
+ int SystemTool::Server::run(void)
+                 ^
+../src/systool.cpp: In function 'int run()':
+../src/systool.cpp:25:5: error: 'server_socket' was not declared in this scope
+     server_socket = socket(AF_INET , SOCK_STREAM , 0);
+     ^
+../src/systool.cpp:33:5: error: 'server_address' was not declared in this scope
+     server_address.sin_family = AF_INET;
+     ^
+../src/systool.cpp:54:5: error: 'client_socket' was not declared in this scope
+     client_socket = accept(server_socket, (struct sockaddr *)&client_address, (socklen_t*)&addr_len);
+     ^
+../src/systool.cpp:54:63: error: 'client_address' was not declared in this scope
+     client_socket = accept(server_socket, (struct sockaddr *)&client_address, (socklen_t*)&addr_len);
+                                                               ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:36:52 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893748	  12484	  37688	 943920	  e6730	systool.elf
+Finished building: systool.elf.size
+ 
+04:37:22 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893748	  12484	  37688	 943920	  e6730	systool.elf
+Finished building: systool.elf.size
+ 
+04:37:34 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In constructor 'SystemTool::SystemTool()':
+../src/systool.cpp:17:29: error: no matching function for call to 'SystemTool::ServerFeature::ServerFeature()'
+  server = new ServerFeature();
+                             ^
+../src/systool.cpp:17:29: note: candidates are:
+In file included from ../src/systool.cpp:12:0:
+../src/systool.hpp:27:3: note: SystemTool::ServerFeature::ServerFeature(DeviceHandler*)
+   ServerFeature(DeviceHandler * device_handler):
+   ^
+../src/systool.hpp:27:3: note:   candidate expects 1 argument, 0 provided
+../src/systool.hpp:24:8: note: SystemTool::ServerFeature::ServerFeature(const SystemTool::ServerFeature&)
+  class ServerFeature: protected SystemFeature
+        ^
+../src/systool.hpp:24:8: note:   candidate expects 1 argument, 0 provided
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:37:56 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893916	  12484	  37688	 944088	  e67d8	systool.elf
+Finished building: systool.elf.size
+ 
+04:40:26 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In constructor 'SystemTool::SystemTool()':
+../src/systool.cpp:18:25: error: 'SystemFeature' is an inaccessible base of 'SystemTool::ServerFeature'
+  register_feature(server);
+                         ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:43:28 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893924	  12484	  37688	 944096	  e67e0	systool.elf
+Finished building: systool.elf.size
+ 
+04:43:31 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893924	  12484	  37688	 944096	  e67e0	systool.elf
+Finished building: systool.elf.size
+ 
+04:43:45 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::run()':
+../src/systool.cpp:93:10: error: expression cannot be used as a function
+  start()();
+          ^
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+04:43:50 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893936	  12484	  37688	 944108	  e67ec	systool.elf
+Finished building: systool.elf.size
+ 
+04:44:06 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 893936	  12484	  37688	 944108	  e67ec	systool.elf
+Finished building: systool.elf.size
+ 
+04:44:10 **** Incremental Build of configuration Debug for project ctrlapp ****
+make all 
+make: Nothing to be done for 'all'.
+04:44:21 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:55:37 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:67:10: error: expected primary-expression before ')' token
+      if ()
+          ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:56:52 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:69:50: error: no matching function for call to 'OutputPin::set_status(bool)'
+       relay_0.set_status(client_message[1] == '1');
+                                                  ^
+../src/systool.cpp:69:50: note: candidate is:
+In file included from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:13,
+                 from ../src/systool.cpp:12:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:91:7: note: bool OutputPin::set_status(OutputPin::Status)
+  bool set_status(Status status);
+       ^
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:91:7: note:   no known conversion for argument 1 from 'bool' to 'OutputPin::Status'
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:57:40 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:69:27: error: invalid conversion from 'int' to 'OutputPin::Status' [-fpermissive]
+       relay_0.set_status(1);
+                           ^
+In file included from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:13,
+                 from ../src/systool.cpp:12:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:91:7: note: initializing argument 1 of 'bool OutputPin::set_status(OutputPin::Status)'
+  bool set_status(Status status);
+       ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:58:00 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:69:50: error: no matching function for call to 'OutputPin::set_status(bool)'
+       relay_0.set_status(client_message[1] == '1');
+                                                  ^
+../src/systool.cpp:69:50: note: candidate is:
+In file included from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:13,
+                 from ../src/systool.cpp:12:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:91:7: note: bool OutputPin::set_status(OutputPin::Status)
+  bool set_status(Status status);
+       ^
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:91:7: note:   no known conversion for argument 1 from 'bool' to 'OutputPin::Status'
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+04:58:11 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:69:50: error: no matching function for call to 'OutputPin::set_status(bool)'
+       relay_0.set_status(client_message[1] == '1');
+                                                  ^
+../src/systool.cpp:69:50: note: candidate is:
+In file included from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:13,
+                 from ../src/systool.cpp:12:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:91:7: note: bool OutputPin::set_status(OutputPin::Status)
+  bool set_status(Status status);
+       ^
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:91:7: note:   no known conversion for argument 1 from 'bool' to 'OutputPin::Status'
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:59:14 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:69:69: error: no matching function for call to 'OutputPin::set_status(bool)'
+       relay_0.set_status((OutputPin::Status)client_message[1] == '1');
+                                                                     ^
+../src/systool.cpp:69:69: note: candidate is:
+In file included from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:13,
+                 from ../src/systool.cpp:12:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:91:7: note: bool OutputPin::set_status(OutputPin::Status)
+  bool set_status(Status status);
+       ^
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:91:7: note:   no known conversion for argument 1 from 'bool' to 'OutputPin::Status'
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:59:50 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:69:37: error: 'OutputPin::Status' is not a class or namespace
+       relay_0.set_status(OutputPin::Status::ON);
+                                     ^
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+05:00:56 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 894000	  12484	  37688	 944172	  e682c	systool.elf
+Finished building: systool.elf.size
+ 
+05:01:19 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:69:53: error: no matching function for call to 'OutputPin::OutputPin(char&)'
+       relay_0.set_status((OutputPin)client_message[1] == '1');
+                                                     ^
+../src/systool.cpp:69:53: note: candidates are:
+In file included from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:13,
+                 from ../src/systool.cpp:12:
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:83:2: note: OutputPin::OutputPin(DeviceID, DeviceHandler*)
+  OutputPin(DeviceID ID, DeviceHandler * device_handler);
+  ^
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:83:2: note:   candidate expects 2 arguments, 1 provided
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:80:7: note: OutputPin::OutputPin(const OutputPin&)
+ class OutputPin: public Device
+       ^
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:80:7: note:   no known conversion for argument 1 from 'char' to 'const OutputPin&'
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+05:01:22 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:69:38: error: expected unqualified-id before ')' token
+       relay_0.set_status((OutputPin::)client_message[1] == '1');
+                                      ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+05:01:28 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:69:41: error: expected ')' before 'client_message'
+       relay_0.set_status((OutputPin::ON)client_message[1] == '1');
+                                         ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+05:02:08 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 894064	  12484	  37688	 944236	  e686c	systool.elf
+Finished building: systool.elf.size
+ 
+05:02:16 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 894064	  12484	  37688	 944236	  e686c	systool.elf
+Finished building: systool.elf.size
+ 
+05:02:42 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 894064	  12484	  37688	 944236	  e686c	systool.elf
+Finished building: systool.elf.size
+ 
+05:05:40 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 894208	  12484	  37688	 944380	  e68fc	systool.elf
+Finished building: systool.elf.size
+ 
+05:06:54 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 894216	  12484	  37688	 944388	  e6904	systool.elf
+Finished building: systool.elf.size
+ 
+05:11:31 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 894264	  12484	  37688	 944436	  e6934	systool.elf
+Finished building: systool.elf.size
+ 
+05:12:28 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+05:18:13 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1013944	  14832	  39920	1068696	 104e98	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+05:18:14 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "../framework/systembox.cpp"
+Finished building: ../framework/systembox.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+   2264	      0	      0	   2264	    8d8	devicehandler.o (ex libframework.elf)
+   3100	      0	      0	   3100	    c1c	devices.o (ex libframework.elf)
+   4760	      0	      0	   4760	   1298	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+05:18:14 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 894264	  12484	  37688	 944436	  e6934	systool.elf
+Finished building: systool.elf.size
+ 

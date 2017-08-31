@@ -26,7 +26,7 @@ SystemFeature::SystemFeature(DeviceHandler * device_handler):
 	pwm_0(PWM_0, device_handler),
 	pwm_1(PWM_1, device_handler),
 	relay_0(RELAY_0, device_handler),
-	relay_1(RELAY_0, device_handler)
+	relay_1(RELAY_1, device_handler)
 {}
 
 SystemFeature::~SystemFeature()

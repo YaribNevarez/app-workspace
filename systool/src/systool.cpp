@@ -6,20 +6,19 @@
  */
 
 #include <stdio.h>
-
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-
-
 #include "systool.hpp"
-
+#include "framework/zybo.hpp"
 
 SystemTool::SystemTool()
 {
+	server = new ServerFeature(&ZYNQ_PMOD_HANDLER);
+	register_feature((SystemFeature *) server);
 }
 
-int SystemTool::Server::run(void)
+int SystemTool::ServerFeature::run(void)
 {
 	int addr_len, read_size;
     char client_message[2000];
@@ -65,23 +64,29 @@ int SystemTool::Server::run(void)
     //Receive a message from client
     while( (read_size = recv(client_socket , client_message , sizeof(client_message) , 0)) > 0 )
     {
-    	if (1)
+    	if (strncmp(client_message, "Relay1=", 7) == 0)
     	{
-    		//relay_0.get_ID();
+    		relay_0.set_status(client_message[7] == '1' ? OutputPin::ON : OutputPin::OFF);
     	}
-    	else if (1)
-    	{}
+    	else if (strncmp(client_message, "Relay2=", 7) == 0)
+    	{
+    		relay_1.set_status(client_message[7] == '1' ? OutputPin::ON : OutputPin::OFF);
+    	}
+    	else if (strncmp(client_message, "EXIT", 4) == 0)
+		{
+    		puts("Client disconnected");
+			break;
+		}
 
     	puts(client_message);
         write(client_socket , client_message , strlen(client_message));
+        memset(client_message, 0, sizeof(client_message));
     }
 
-    if(read_size == 0)
-    {
-        puts("Client disconnected");
-        fflush(stdout);
-    }
-    else if(read_size == -1)
+    close(client_socket);
+    close(server_socket);
+
+    if(read_size == -1)
     {
         perror("recv failed");
     }
@@ -91,8 +96,9 @@ int SystemTool::Server::run(void)
 
 int SystemTool::run(void)
 {
+	start();
 
-
+	for (;;);
     return 0;
 }
 
