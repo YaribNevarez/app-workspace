@@ -43,10 +43,8 @@ private:
 class Device
 {
 public:
-	Device(DeviceHandler *, DeviceID, std::string name = NULL);
+	Device(DeviceHandler *, DeviceIdentity *);
 
-	static std::string register_identities(DeviceIdentity *);
-	static std::string get_nameByID(DeviceID);
 	static Device *    get_instanceByID(DeviceID);
 
 	int 			get_ID(void);

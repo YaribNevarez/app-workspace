@@ -8,8 +8,8 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-LevelSensor::LevelSensor(DeviceHandler * device_handler, DeviceID ID, std::string name):
-Device(device_handler, ID, name)
+LevelSensor::LevelSensor(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
 {}
 
 LevelSensor::Status LevelSensor::get_level(void)
@@ -21,8 +21,8 @@ LevelSensor::Status LevelSensor::get_level(void)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-LeakageSensor::LeakageSensor(DeviceHandler * device_handler, DeviceID ID, std::string name):
-Device(device_handler, ID, name)
+LeakageSensor::LeakageSensor(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
 {}
 
 LeakageSensor::Status LeakageSensor::get_status(void)
@@ -34,8 +34,8 @@ LeakageSensor::Status LeakageSensor::get_status(void)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-IRSensor::IRSensor(DeviceHandler * device_handler, DeviceID ID, std::string name):
-Device(device_handler, ID, name)
+IRSensor::IRSensor(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
 {}
 
 IRSensor::Status IRSensor::get_status(void)
@@ -47,8 +47,8 @@ IRSensor::Status IRSensor::get_status(void)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-Valve::Valve(DeviceHandler * device_handler, DeviceID ID, std::string name):
-Device(device_handler, ID, name)
+Valve::Valve(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
 {}
 
 bool     Valve::set_position(Position position)
@@ -65,8 +65,8 @@ Valve::Position Valve::get_position(void)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-OutputPin::OutputPin(DeviceHandler * device_handler, DeviceID ID, std::string name):
-Device(device_handler, ID, name)
+OutputPin::OutputPin(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
 {}
 
 bool OutputPin::set_status(Status status)
@@ -76,8 +76,8 @@ bool OutputPin::set_status(Status status)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-InputPin::InputPin(DeviceHandler * device_handler, DeviceID ID, std::string name):
-Device(device_handler, ID, name)
+InputPin::InputPin(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
 {}
 
 InputPin::Status InputPin::get_status(void)
@@ -89,8 +89,8 @@ InputPin::Status InputPin::get_status(void)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-OutputVector::OutputVector(DeviceHandler * device_handler, DeviceID ID, std::string name):
-Device(device_handler, ID, name)
+OutputVector::OutputVector(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
 {}
 
 bool OutputVector::set_value(int value)
@@ -100,8 +100,8 @@ bool OutputVector::set_value(int value)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-InputVector::InputVector(DeviceHandler * device_handler, DeviceID ID, std::string name):
-Device(device_handler, ID, name)
+InputVector::InputVector(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
 {}
 
 int InputVector::get_value(void)

@@ -141,12 +141,17 @@ DeviceHandler::~DeviceHandler()
 
 std::vector<Device *> Device::instances;
 
-Device::Device(DeviceHandler * device_handler, DeviceID ID, std::string name):
+Device::Device(DeviceHandler * device_handler, DeviceIdentity * identity):
 device_handler(device_handler),
-device_ID(ID),
-device_name(name)
+device_ID(0),
+device_name("")
 {
 	pthread_mutex_init(&mutex, NULL);
+	if (identity != NULL)
+	{
+		device_ID   = identity->ID;
+		device_name = identity->name;
+	}
 	instances.push_back(this);
 }
 
@@ -159,9 +164,6 @@ std::string Device::get_name(void)
 {
 	return device_name;
 }
-
-std::string Device::register_identities(DeviceIdentity * identities)
-{}
 
 Device * Device::get_instanceByID(DeviceID id)
 {
@@ -176,9 +178,6 @@ Device * Device::get_instanceByID(DeviceID id)
 
 	return instance;
 }
-
-std::string Device::get_nameByID(DeviceID id)
-{}
 
 bool Device::write(int data)
 {

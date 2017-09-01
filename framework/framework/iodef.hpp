@@ -23,8 +23,8 @@ typedef struct
 
 typedef struct
 {
-	DeviceID 	 ID;
-	const char * name;
+	const DeviceID	ID;
+	const char * 	name;
 } DeviceIdentity;
 
 #ifdef __cplusplus

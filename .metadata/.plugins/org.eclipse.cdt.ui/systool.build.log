@@ -1,17 +1,9 @@
-18:22:33 **** Auto Build of configuration Debug for project systool ****
+19:58:24 **** Auto Build of configuration Debug for project systool ****
 make all 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
-/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp: In static member function 'static std::string Device::register_identities(DeviceIdentity*)':
-/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp:164:2: warning: no return statement in function returning non-void [-Wreturn-type]
- {}
-  ^
-/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp: In static member function 'static std::string Device::get_nameByID(DeviceID)':
-/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp:181:2: warning: no return statement in function returning non-void [-Wreturn-type]
- {}
-  ^
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
  
 Building target: systool.elf
 Invoking: ARM Linux g++ linker
@@ -21,9 +13,9 @@ Finished building target: systool.elf
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 903100	  12648	  37704	 953452	  e8c6c	systool.elf
+ 900452	  12648	  37704	 950804	  e8214	systool.elf
 Finished building: systool.elf.size
  
 
-18:22:34 Build Finished (took 716ms)
+19:58:25 Build Finished (took 919ms)
 

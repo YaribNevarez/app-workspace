@@ -1,0 +1,15 @@
+/*
+ * systembox.cpp
+ *
+ *  Created on: Aug 29, 2017
+ *      Author: root
+ */
+#include "systembox.hpp"
+#include "deviceid.hpp"
+
+SystemFeature::SystemFeature(DeviceHandler * device_handler):
+	wasteTankSensor(device_handler, &id_WASTETLEVEL)
+{}
+
+SystemFeature::~SystemFeature()
+{}
