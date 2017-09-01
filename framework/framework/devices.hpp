@@ -15,7 +15,7 @@
 class LevelSensor : public Device
 {
 public:
-	LevelSensor(DeviceID ID, DeviceHandler * device_handler);
+	LevelSensor(DeviceHandler * device_handler, DeviceID ID, std::string name = NULL);
 
 	typedef enum
 	{
@@ -31,7 +31,7 @@ public:
 class LeakageSensor : public Device
 {
 public:
-	LeakageSensor(DeviceID ID, DeviceHandler * device_handler);
+	LeakageSensor(DeviceHandler * device_handler, DeviceID ID, std::string name = NULL);
 
 	typedef enum
 	{
@@ -47,7 +47,7 @@ public:
 class IRSensor : public Device
 {
 public:
-	IRSensor(DeviceID ID, DeviceHandler * device_handler);
+	IRSensor(DeviceHandler * device_handler, DeviceID ID, std::string name = NULL);
 
 	typedef enum
 	{
@@ -63,7 +63,7 @@ public:
 class Valve : public Device
 {
 public:
-	Valve(DeviceID ID, DeviceHandler * device_handler);
+	Valve(DeviceHandler * device_handler, DeviceID ID, std::string name = NULL);
 
 	typedef enum
 	{
@@ -80,7 +80,7 @@ public:
 class OutputPin: public Device
 {
 public:
-	OutputPin(DeviceID ID, DeviceHandler * device_handler);
+	OutputPin(DeviceHandler * device_handler, DeviceID ID, std::string name = NULL);
 
 	typedef enum
 	{
@@ -96,7 +96,7 @@ public:
 class InputPin : public Device
 {
 public:
-	InputPin(DeviceID ID, DeviceHandler * device_handler);
+	InputPin(DeviceHandler * device_handler, DeviceID ID, std::string name = NULL);
 
 	typedef enum
 	{
@@ -112,7 +112,7 @@ public:
 class OutputVector : public Device
 {
 public:
-	OutputVector(DeviceID ID, DeviceHandler * device_handler);
+	OutputVector(DeviceHandler * device_handler, DeviceID ID, std::string name = NULL);
 
 	bool set_value(int value);
 };
@@ -122,7 +122,7 @@ public:
 class InputVector : public Device
 {
 public:
-	InputVector(DeviceID ID, DeviceHandler * device_handler);
+	InputVector(DeviceHandler * device_handler, DeviceID ID, std::string name = NULL);
 
 	int get_value(void);
 };

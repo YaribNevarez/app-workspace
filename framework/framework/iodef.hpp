@@ -12,43 +12,20 @@
 extern "C" {
 #endif
 
-typedef enum
-{
-	DEVICE_ID_BEGIN = 0,
-	LEVELSENSOR_0,
-	LEVELSENSOR_1,
-	WASTETLEVEL,
-	LEAKSENSOR_0,
-	LEAKSENSOR_1,
-	IRSENSOR,
-	FLUSHVALVE,
-	DRAINVALVE,
-	SHUTOFFVALVE,
-	DRAINLOCAL,
-	EMERGENCY,
-	APPSELECTION,
-	DRAINDELAY,
-	VACUMGEN,
-	DRAININDICATOR,
-	LEAKINDICATOR,
-	PWM_0,
-	PWM_1,
-	RELAY_0,
-	RELAY_1,
-	DEVICE_ID_END
-} DeviceID;
+typedef unsigned char DeviceID;
+typedef unsigned int  Data;
 
 typedef struct
 {
-	const DeviceID     device_ID;
-	const char * const driver_name;
-} DeviceDef;
-
-typedef struct
-{
-	unsigned char device_ID;
-	unsigned int  data;
+	DeviceID device_ID;
+	Data     data;
 } IOPacket;
+
+typedef struct
+{
+	DeviceID 	 ID;
+	const char * name;
+} DeviceIdentity;
 
 #ifdef __cplusplus
 }

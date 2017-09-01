@@ -139,17 +139,46 @@ DeviceHandler::~DeviceHandler()
 	pthread_mutex_destroy(&fileMutex);
 }
 
-Device::Device(DeviceID ID, DeviceHandler * device_handler):
+std::vector<Device *> Device::instances;
+
+Device::Device(DeviceHandler * device_handler, DeviceID ID, std::string name):
+device_handler(device_handler),
 device_ID(ID),
-device_handler(device_handler)
+device_name(name)
 {
 	pthread_mutex_init(&mutex, NULL);
+	instances.push_back(this);
 }
 
 int Device::get_ID(void)
 {
 	return device_ID;
 }
+
+std::string Device::get_name(void)
+{
+	return device_name;
+}
+
+std::string Device::register_identities(DeviceIdentity * identities)
+{}
+
+Device * Device::get_instanceByID(DeviceID id)
+{
+	Device * instance = NULL;
+	for (unsigned i = 0; (i < instances.size()) && (instance == NULL); i ++)
+	{
+		if (instances[i]->get_ID() == id)
+		{
+			instance = instances[i];
+		}
+	}
+
+	return instance;
+}
+
+std::string Device::get_nameByID(DeviceID id)
+{}
 
 bool Device::write(int data)
 {

@@ -1,9 +1,17 @@
-05:18:13 **** Auto Build of configuration Debug for project ctrlapp ****
+18:22:32 **** Auto Build of configuration Debug for project ctrlapp ****
 make all 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp: In static member function 'static std::string Device::register_identities(DeviceIdentity*)':
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp:164:2: warning: no return statement in function returning non-void [-Wreturn-type]
+ {}
+  ^
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp: In static member function 'static std::string Device::get_nameByID(DeviceID)':
+/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp:181:2: warning: no return statement in function returning non-void [-Wreturn-type]
+ {}
+  ^
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
  
 Building target: ctrlapp.elf
 Invoking: ARM Linux g++ linker
@@ -13,9 +21,9 @@ Finished building target: ctrlapp.elf
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1013944	  14832	  39920	1068696	 104e98	ctrlapp.elf
+1022772	  14996	  39928	1077696	 1071c0	ctrlapp.elf
 Finished building: ctrlapp.elf.size
  
 
-05:18:14 Build Finished (took 688ms)
+18:22:33 Build Finished (took 767ms)
 
