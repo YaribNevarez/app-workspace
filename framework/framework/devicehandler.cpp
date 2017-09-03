@@ -139,7 +139,7 @@ DeviceHandler::~DeviceHandler()
 	pthread_mutex_destroy(&fileMutex);
 }
 
-std::vector<Device *> Device::instances;
+Device::InstanceVector Device::instances;
 
 Device::Device(DeviceHandler * device_handler, DeviceIdentity * identity):
 device_handler(device_handler),
@@ -177,6 +177,11 @@ Device * Device::get_instanceByID(DeviceID id)
 	}
 
 	return instance;
+}
+
+Device::InstanceVector Device::get_instanceVector(void)
+{
+	return instances;
 }
 
 bool Device::write(int data)

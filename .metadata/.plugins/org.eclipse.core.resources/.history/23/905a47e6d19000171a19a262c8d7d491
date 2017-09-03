@@ -1,0 +1,104 @@
+/*
+ * systool.cpp
+ *
+ *  Created on: Aug 30, 2017
+ *      Author: root
+ */
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include "systool.hpp"
+#include "framework/zybo.hpp"
+
+SystemTool::SystemTool()
+{
+	serverFeature = new ServerFeature(&ZYNQ_PMOD_HANDLER, 7777);
+	register_feature((SystemFeature *) serverFeature);
+}
+
+SystemTool::ServerFeature::ServerFeature(DeviceHandler * device_handler, uint16_t host_port):
+		SystemFeature(device_handler),
+		server(host_port),
+		flags(EXECUTE)
+{
+}
+
+int SystemTool::ServerFeature::command_handler(std::string command)
+{
+	if (command.compare("EXIT") == 0)
+	{
+		printf("Exit server...\n");
+		flags &= ~ EXECUTE;
+	}
+	else
+	{
+		Device::InstanceVector devices = Device::get_instanceVector();
+		Device * device = NULL;
+
+		for (unsigned i = 0; i < devices.size(); i ++)
+		{
+			if (command.compare(0,
+								devices[i]->get_name().size(),
+								devices[i]->get_name()) == 0)
+			{
+				device = devices[i];
+			}
+		}
+
+		if (device != NULL)
+		{
+		}
+		else
+		{
+			server.send_buffer((ByteVector)(std::string("Command not found")));
+		}
+	}
+	return SUCCESS;
+}
+
+int SystemTool::ServerFeature::command_handler(ByteVector command)
+{
+	return SUCCESS;
+}
+
+int SystemTool::ServerFeature::run(void)
+{
+	int result = server.open_connection();
+
+	if (result == SUCCESS)
+	{
+		ByteVector buffer;
+		do
+		{
+			if (server.receive_buffer(buffer) > 0)
+			{
+				if (std::isalpha(buffer[0]))
+				{
+					command_handler(std::string((const char *)buffer.data()));
+				}
+				else
+				{
+					command_handler(buffer);
+				}
+			}
+		} while(flags & EXECUTE);
+
+		server.close_connection();
+	}
+
+	return result;
+}
+
+int SystemTool::run(void)
+{
+	start();
+
+	for (;;);
+    return 0;
+}
+
+SystemTool::~SystemTool()
+{
+}

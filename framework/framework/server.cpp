@@ -5,13 +5,10 @@
  *      Author: root
  */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
 #include "server.hpp"
 
-Server::Server(uint16_t host_port):
+Server::Server(uint16_t host_port, size_t buffer_length):
+buffer_length(buffer_length),
 host_port(host_port),
 server_socket(-1),
 client_socket(-1)
@@ -29,7 +26,7 @@ int Server::connect_server(void)
 	{
 		listen(server_socket , 1);
 
-		printf("Waiting for connection ...");
+		printf("Waiting for connection\n");
 		addr_len = sizeof(struct sockaddr_in);
 
 		client_socket = accept(server_socket,
@@ -38,7 +35,7 @@ int Server::connect_server(void)
 
 		if (client_socket != -1)
 		{
-			printf("Connection established.\n");
+			printf("Connection established\n");
 			result = EXIT_SUCCESS;
 		}
 		else
@@ -58,7 +55,7 @@ int Server::prepare_server(void)
 
     if (server_socket != -1)
     {
-		printf("Socket created\n");
+		printf("Server created\n");
 
 		server_address.sin_family = AF_INET;
 		server_address.sin_addr.s_addr = INADDR_ANY;
@@ -83,11 +80,11 @@ int Server::prepare_server(void)
 
 void Server::close_connection(void)
 {
-	if (server_socket != -1)
-		close(server_socket);
-
 	if (client_socket != -1)
 		close(client_socket);
+
+	if (server_socket != -1)
+		close(server_socket);
 }
 
 int Server::open_connection(void)
@@ -104,14 +101,73 @@ int Server::open_connection(void)
 	return result;
 }
 
-int Server::receive_data(void * buffer, unsigned int length)
+int Server::receive_buffer(void * buffer, size_t length)
 {
 	return recv(client_socket, buffer, length, 0);
 }
 
-int Server::send_data(void * buffer, unsigned int length)
+int Server::receive_buffer(std::string & string)
+{
+	int result;
+
+	std::string i_string(buffer_length, (char) 0);
+
+	result = receive_buffer((void *)i_string.data(), i_string.size());
+
+	if (result != -1)
+	{
+		string = i_string;
+		string.resize(result);
+	}
+
+	return result;
+}
+
+int Server::receive_buffer(ByteVector & vector)
+{
+	int result;
+
+	ByteVector i_vector(buffer_length);
+
+	result = receive_buffer(i_vector.data(), i_vector.size());
+
+	if (result != -1)
+	{
+		vector = i_vector;
+		vector.resize(result);
+	}
+
+	return result;
+}
+
+int Server::send_buffer(void * buffer, size_t length)
 {
 	return send(client_socket, buffer, length, 0);
+}
+
+int Server::send_buffer(const char * array)
+{
+	return send_buffer((void *) array, strlen(array));
+}
+
+int Server::send_buffer(std::string & string)
+{
+	return send_buffer((void *)string.data(), string.size());
+}
+
+int Server::send_buffer(ByteVector & vector)
+{
+	return send_buffer((void *)vector.data(), vector.size());
+}
+
+void Server::set_buffer_length(size_t length)
+{
+	buffer_length = length;
+}
+
+size_t Server::get_buffer_length()
+{
+	return buffer_length;
 }
 
 Server::~Server()

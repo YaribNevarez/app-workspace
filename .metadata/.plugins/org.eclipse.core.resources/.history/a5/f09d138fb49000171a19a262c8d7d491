@@ -1,0 +1,55 @@
+/*
+ * systool.cpp
+ *
+ *  Created on: Aug 30, 2017
+ *      Author: root
+ */
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include "systool.hpp"
+#include "framework/zybo.hpp"
+
+SystemTool::SystemTool()
+{
+	serverFeature = new ServerFeature(&ZYNQ_PMOD_HANDLER, 7777);
+	register_feature((SystemFeature *) serverFeature);
+}
+
+SystemTool::ServerFeature::ServerFeature(DeviceHandler * device_handler, uint16_t host_port):
+		SystemFeature(device_handler),
+		server(host_port)
+{
+}
+
+int SystemTool::ServerFeature::run(void)
+{
+	int result = server.open_connection();
+
+	if (result == SUCCESS)
+	{
+		ByteVector buffer;
+		do
+		{
+			if (server.receive_buffer(buffer) != -1)
+		} while(1);
+
+		server.close_connection();
+	}
+
+	return result;
+}
+
+int SystemTool::run(void)
+{
+	start();
+
+	for (;;);
+    return 0;
+}
+
+SystemTool::~SystemTool()
+{
+}

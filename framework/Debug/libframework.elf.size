@@ -1,6 +1,6 @@
    text	   data	    bss	    dec	    hex	filename
    6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
-   8232	      4	     12	   8248	   2038	devicehandler.o (ex libframework.elf)
+  10072	      4	     12	  10088	   2768	devicehandler.o (ex libframework.elf)
    3100	      0	      0	   3100	    c1c	devices.o (ex libframework.elf)
-   1360	      0	      0	   1360	    550	server.o (ex libframework.elf)
+  11792	      4	      4	  11800	   2e18	server.o (ex libframework.elf)
    5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)

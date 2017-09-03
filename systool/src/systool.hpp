@@ -21,7 +21,24 @@ public:
 
 protected:
 
-	Server * server;
+	class ServerFeature: public SystemFeature
+	{
+	public:
+		ServerFeature(DeviceHandler *, uint16_t);
+		virtual int run(void);
+		virtual int command_handler(std::string);
+		virtual int command_handler(ByteVector);
+
+	protected:
+		enum
+		{
+			EXECUTE = 0x80
+		};
+		Server server;
+		uint8_t flags;
+	};
+
+	ServerFeature * serverFeature;
 };
 
 #endif /* SYSTOOL_HPP_ */

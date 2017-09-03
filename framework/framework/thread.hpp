@@ -15,7 +15,7 @@
 class Runnable
 {
 public:
-	virtual int run() = 0;
+	virtual int run(void) = 0;
 };
 
 class Thread: public Runnable

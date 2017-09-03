@@ -1,4 +1,4 @@
-01:32:22 **** Auto Build of configuration Debug for project ctrlapp ****
+22:26:11 **** Auto Build of configuration Debug for project ctrlapp ****
 make all 
 Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
 Invoking: ARM Linux g++ compiler
@@ -13,9 +13,9 @@ Finished building target: ctrlapp.elf
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1023272	  14996	  39928	1078196	 1073b4	ctrlapp.elf
+1035340	  15000	  39936	1090276	 10a2e4	ctrlapp.elf
 Finished building: ctrlapp.elf.size
  
 
-01:32:23 Build Finished (took 640ms)
+22:26:12 Build Finished (took 927ms)
 

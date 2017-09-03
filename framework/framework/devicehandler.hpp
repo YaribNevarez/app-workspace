@@ -45,7 +45,10 @@ class Device
 public:
 	Device(DeviceHandler *, DeviceIdentity *);
 
-	static Device *    get_instanceByID(DeviceID);
+	typedef std::vector<Device *> InstanceVector;
+
+	static Device *       get_instanceByID(DeviceID);
+	static InstanceVector get_instanceVector(void);
 
 	int 			get_ID(void);
 	std::string     get_name(void);
@@ -60,7 +63,7 @@ protected:
 	DeviceID		device_ID;
 	std::string     device_name;
 private:
-	static std::vector<Device *> instances;
+	static InstanceVector instances;
 };
 
 #endif /* PORTDRIVER_HPP_ */

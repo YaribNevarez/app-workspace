@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+#define SUCCESS 0
+
 typedef unsigned char DeviceID;
 typedef unsigned int  Data;
 
