@@ -1,0 +1,30 @@
+/*
+ * server.hpp
+ *
+ *  Created on: Sep 3, 2017
+ *      Author: root
+ */
+
+#ifndef SERVER_HPP_
+#define SERVER_HPP_
+
+
+class Server
+{
+public:
+	ServerFeature(void);
+
+	virtual int prepare_server(uint16_t host);
+	virtual int connect_server(void);
+	virtual void close_connection(void);
+
+	virtual ~ServerFeature(void);
+private:
+	int server_socket;
+	int client_socket;
+	struct sockaddr_in server_address;
+	struct sockaddr_in client_address;
+};
+
+
+#endif /* SERVER_HPP_ */

@@ -1,21 +1,21 @@
-19:58:24 **** Auto Build of configuration Debug for project systool ****
+01:35:13 **** Auto Build of configuration Debug for project systool ****
 make all 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Building file: ../src/systool.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
  
 Building target: systool.elf
 Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
 Finished building target: systool.elf
  
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 900452	  12648	  37704	 950804	  e8214	systool.elf
+ 900684	  12648	  37704	 951036	  e82fc	systool.elf
 Finished building: systool.elf.size
  
 
-19:58:25 Build Finished (took 919ms)
+01:35:14 Build Finished (took 636ms)
 
