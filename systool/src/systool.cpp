@@ -26,20 +26,24 @@ SystemTool::ServerFeature::ServerFeature(DeviceHandler * device_handler, uint16_
 {
 }
 
-int SystemTool::ServerFeature::command_handler(std::string command)
+int SystemTool::ServerFeature::command_handler(std::string command, std::string & answer)
 {
-	std::string answer;
+	Device::InstanceVector devices = Device::get_instanceVector();
+	answer.clear();
 
-	printf("Command: %s\n", command.c_str());
-
-	if (command.compare(0, 4, "EXIT") == 0)
+	if (devices.empty())
 	{
-		printf("Exit server...\n");
+		answer = "________________________________________\n";
+		answer += "NO REGISTERED DEVICES\n";
+		answer += "________________________________________\n";
+	}
+	else if (command.compare(0, 4, "EXIT") == 0)
+	{
+		answer = "Exit server...\n";
 		flags &= ~ EXECUTE;
 	}
 	else
 	{
-		Device::InstanceVector devices = Device::get_instanceVector();
 		Device * device = NULL;
 
 		for (unsigned i = 0; i < devices.size(); i ++)
@@ -54,64 +58,56 @@ int SystemTool::ServerFeature::command_handler(std::string command)
 
 		if (device != NULL)
 		{
-			if (dynamic_cast<LevelSensor *>(device))
+			uint32_t data;
+			bool device_access;
+			std::string::size_type token_equal;
+
+			token_equal = command.find("=", device->get_name().size());
+
+			if (token_equal == string::npos)
 			{
-				printf("%s\n", device->get_name().c_str());
-			}
-			else if(dynamic_cast<LeakageSensor *>(device))
-			{
-				printf("%s\n", device->get_name().c_str());
-			}
-			else if(dynamic_cast<IRSensor *>(device))
-			{
-				printf("%s\n", device->get_name().c_str());
-			}
-			else if(dynamic_cast<Valve *>(device))
-			{
-				printf("%s\n", device->get_name().c_str());
-				if (command.compare(device->get_name().size(), 3, " = ") == 0)
-				{
-					unsigned i = command.find(";", device->get_name().size() + 3);
-					printf("End (;): %d\n", i);
-					if (i != string::npos)
-					{
-						int data;
-						data = strtoul(command.substr(device->get_name().size() + 3, i).c_str(), NULL, 0);
-						printf("Data: %d\n", data);
-						((Valve *)device)->set_position((Valve::Position) data);
-					}
-				}
-			}
-			else if(dynamic_cast<OutputPin *>(device))
-			{
-				printf("%s\n", device->get_name().c_str());
-			}
-			else if(dynamic_cast<InputPin *>(device))
-			{
-				printf("%s\n", device->get_name().c_str());
-			}
-			else if(dynamic_cast<OutputVector *>(device))
-			{
-				printf("%s\n", device->get_name().c_str());
-			}
-			else if(dynamic_cast<InputVector *>(device))
-			{
-				printf("%s\n", device->get_name().c_str());
+				device_access = device->read(& data);
+				answer = "[READ] ";
 			}
 			else
 			{
-				printf("%s\n", device->get_name().c_str());
+				data = strtoul(command.substr(token_equal + 1).c_str(), NULL, 0);
+				device_access = device->write(data);
+				answer = "[WRITE] ";
 			}
-		}
-		else
-		{
-			server.send_buffer("Command not found\n");
+
+			if (device_access)
+			{
+				char c_answer[128];
+				sprintf(c_answer, "%s : 0x%X\n", device->get_name().c_str(), data);
+				answer += c_answer;
+			}
+			else
+			{
+				answer += "Couldn't access device: " + device->get_name() + "\n";
+			}
+			answer += "________________________________________\n";
 		}
 	}
+
+	if (answer.empty())
+	{
+		answer = "_________________ HELP _________________\n";
+		answer += "List of devices:\n\n";
+		for (unsigned i = 0; i < devices.size(); i ++)
+		{
+			answer += devices[i]->get_name() + "\n";
+		}
+		answer += "\n * Example reading:\n" + devices[0]->get_name() + "     (hit ENTER key)\n";
+		answer += "\n * Example writing:\n" + devices[0]->get_name() + " = 1 (hit ENTER key)\n";
+		answer += "\n * Exit commander:\nEXIT (hit ENTER key)\n";
+		answer += "________________________________________\n";
+	}
+
 	return SUCCESS;
 }
 
-int SystemTool::ServerFeature::command_handler(ByteVector command)
+int SystemTool::ServerFeature::command_handler(ByteVector command, ByteVector & answer)
 {
 	return SUCCESS;
 }
@@ -122,18 +118,17 @@ int SystemTool::ServerFeature::run(void)
 
 	if (result == SUCCESS)
 	{
-		ByteVector buffer;
+		ByteVector  buffer;
+		std::string answer;
+
 		do
 		{
 			if (server.receive_buffer(buffer) > 0)
 			{
 				if (std::isalpha(buffer[0]))
 				{
-					command_handler(std::string((const char *)buffer.data()));
-				}
-				else
-				{
-					command_handler(buffer);
+					command_handler(std::string((const char *)buffer.data()), answer);
+					server.send_buffer(answer);
 				}
 			}
 		} while(flags & EXECUTE);

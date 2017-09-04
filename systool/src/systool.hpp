@@ -26,8 +26,8 @@ protected:
 	public:
 		ServerFeature(DeviceHandler *, uint16_t);
 		virtual int run(void);
-		virtual int command_handler(std::string);
-		virtual int command_handler(ByteVector);
+		virtual int command_handler(std::string, std::string &);
+		virtual int command_handler(ByteVector, ByteVector &);
 
 	protected:
 		enum

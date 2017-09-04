@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <pthread.h>
+#include "stdint.h"
 #include "iodef.hpp"
 
 using namespace std;
@@ -53,11 +54,11 @@ public:
 	int 			get_ID(void);
 	std::string     get_name(void);
 
-	virtual 		~Device();
+	bool			write(uint32_t);
+	bool			read(uint32_t *);
 
+	virtual 		~Device();
 protected:
-	bool			write(int);
-	bool			read(int *);
 	pthread_mutex_t mutex;
 	DeviceHandler *	device_handler;
 	DeviceID		device_ID;

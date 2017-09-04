@@ -184,33 +184,34 @@ Device::InstanceVector Device::get_instanceVector(void)
 	return instances;
 }
 
-bool Device::write(int data)
+bool Device::write(uint32_t data)
 {
 	bool result = false;
 	pthread_mutex_lock(&mutex);
-	//while (pthread_mutex_trylock(&mutex) != 0) usleep(1000);
 	if (device_handler != NULL)
 	{
 		IOPacket packet;
 		packet.device_ID = device_ID;
 		packet.data = data;
 
-		result = device_handler->write(&packet, sizeof(packet)) == sizeof(packet);
+		result = device_handler->write(&packet, sizeof(packet)) > 0;
 	}
 	pthread_mutex_unlock(&mutex);
 	return result;
 }
 
-bool Device::read(int * data)
+bool Device::read(uint32_t * data)
 {
 	bool result = false;
 	pthread_mutex_lock(&mutex);
-	//while (pthread_mutex_trylock(&mutex) != 0) usleep(1000);
 	if (device_handler != NULL)
 	{
 		IOPacket packet;
 
-		device_handler->IORequest(&packet, sizeof(packet), DeviceHandler::QUERY, device_ID);
+		result = device_handler->IORequest(&packet,
+										   sizeof(packet),
+										   DeviceHandler::QUERY,
+										   device_ID) > 0;
 
 		if (packet.device_ID == device_ID)
 		{

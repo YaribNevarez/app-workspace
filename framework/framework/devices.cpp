@@ -15,7 +15,7 @@ Device(device_handler, identity)
 LevelSensor::Status LevelSensor::get_level(void)
 {
 	Status status;
-	read((int *) & status);
+	read((uint32_t *) & status);
 	return status;
 }
 
@@ -28,7 +28,7 @@ Device(device_handler, identity)
 LeakageSensor::Status LeakageSensor::get_status(void)
 {
 	Status status;
-	read((int *) & status);
+	read((uint32_t *) & status);
 	return status;
 }
 
@@ -41,7 +41,7 @@ Device(device_handler, identity)
 IRSensor::Status IRSensor::get_status(void)
 {
 	Status status;
-	read((int *) & status);
+	read((uint32_t *) & status);
 	return status;
 }
 
@@ -51,7 +51,7 @@ Valve::Valve(DeviceHandler * device_handler, DeviceIdentity * identity):
 Device(device_handler, identity)
 {}
 
-bool     Valve::set_position(Position position)
+bool Valve::set_position(Position position)
 {
 	return write((int) position);
 }
@@ -59,7 +59,7 @@ bool     Valve::set_position(Position position)
 Valve::Position Valve::get_position(void)
 {
 	Position position;
-	read((int *) & position);
+	read((uint32_t *) & position);
 	return position;
 }
 
@@ -83,7 +83,7 @@ Device(device_handler, identity)
 InputPin::Status InputPin::get_status(void)
 {
 	Status status;
-	read((int *) & status);
+	read((uint32_t *) & status);
 	return status;
 }
 
@@ -107,7 +107,7 @@ Device(device_handler, identity)
 int InputVector::get_value(void)
 {
 	int status;
-	read(& status);
+	read((uint32_t *) & status);
 	return status;
 }
 
