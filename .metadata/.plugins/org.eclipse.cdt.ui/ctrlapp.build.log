@@ -1,9 +1,39 @@
-15:36:13 **** Auto Build of configuration Debug for project ctrlapp ****
+12:19:44 **** Auto Build of configuration Debug for project ctrlapp ****
 make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+ 
 Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
 Invoking: ARM Linux g++ compiler
 arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devicehandler.o" -MMD -MP -MF"framework/devicehandler.d" -MT"framework/devicehandler.d" -o "framework/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp"
 Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/devices.o" -MMD -MP -MF"framework/devices.d" -MT"framework/devices.d" -o "framework/devices.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
  
 Building target: ctrlapp.elf
 Invoking: ARM Linux g++ linker
@@ -17,5 +47,5 @@ arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
 Finished building: ctrlapp.elf.size
  
 
-15:36:14 Build Finished (took 823ms)
+12:19:46 Build Finished (took 2s.900ms)
 
