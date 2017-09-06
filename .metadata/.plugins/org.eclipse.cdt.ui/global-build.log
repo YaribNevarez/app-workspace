@@ -43991,3 +43991,1968 @@ arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
 1036236	  15004	  39936	1091176	 10a668	systool.elf
 Finished building: systool.elf.size
  
+02:06:17 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035420	  15000	  39936	1090356	 10a334	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+02:06:20 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "../framework/server.cpp"
+Finished building: ../framework/server.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11820	      4	      4	  11828	   2e34	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+02:06:21 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036252	  15004	  39936	1091192	 10a678	systool.elf
+Finished building: systool.elf.size
+ 
+02:06:27 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035420	  15000	  39936	1090356	 10a334	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+02:06:29 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "../framework/server.cpp"
+Finished building: ../framework/server.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11820	      4	      4	  11828	   2e34	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+02:06:31 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035420	  15000	  39936	1090356	 10a334	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+02:06:33 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "../framework/server.cpp"
+Finished building: ../framework/server.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11820	      4	      4	  11828	   2e34	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+02:06:35 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036252	  15004	  39936	1091192	 10a678	systool.elf
+Finished building: systool.elf.size
+ 
+02:06:54 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035420	  15000	  39936	1090356	 10a334	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+02:06:57 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "../framework/server.cpp"
+Finished building: ../framework/server.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11820	      4	      4	  11828	   2e34	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+02:06:58 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036252	  15004	  39936	1091192	 10a678	systool.elf
+Finished building: systool.elf.size
+ 
+02:10:58 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In constructor 'SystemTool::ServerFeature::ServerFeature(DeviceHandler*, uint16_t)':
+../src/systool.cpp:25:9: error: 'EXECUTE' was not declared in this scope
+   flags(EXECUTE)
+         ^
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:43:14: error: 'EXECUTE' was not declared in this scope
+   flags &= ~ EXECUTE;
+              ^
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:134:19: error: 'EXECUTE' was not declared in this scope
+   } while(flags & EXECUTE);
+                   ^
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+02:11:09 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In constructor 'SystemTool::ServerFeature::ServerFeature(DeviceHandler*, uint16_t)':
+../src/systool.cpp:25:9: error: 'EXECUTE' was not declared in this scope
+   flags(EXECUTE)
+         ^
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:43:14: error: 'EXECUTE' was not declared in this scope
+   flags &= ~ EXECUTE;
+              ^
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::run()':
+../src/systool.cpp:134:19: error: 'EXECUTE' was not declared in this scope
+   } while(flags & EXECUTE);
+                   ^
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+02:11:35 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036252	  15004	  39936	1091192	 10a678	systool.elf
+Finished building: systool.elf.size
+ 
+02:18:24 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp:110:5: error: prototype for 'int SystemTool::ServerFeature::command_handler(ByteVector, ByteVector&)' does not match any in class 'SystemTool::ServerFeature'
+ int SystemTool::ServerFeature::command_handler(ByteVector command, ByteVector & answer)
+     ^
+../src/systool.cpp:29:5: error: candidate is: virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)
+ int SystemTool::ServerFeature::command_handler(std::string command, std::string & answer)
+     ^
+In file included from ../src/systool.cpp:13:0:
+../src/systool.hpp:24:8: error: 'class SystemTool::ServerFeature' is protected
+  class ServerFeature: public SystemFeature
+        ^
+../src/systool.cpp:110:5: error: within this context
+ int SystemTool::ServerFeature::command_handler(ByteVector command, ByteVector & answer)
+     ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+02:18:36 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036172	  15004	  39936	1091112	 10a628	systool.elf
+Finished building: systool.elf.size
+ 
+02:19:48 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_executing()':
+../src/systool.cpp:112:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_connected()':
+../src/systool.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036244	  15004	  39936	1091184	 10a670	systool.elf
+Finished building: systool.elf.size
+ 
+02:20:49 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_executing()':
+../src/systool.cpp:112:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_connected()':
+../src/systool.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::get_flag(unsigned int)':
+../src/systool.cpp:128:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036372	  15004	  39936	1091312	 10a6f0	systool.elf
+Finished building: systool.elf.size
+ 
+02:23:57 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_executing()':
+../src/systool.cpp:112:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_connected()':
+../src/systool.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::get_flag(unsigned int)':
+../src/systool.cpp:128:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035436	  15004	  39936	1090376	 10a348	systool.elf
+Finished building: systool.elf.size
+ 
+02:24:52 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_executing()':
+../src/systool.cpp:112:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_connected()':
+../src/systool.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: At global scope:
+../src/systool.cpp:118:6: error: prototype for 'void SystemTool::ServerFeature::set_flag(unsigned int)' does not match any in class 'SystemTool::ServerFeature'
+ void SystemTool::ServerFeature::set_flag(unsigned)
+      ^
+In file included from ../src/systool.cpp:13:0:
+../src/systool.hpp:41:8: error: candidate is: void SystemTool::ServerFeature::set_flag(uint8_t)
+   void set_flag(uint8_t);
+        ^
+../src/systool.hpp:24:8: error: 'class SystemTool::ServerFeature' is protected
+  class ServerFeature: public SystemFeature
+        ^
+../src/systool.cpp:118:6: error: within this context
+ void SystemTool::ServerFeature::set_flag(unsigned)
+      ^
+../src/systool.cpp:122:6: error: prototype for 'void SystemTool::ServerFeature::clear_flag(unsigned int)' does not match any in class 'SystemTool::ServerFeature'
+ void SystemTool::ServerFeature::clear_flag(unsigned)
+      ^
+In file included from ../src/systool.cpp:13:0:
+../src/systool.hpp:42:8: error: candidate is: void SystemTool::ServerFeature::clear_flag(uint8_t)
+   void clear_flag(uint8_t);
+        ^
+../src/systool.hpp:24:8: error: 'class SystemTool::ServerFeature' is protected
+  class ServerFeature: public SystemFeature
+        ^
+../src/systool.cpp:122:6: error: within this context
+ void SystemTool::ServerFeature::clear_flag(unsigned)
+      ^
+../src/systool.cpp:126:6: error: prototype for 'bool SystemTool::ServerFeature::get_flag(unsigned int)' does not match any in class 'SystemTool::ServerFeature'
+ bool SystemTool::ServerFeature::get_flag(unsigned)
+      ^
+In file included from ../src/systool.cpp:13:0:
+../src/systool.hpp:43:8: error: candidate is: bool SystemTool::ServerFeature::get_flag(uint8_t)
+   bool get_flag(uint8_t);
+        ^
+../src/systool.hpp:24:8: error: 'class SystemTool::ServerFeature' is protected
+  class ServerFeature: public SystemFeature
+        ^
+../src/systool.cpp:126:6: error: within this context
+ bool SystemTool::ServerFeature::get_flag(unsigned)
+      ^
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+02:25:03 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_executing()':
+../src/systool.cpp:112:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_connected()':
+../src/systool.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::get_flag(uint8_t)':
+../src/systool.cpp:129:1: error: expected ';' before '}' token
+ }
+ ^
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+02:25:38 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_executing()':
+../src/systool.cpp:112:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_connected()':
+../src/systool.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035500	  15004	  39936	1090440	 10a388	systool.elf
+Finished building: systool.elf.size
+ 
+02:26:05 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_executing()':
+../src/systool.cpp:112:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_connected()':
+../src/systool.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035564	  15004	  39936	1090504	 10a3c8	systool.elf
+Finished building: systool.elf.size
+ 
+02:26:29 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_executing()':
+../src/systool.cpp:113:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_connected()':
+../src/systool.cpp:118:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035604	  15004	  39936	1090544	 10a3f0	systool.elf
+Finished building: systool.elf.size
+ 
+02:26:46 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_executing()':
+../src/systool.cpp:113:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/systool.cpp: In member function 'bool SystemTool::ServerFeature::is_connected()':
+../src/systool.cpp:118:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035540	  15004	  39936	1090480	 10a3b0	systool.elf
+Finished building: systool.elf.size
+ 
+02:27:05 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035540	  15004	  39936	1090480	 10a3b0	systool.elf
+Finished building: systool.elf.size
+ 
+02:27:14 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035540	  15004	  39936	1090480	 10a3b0	systool.elf
+Finished building: systool.elf.size
+ 
+02:30:22 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::run()':
+../src/systool.cpp:163:39: error: 'pritnf' was not declared in this scope
+  pritnf("Welcome to the local DevTool");
+                                       ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+02:30:35 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::run()':
+../src/systool.cpp:168:14: error: 'pritnf' was not declared in this scope
+  pritnf("Bye");
+              ^
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+02:30:41 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::run()':
+../src/systool.cpp:168:14: error: 'pritnf' was not declared in this scope
+  pritnf("Bye");
+              ^
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+02:30:49 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035700	  15004	  39936	1090640	 10a450	systool.elf
+Finished building: systool.elf.size
+ 
+02:31:46 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+02:31:58 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+02:32:00 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+02:32:02 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+02:32:20 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+02:33:22 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+03:29:27 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+03:33:47 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035420	  15000	  39936	1090356	 10a334	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+03:33:49 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "../framework/application.cpp"
+Finished building: ../framework/application.cpp
+ 
+Building file: ../framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "../framework/systembox.cpp"
+Finished building: ../framework/systembox.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11820	      4	      4	  11828	   2e34	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+03:33:50 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/systembox.o" -MMD -MP -MF"framework/systembox.d" -MT"framework/systembox.d" -o "framework/systembox.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035700	  15004	  39936	1090640	 10a450	systool.elf
+Finished building: systool.elf.size
+ 
+03:33:57 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+03:36:49 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+03:37:38 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+03:38:41 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+03:39:08 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035700	  15004	  39936	1090640	 10a450	systool.elf
+Finished building: systool.elf.size
+ 
+03:39:25 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+03:40:04 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+03:42:43 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035428	  15000	  39936	1090364	 10a33c	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+03:42:44 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "../framework/server.cpp"
+Finished building: ../framework/server.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11828	      4	      4	  11836	   2e3c	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+03:42:44 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035708	  15004	  39936	1090648	 10a458	systool.elf
+Finished building: systool.elf.size
+ 
+03:42:46 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035420	  15000	  39936	1090356	 10a334	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+03:42:47 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "../framework/server.cpp"
+Finished building: ../framework/server.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11820	      4	      4	  11828	   2e34	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+03:42:47 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035700	  15004	  39936	1090640	 10a450	systool.elf
+Finished building: systool.elf.size
+ 
+03:57:14 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035700	  15004	  39936	1090640	 10a450	systool.elf
+Finished building: systool.elf.size
+ 
+03:57:45 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035636	  15004	  39936	1090576	 10a410	systool.elf
+Finished building: systool.elf.size
+ 
+03:57:51 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035636	  15004	  39936	1090576	 10a410	systool.elf
+Finished building: systool.elf.size
+ 
+03:58:13 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035700	  15004	  39936	1090640	 10a450	systool.elf
+Finished building: systool.elf.size
+ 
+03:58:28 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035764	  15004	  39936	1090704	 10a490	systool.elf
+Finished building: systool.elf.size
+ 
+04:01:21 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:41:9: error: no match for 'operator<<' (operand types are 'std::string {aka std::basic_string<char>}' and 'int')
+   answer<<10;
+         ^
+../src/systool.cpp:41:9: note: candidates are:
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/string:52:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.hpp:10,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:11,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:11,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/basic_string.h:2772:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/basic_string.h:2772:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:609:0,
+                 from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<10;
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<10;
+           ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:01:27 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:41:9: error: no match for 'operator<<' (operand types are 'std::string {aka std::basic_string<char>}' and 'int')
+   answer<<(int)10;
+         ^
+../src/systool.cpp:41:9: note: candidates are:
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/string:52:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.hpp:10,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:11,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:11,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/basic_string.h:2772:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/basic_string.h:2772:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:609:0,
+                 from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<(int)10;
+                ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:16: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<(int)10;
+                ^
+make: *** [src/systool.o] Error 1
+04:01:46 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp:41:11: warning: missing terminating " character
+   answer<<"10;
+           ^
+../src/systool.cpp:41:3: error: missing terminating " character
+   answer<<"10;
+   ^
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:42:2: error: expected primary-expression before '}' token
+  }
+  ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:01:56 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:41:9: error: no match for 'operator<<' (operand types are 'std::string {aka std::basic_string<char>}' and 'const char [3]')
+   answer<<"10";
+         ^
+../src/systool.cpp:41:9: note: candidates are:
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/string:52:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.hpp:10,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:11,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:11,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/basic_string.h:2772:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/basic_string.h:2772:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:609:0,
+                 from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<"10";
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/iostream:39:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.hpp:15,
+                 from ../src/systool.hpp:12,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/systool.cpp:41:11: note:   'std::string {aka std::basic_string<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+   answer<<"10";
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+           ^
+make: *** [src/systool.o] Error 1
+04:03:47 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:42:36: error: 'device' was not declared in this scope
+   sprintf(c_answer, "%s : 0x%X\n", device->get_name().c_str(), data);
+                                    ^
+../src/systool.cpp:42:64: error: 'data' was not declared in this scope
+   sprintf(c_answer, "%s : 0x%X\n", device->get_name().c_str(), data);
+                                                                ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:03:52 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:42:36: error: 'device' was not declared in this scope
+   sprintf(c_answer, "%s : 0x%X\n", device->get_name().c_str(), data);
+                                    ^
+../src/systool.cpp:42:64: error: 'data' was not declared in this scope
+   sprintf(c_answer, "%s : 0x%X\n", device->get_name().c_str(), data);
+                                                                ^
+make: *** [src/systool.o] Error 1
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+04:04:15 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:42:52: error: 'data' was not declared in this scope
+   sprintf(c_answer, "%s : 0x%X\n", devices.size(), data);
+                                                    ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:04:33 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:42:45: error: 'data' was not declared in this scope
+   sprintf(c_answer, "%d\n", devices.size(), data);
+                                             ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:04:44 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035540	  15004	  39936	1090480	 10a3b0	systool.elf
+Finished building: systool.elf.size
+ 
+04:04:53 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035540	  15004	  39936	1090480	 10a3b0	systool.elf
+Finished building: systool.elf.size
+ 
+04:06:52 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035520	  15004	  39936	1090460	 10a39c	systool.elf
+Finished building: systool.elf.size
+ 
+04:08:18 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035540	  15004	  39936	1090480	 10a3b0	systool.elf
+Finished building: systool.elf.size
+ 
+04:10:49 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035540	  15004	  39936	1090480	 10a3b0	systool.elf
+Finished building: systool.elf.size
+ 
+04:15:19 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+../src/systool.cpp: In member function 'virtual int SystemTool::ServerFeature::command_handler(std::string, std::string&)':
+../src/systool.cpp:50:11: error: invalid conversion from 'Device*' to 'char' [-fpermissive]
+    answer = devices[i];
+           ^
+In file included from /opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/string:52:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/devicehandler.hpp:10,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/devices.hpp:11,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/systembox.hpp:12,
+                 from /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.hpp:14,
+                 from ../src/systool.hpp:11,
+                 from ../src/systool.cpp:13:
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.9.2/bits/basic_string.h:573:7: note: initializing argument 1 of 'std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::operator=(_CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'
+       operator=(_CharT __c) 
+       ^
+src/subdir.mk:21: recipe for target 'src/systool.o' failed
+make: *** [src/systool.o] Error 1
+04:15:35 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035892	  15004	  39936	1090832	 10a510	systool.elf
+Finished building: systool.elf.size
+ 
+04:16:19 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035900	  15004	  39936	1090840	 10a518	systool.elf
+Finished building: systool.elf.size
+ 
+04:17:51 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:23:22 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035900	  15004	  39936	1090840	 10a518	systool.elf
+Finished building: systool.elf.size
+ 
+04:24:24 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035976	  15004	  39936	1090916	 10a564	systool.elf
+Finished building: systool.elf.size
+ 
+04:30:41 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036104	  15004	  39936	1091044	 10a5e4	systool.elf
+Finished building: systool.elf.size
+ 
+04:31:46 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:37:25 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036104	  15004	  39936	1091044	 10a5e4	systool.elf
+Finished building: systool.elf.size
+ 
+04:37:29 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:37:47 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:37:59 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:38:16 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:38:55 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036104	  15004	  39936	1091044	 10a5e4	systool.elf
+Finished building: systool.elf.size
+ 
+04:39:03 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:43:09 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035420	  15000	  39936	1090356	 10a334	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+04:43:10 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "../framework/server.cpp"
+Finished building: ../framework/server.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11844	      4	      4	  11852	   2e4c	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+04:43:10 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036168	  15004	  39936	1091108	 10a624	systool.elf
+Finished building: systool.elf.size
+ 
+04:44:15 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035420	  15000	  39936	1090356	 10a334	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+04:44:16 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "../framework/server.cpp"
+Finished building: ../framework/server.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11876	      4	      4	  11884	   2e6c	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+04:44:17 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036168	  15004	  39936	1091108	 10a624	systool.elf
+Finished building: systool.elf.size
+ 
+04:44:29 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1035420	  15000	  39936	1090356	 10a334	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+04:44:31 **** Auto Build of configuration Debug for project framework ****
+make all 
+Building file: ../framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "../framework/server.cpp"
+Finished building: ../framework/server.cpp
+ 
+Building target: libframework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libframework.elf"  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+arm-xilinx-linux-gnueabi-ar: creating libframework.elf
+Finished building target: libframework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libframework.elf  |tee "libframework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	      0	      0	   6944	   1b20	application.o (ex libframework.elf)
+  10088	      4	     12	  10104	   2778	devicehandler.o (ex libframework.elf)
+   3096	      0	      0	   3096	    c18	devices.o (ex libframework.elf)
+  11876	      4	      4	  11884	   2e6c	server.o (ex libframework.elf)
+   5096	    160	      0	   5256	   1488	systembox.o (ex libframework.elf)
+Finished building: libframework.elf.size
+ 
+04:44:31 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1036168	  15004	  39936	1091108	 10a624	systool.elf
+Finished building: systool.elf.size
+ 

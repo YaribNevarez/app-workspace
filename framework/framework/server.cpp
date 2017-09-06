@@ -40,7 +40,7 @@ int Server::connect_server(void)
 		}
 		else
 		{
-			perror("connection - Error");
+			perror("Connection - Error");
 		}
 	}
 
@@ -80,11 +80,18 @@ int Server::prepare_server(void)
 
 void Server::close_connection(void)
 {
-	if (client_socket != -1)
-		close(client_socket);
+	if ((client_socket != -1) || (server_socket != -1))
+	{
+		printf("Closing connection.\n");
 
-	if (server_socket != -1)
-		close(server_socket);
+		if (client_socket != -1)
+			close(client_socket);
+		client_socket = -1;
+
+		if (server_socket != -1)
+			close(server_socket);
+		server_socket = -1;
+	}
 }
 
 int Server::open_connection(void)

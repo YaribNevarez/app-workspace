@@ -27,13 +27,21 @@ protected:
 		ServerFeature(DeviceHandler *, uint16_t);
 		virtual int run(void);
 		virtual int command_handler(std::string, std::string &);
-		virtual int command_handler(ByteVector, ByteVector &);
+
+		bool is_executing(void);
+		bool is_connected(void);
 
 	protected:
 		enum
 		{
-			EXECUTE = 0x80
+			EXECUTING = 0x80,
+			CONNECTED = 0x40
 		};
+
+		inline void set_flag(uint8_t);
+		inline void clear_flag(uint8_t);
+		inline bool get_flag(uint8_t);
+
 		Server server;
 		uint8_t flags;
 	};

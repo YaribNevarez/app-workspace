@@ -61,7 +61,7 @@ public:
 		int result = -1;
 		if (thread != 0)
 		{
-			pthread_tryjoin_np(thread, (void **)&result);
+			result = pthread_tryjoin_np(thread, NULL);
 		}
 		return result == EBUSY;
 	}
