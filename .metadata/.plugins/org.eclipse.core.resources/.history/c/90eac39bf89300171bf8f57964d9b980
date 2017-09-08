@@ -1,0 +1,183 @@
+/*
+ * TcpServer.cpp
+ *
+ *  Created on: Sep 3, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+
+#include "tcpserver.hpp"
+
+TcpServer::TcpServer(uint16_t host_port, size_t buffer_length):
+buffer_length(buffer_length),
+host_port(host_port),
+server_socket(-1),
+client_socket(-1)
+{
+	memset(&server_address, 0, sizeof(server_address));
+	memset(&client_address, 0, sizeof(client_address));
+}
+
+int TcpServer::connect(void)
+{
+	int addr_len;
+	int result = EXIT_FAILURE;
+
+	if (server_socket != -1)
+	{
+		listen(server_socket , 1);
+
+		printf("Waiting for connection\n");
+		addr_len = sizeof(struct sockaddr_in);
+
+		client_socket = accept(server_socket,
+							  (struct sockaddr *) &client_address,
+							  (socklen_t*)&addr_len);
+
+		if (client_socket != -1)
+		{
+			printf("Connection established\n");
+			result = EXIT_SUCCESS;
+		}
+		else
+		{
+			perror("Connection - Error");
+		}
+	}
+
+	return result;
+}
+
+int TcpServer::prepare(void)
+{
+	int result = EXIT_FAILURE;
+
+    server_socket = socket(AF_INET , SOCK_STREAM , 0);
+
+    if (TcpServer_socket != -1)
+    {
+		printf("TcpServer created\n");
+
+		server_address.sin_family = AF_INET;
+		server_address.sin_addr.s_addr = INADDR_ANY;
+		server_address.sin_port = htons(host_port);
+
+		if(bind(server_socket, (struct sockaddr *)&server_address, sizeof(server_address)) == 0)
+		{
+			result = EXIT_SUCCESS;
+		}
+		else
+		{
+			perror("bind - Error");
+		}
+    }
+    else
+    {
+    	perror("socket - Error");
+    }
+
+    return result;
+}
+
+void TcpServer::close_connection(void)
+{
+	if ((client_socket != -1) || (server_socket != -1))
+	{
+		printf("Closing connection.\n");
+
+		if (client_socket != -1)
+			close(client_socket);
+		client_socket = -1;
+
+		if (server_socket != -1)
+			close(server_socket);
+		server_socket = -1;
+	}
+}
+
+int TcpServer::open_connection(void)
+{
+	int result;
+
+	result = prepare();
+
+	if (result == EXIT_SUCCESS)
+	{
+		result = connect();
+	}
+
+	return result;
+}
+
+int TcpServer::receive_buffer(void * buffer, size_t length)
+{
+	return recv(client_socket, buffer, length, 0);
+}
+
+int TcpServer::receive_buffer(std::string & string)
+{
+	int result;
+
+	std::string i_string(buffer_length, (char) 0);
+
+	result = receive_buffer((void *)i_string.data(), i_string.size());
+
+	if (result != -1)
+	{
+		string = i_string;
+		string.resize(result);
+	}
+
+	return result;
+}
+
+int TcpServer::receive_buffer(ByteVector & vector)
+{
+	int result;
+
+	ByteVector i_vector(buffer_length);
+
+	result = receive_buffer(i_vector.data(), i_vector.size());
+
+	if (result != -1)
+	{
+		vector = i_vector;
+		vector.resize(result);
+	}
+
+	return result;
+}
+
+int TcpServer::send_buffer(void * buffer, size_t length)
+{
+	return send(client_socket, buffer, length, 0);
+}
+
+int TcpServer::send_buffer(const char * array)
+{
+	return send_buffer((void *) array, strlen(array));
+}
+
+int TcpServer::send_buffer(std::string & string)
+{
+	return send_buffer((void *)string.data(), string.size());
+}
+
+int TcpServer::send_buffer(ByteVector & vector)
+{
+	return send_buffer((void *)vector.data(), vector.size());
+}
+
+void TcpServer::set_buffer_length(size_t length)
+{
+	buffer_length = length;
+}
+
+size_t TcpServer::get_buffer_length()
+{
+	return buffer_length;
+}
+
+TcpServer::~TcpServer()
+{
+	close_connection();
+}

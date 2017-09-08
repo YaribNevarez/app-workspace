@@ -12,11 +12,11 @@
 
 ControlApp::ControlApp()
 {
-	register_feature(new DrainFeature(&ZYNQ_PMOD_HANDLER));
-	register_feature(new FlushFeature(&ZYNQ_PMOD_HANDLER));
-	register_feature(new IRFeature(&ZYNQ_PMOD_HANDLER));
-	register_feature(new LeakageFeature(&ZYNQ_PMOD_HANDLER));
-	register_feature(new RelayFeature(&ZYNQ_PMOD_HANDLER));
+	register_thread(new DrainFeature(&ZYNQ_PMOD_HANDLER));
+	register_thread(new FlushFeature(&ZYNQ_PMOD_HANDLER));
+	register_thread(new IRFeature(&ZYNQ_PMOD_HANDLER));
+	register_thread(new LeakageFeature(&ZYNQ_PMOD_HANDLER));
+	register_thread(new RelayFeature(&ZYNQ_PMOD_HANDLER));
 }
 
 int ControlApp::DrainFeature::run(void)

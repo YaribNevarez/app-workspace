@@ -1,0 +1,88 @@
+/*
+ * TcpServer.cpp
+ *
+ *  Created on: Sep 3, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+
+#include "tcpserver.hpp"
+
+TcpServer::TcpServer(uint16_t host_port):
+host_port(host_port),
+server_socket(-1)
+{
+	memset(&server_address, 0, sizeof(server_address));
+}
+
+TcpSocket * TcpServer::accept_connection(void)
+{
+	TcpSocket * client = NULL;
+
+	if (server_socket != -1)
+	{
+		int                client_socket;
+		struct sockaddr_in client_address;
+		int                addr_len;
+
+		listen(server_socket , 1);
+
+		addr_len = sizeof(struct sockaddr_in);
+
+		client_socket = accept(server_socket,
+							  (struct sockaddr *) &client_address,
+							  (socklen_t*)&addr_len);
+
+		if (client_socket != -1)
+		{
+			client = new TcpSocket(client_socket, client_address);
+		}
+	}
+
+	return client;
+}
+
+int TcpServer::prepare(void)
+{
+	int result = EXIT_FAILURE;
+
+    server_socket = socket(AF_INET , SOCK_STREAM , 0);
+
+    if (server_socket != -1)
+    {
+		printf("TcpServer created\n");
+
+		server_address.sin_family = AF_INET;
+		server_address.sin_addr.s_addr = INADDR_ANY;
+		server_address.sin_port = htons(host_port);
+
+		if(bind(server_socket, (struct sockaddr *)&server_address, sizeof(server_address)) == 0)
+		{
+			result = EXIT_SUCCESS;
+		}
+		else
+		{
+			perror("bind - Error");
+		}
+    }
+    else
+    {
+    	perror("socket - Error");
+    }
+
+    return result;
+}
+
+void TcpServer::close_connection(void)
+{
+	if (server_socket != -1)
+	{
+		shutdown(server_socket, SHUT_RDWR);
+		close(server_socket);
+		server_socket = -1;
+	}
+}
+
+TcpServer::~TcpServer()
+{
+	close_connection();
+}

@@ -1,0 +1,30 @@
+/*
+ * commander.hpp
+ *
+ *  Created on: Sep 8, 2017
+ *      Author: root
+ */
+
+#ifndef COMMANDER_HPP_
+#define COMMANDER_HPP_
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <typeinfo>
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <iostream>
+#include <vector>
+
+class Commander
+{
+public:
+static bool process(std::string command, std::string & answer);
+};
+
+#endif /* COMMANDER_HPP_ */

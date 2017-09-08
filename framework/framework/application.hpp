@@ -20,11 +20,11 @@ public:
 	virtual ~Application();
 
 protected:
-	void register_feature(SystemFeature *);
+	void register_thread(Thread *);
 	int start(void);
 
 private:
-	std::vector<SystemFeature *> features;
+	std::vector<Thread *> threads;
 };
 
 

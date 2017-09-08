@@ -1,0 +1,17 @@
+/*
+ * commander.hpp
+ *
+ *  Created on: Sep 8, 2017
+ *      Author: root
+ */
+
+#ifndef COMMANDER_HPP_
+#define COMMANDER_HPP_
+
+class Commander
+{
+public:
+static int process();
+};
+
+#endif /* COMMANDER_HPP_ */

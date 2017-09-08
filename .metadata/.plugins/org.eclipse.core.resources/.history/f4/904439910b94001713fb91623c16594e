@@ -1,0 +1,27 @@
+/*
+ * tcpsocket.hpp
+ *
+ *  Created on: Sep 7, 2017
+ *      Author: root
+ */
+
+#ifndef TCPSOCKET_HPP_
+#define TCPSOCKET_HPP_
+#include<string.h>    //strlen
+#include<sys/socket.h>    //socket
+#include<arpa/inet.h> //inet_addr
+
+class TcpSocket
+{
+public:
+	TcpSocket(void);
+	~TcpSocket(void);
+
+protected:
+	int sock;
+	struct sockaddr_in server;
+};
+
+
+
+#endif /* TCPSOCKET_HPP_ */

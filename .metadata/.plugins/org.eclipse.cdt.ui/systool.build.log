@@ -1,21 +1,6 @@
-04:44:31 **** Auto Build of configuration Debug for project systool ****
+05:24:02 **** Incremental Build of configuration Debug for project systool ****
 make all 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/server.o" -MMD -MP -MF"framework/server.d" -MT"framework/server.d" -o "framework/server.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/server.cpp
- 
-Building target: systool.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/devicehandler.o ./framework/devices.o ./framework/server.o ./framework/systembox.o   
-Finished building target: systool.elf
- 
-Invoking: ARM Linux Print Size
-arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-1036168	  15004	  39936	1091108	 10a624	systool.elf
-Finished building: systool.elf.size
- 
+make: Nothing to be done for 'all'.
 
-04:44:32 Build Finished (took 870ms)
+05:24:03 Build Finished (took 114ms)
 

@@ -2,4 +2,18 @@
 <section name="Workbench">
 	<section name="GitImportWizard">
 	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item value="650" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="427" key="DIALOG_HEIGHT"/>
+		<item value="460" key="DIALOG_X_ORIGIN"/>
+		<item value="172" key="DIALOG_Y_ORIGIN"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
+	</section>
+	<section name="GitCommitSearchPage">
+		<item value="0" key="HISTORY_SIZE"/>
+	</section>
 </section>

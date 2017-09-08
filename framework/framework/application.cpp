@@ -12,18 +12,18 @@ Application::Application()
 
 Application::~Application()
 {
-	while (!features.empty())
+	while (!threads.empty())
 	{
-		if (features.back() != NULL)
-			delete features.back();
+		if (threads.back() != NULL)
+			delete threads.back();
 
-		features.pop_back();
+		threads.pop_back();
 	}
 }
 
-void Application::register_feature(SystemFeature * feature)
+void Application::register_thread(Thread * thread)
 {
-	features.push_back(feature);
+	threads.push_back(thread);
 }
 
 int Application::start(void)
@@ -31,10 +31,10 @@ int Application::start(void)
 	int result = EXIT_SUCCESS;
 
 	for (unsigned int i = 0;
-		(i < features.size()) && (result == EXIT_SUCCESS);
+		(i < threads.size()) && (result == EXIT_SUCCESS);
 		i ++)
 	{
-		result = features[i]->start();
+		result = threads[i]->start();
 	}
 
 	return result;

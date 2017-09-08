@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;systool/framework/server.cpp&apos; to &apos;tcpserver.cpp&apos;" description="Rename resource &apos;server.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="framework/server.cpp" name="tcpserver.cpp" stamp="1504807375542" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;systool/framework/server.hpp&apos; to &apos;tcpserver.hpp&apos;" description="Rename resource &apos;server.hpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="framework/server.hpp" name="tcpserver.hpp" stamp="1504807401246" updateReferences="true"/>
+</session>
