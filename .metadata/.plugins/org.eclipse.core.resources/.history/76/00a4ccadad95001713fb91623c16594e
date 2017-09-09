@@ -1,0 +1,18 @@
+/*
+ * daemon.hpp
+ *
+ *  Created on: Sep 10, 2017
+ *      Author: root
+ */
+
+#ifndef DAEMON_HPP_
+#define DAEMON_HPP_
+
+
+class Daemon
+{
+	static become(int flags);
+};
+
+
+#endif /* DAEMON_HPP_ */

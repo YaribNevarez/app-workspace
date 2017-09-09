@@ -2,7 +2,7 @@
  * commander.cpp
  *
  *  Created on: Sep 8, 2017
- *      Author: root
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
  */
 
 #include <stdio.h>

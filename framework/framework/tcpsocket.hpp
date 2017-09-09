@@ -2,7 +2,7 @@
  * tcpsocket.hpp
  *
  *  Created on: Sep 7, 2017
- *      Author: root
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
  */
 
 #ifndef TCPSOCKET_HPP_
