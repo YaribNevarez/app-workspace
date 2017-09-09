@@ -8,15 +8,18 @@
 #include <unistd.h>
 #include <iostream>
 #include "ctrlapp.hpp"
-#include "framework/zybo.hpp"
+#include "framework/systembox.hpp"
 
-ControlApp::ControlApp()
+using namespace SYSTEMBOX;
+
+ControlApp::ControlApp(int argc, char * argv[]):
+Application(argc, argv)
 {
-	register_thread(new DrainFeature(&ZYNQ_PMOD_HANDLER));
-	register_thread(new FlushFeature(&ZYNQ_PMOD_HANDLER));
-	register_thread(new IRFeature(&ZYNQ_PMOD_HANDLER));
-	register_thread(new LeakageFeature(&ZYNQ_PMOD_HANDLER));
-	register_thread(new RelayFeature(&ZYNQ_PMOD_HANDLER));
+	register_thread(new DrainFeature());
+	register_thread(new FlushFeature());
+	register_thread(new IRFeature());
+	register_thread(new LeakageFeature());
+	register_thread(new RelayFeature());
 }
 
 int ControlApp::DrainFeature::run(void)

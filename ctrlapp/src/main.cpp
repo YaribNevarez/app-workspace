@@ -3,9 +3,9 @@
  */
 #include "ctrlapp.hpp"
 
-int main()
+int main(int argc, char * argv[])
 {
-	ControlApp app;
+	ControlApp app(argc, argv);
 
 	return app.run();
 }

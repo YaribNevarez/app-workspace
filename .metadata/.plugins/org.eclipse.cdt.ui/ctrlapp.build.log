@@ -1,21 +1,6 @@
-04:00:54 **** Auto Build of configuration Debug for project ctrlapp ****
+03:15:18 **** Incremental Build of configuration Debug for project ctrlapp ****
 make all 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/tcpsocket.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/tcpsocket.o" -MMD -MP -MF"framework/tcpsocket.d" -MT"framework/tcpsocket.d" -o "framework/tcpsocket.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/tcpsocket.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/tcpsocket.cpp
- 
-Building target: ctrlapp.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/commander.o ./framework/devicehandler.o ./framework/devices.o ./framework/systembox.o ./framework/tcpserver.o ./framework/tcpsocket.o   
-Finished building target: ctrlapp.elf
- 
-Invoking: ARM Linux Print Size
-arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-1038512	  15004	  39936	1093452	 10af4c	ctrlapp.elf
-Finished building: ctrlapp.elf.size
- 
+make: Nothing to be done for 'all'.
 
-04:00:55 Build Finished (took 906ms)
+03:15:18 Build Finished (took 125ms)
 

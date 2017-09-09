@@ -13,7 +13,6 @@
 #include "stdint.h"
 #include "iodef.hpp"
 
-using namespace std;
 
 class DeviceHandler
 {
@@ -48,8 +47,8 @@ public:
 
 	typedef std::vector<Device *> InstanceVector;
 
-	static Device *       get_instanceByID(DeviceID);
-	static InstanceVector get_instanceVector(void);
+	static Device *         get_instanceByID(DeviceID);
+	static InstanceVector & get_instanceVector(void);
 
 	int 			get_ID(void);
 	std::string     get_name(void);
@@ -63,8 +62,6 @@ protected:
 	DeviceHandler *	device_handler;
 	DeviceID		device_ID;
 	std::string     device_name;
-private:
-	static InstanceVector instances;
 };
 
 #endif /* PORTDRIVER_HPP_ */

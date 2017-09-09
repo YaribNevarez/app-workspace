@@ -4,9 +4,9 @@
 
 #include "systool.hpp"
 
-int main()
+int main(int argc, char * argv[])
 {
-	SystemTool app;
+	SystemTool app(argc, argv);
 
 	return app.run();
 }

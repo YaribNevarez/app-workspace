@@ -16,54 +16,49 @@
 class ControlApp: public Application
 {
 public:
-	ControlApp();
+	ControlApp(int argc = 0, char * argv[] = NULL);
 	~ControlApp();
 
 	virtual int run(void);
 
 protected:
 
-	class DrainFeature: public SystemFeature
+	class DrainFeature: public Thread
 	{
 	public:
-		DrainFeature(DeviceHandler * device_handler):
-			SystemFeature(device_handler)
+		DrainFeature()
 		{}
 		virtual int run(void);
 	};
 
-	class FlushFeature: public SystemFeature
+	class FlushFeature: public Thread
 	{
 	public:
-		FlushFeature(DeviceHandler * device_handler):
-			SystemFeature(device_handler)
+		FlushFeature()
 		{}
 		virtual int run(void);
 	};
 
-	class IRFeature: public SystemFeature
+	class IRFeature: public Thread
 	{
 	public:
-		IRFeature(DeviceHandler * device_handler):
-			SystemFeature(device_handler)
+		IRFeature()
 		{}
 		virtual int run(void);
 	};
 
-	class LeakageFeature: public SystemFeature
+	class LeakageFeature: public Thread
 	{
 	public:
-		LeakageFeature(DeviceHandler * device_handler):
-			SystemFeature(device_handler)
+		LeakageFeature()
 		{}
 		virtual int run(void);
 	};
 
-	class RelayFeature: public SystemFeature
+	class RelayFeature: public Thread
 	{
 	public:
-		RelayFeature(DeviceHandler * device_handler):
-			SystemFeature(device_handler)
+		RelayFeature()
 		{}
 		virtual int run(void);
 	};

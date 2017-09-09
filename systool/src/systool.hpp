@@ -14,25 +14,15 @@
 class SystemTool: public Application
 {
 public:
-	SystemTool();
+	SystemTool(int argc = 0, char * argv[] = NULL);
 	~SystemTool();
 
 	virtual int run(void);
 
 protected:
 
-	class TcpServerFeature: public SystemFeature
-	{
-	public:
-		TcpServerFeature(DeviceHandler *, uint16_t);
-		virtual int run(void);
-
-	protected:
-		TcpServer server;
-		uint8_t   flags;
-	};
-
-	TcpServerFeature * tcpServerFeature;
+	void remote_commander(uint16_t server_port = 2323);
+	void local_commander(void);
 };
 
 #endif /* SYSTOOL_HPP_ */

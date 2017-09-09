@@ -6,8 +6,8 @@
  */
 
 #include <stdio.h>
-#include "devicehandler.hpp"
 #include "commander.hpp"
+#include "devicehandler.hpp"
 
 bool Commander::execute(std::string command, std::string & answer)
 {
@@ -61,7 +61,7 @@ bool Commander::execute(std::string command, std::string & answer)
 
 			token_equal = command.find("=", device->get_name().size());
 
-			if (token_equal == string::npos)
+			if (token_equal == std::string::npos)
 			{
 				device_access = device->read(& data);
 				answer = "[READ] ";

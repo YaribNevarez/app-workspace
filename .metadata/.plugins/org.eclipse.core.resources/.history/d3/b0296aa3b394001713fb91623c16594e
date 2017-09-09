@@ -1,0 +1,40 @@
+/*
+ * systembox.hpp
+ *
+ *  Created on: Aug 29, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+
+#ifndef SYSTEMBOX_HPP_
+#define SYSTEMBOX_HPP_
+
+#include "thread.hpp"
+#include "devices.hpp"
+#include "deviceid.hpp"
+#include "zybo.hpp"
+
+namespace SYSTEMBOX
+{
+wasteTankSensor(ZYBO::HANDLER::PMOD, &id_WASTETLEVEL);
+chamberTopSensor(ZYBO::HANDLER::PMOD, &id_LEVELSENSOR_1);
+chamberBottomSensor(ZYBO::HANDLER::PMOD, &id_LEVELSENSOR_0);
+leakageSensor_0(ZYBO::HANDLER::PMOD, &id_LEAKSENSOR_0);
+leakageSensor_1(ZYBO::HANDLER::PMOD, &id_LEAKSENSOR_1);
+irSensor(ZYBO::HANDLER::PMOD, &id_IRSENSOR);
+flushValve(ZYBO::HANDLER::PMOD, &id_FLUSHVALVE);
+drainValve(ZYBO::HANDLER::PMOD, &id_DRAINVALVE);
+shutOffValve(ZYBO::HANDLER::PMOD, &id_SHUTOFFVALVE);
+drainLocalReq(ZYBO::HANDLER::PMOD, &id_DRAINLOCAL);
+emergencySwitch(ZYBO::HANDLER::PMOD, &id_EMERGENCY);
+appSelection(ZYBO::HANDLER::PMOD, &id_APPSELECTION);
+drainDelaySelection(ZYBO::HANDLER::PMOD, &id_DRAINDELAY);
+vacumGenerator(ZYBO::HANDLER::PMOD, &id_VACUMGEN);
+drainIndicator(ZYBO::HANDLER::PMOD, &id_DRAININDICATOR);
+leakageIndicator(ZYBO::HANDLER::PMOD, &id_LEAKINDICATOR);
+pwm_0(ZYBO::HANDLER::PMOD, &id_PWM_0);
+pwm_1(ZYBO::HANDLER::PMOD, &id_PWM_1);
+relay_0(ZYBO::HANDLER::PMOD, &id_RELAY_0);
+relay_1(ZYBO::HANDLER::PMOD, &id_RELAY_1);
+};
+
+#endif /* SYSTEMBOX_HPP_ */

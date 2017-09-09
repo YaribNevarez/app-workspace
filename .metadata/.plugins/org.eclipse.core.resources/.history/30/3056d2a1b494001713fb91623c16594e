@@ -1,0 +1,42 @@
+/*
+ * systembox.hpp
+ *
+ *  Created on: Aug 29, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+
+#ifndef SYSTEMBOX_HPP_
+#define SYSTEMBOX_HPP_
+
+#include "thread.hpp"
+#include "devices.hpp"
+#include "deviceid.hpp"
+#include "zybo.hpp"
+
+using namespace ZYBO::HANDLER;
+
+namespace SYSTEMBOX
+{
+	wasteTankSensor(PMOD, &id_WASTETLEVEL);
+	chamberTopSensor(PMOD, &id_LEVELSENSOR_1);
+	chamberBottomSensor(PMOD, &id_LEVELSENSOR_0);
+	leakageSensor_0(PMOD, &id_LEAKSENSOR_0);
+	leakageSensor_1(PMOD, &id_LEAKSENSOR_1);
+	irSensor(PMOD, &id_IRSENSOR);
+	flushValve(PMOD, &id_FLUSHVALVE);
+	drainValve(PMOD, &id_DRAINVALVE);
+	shutOffValve(PMOD, &id_SHUTOFFVALVE);
+	drainLocalReq(PMOD, &id_DRAINLOCAL);
+	emergencySwitch(PMOD, &id_EMERGENCY);
+	appSelection(PMOD, &id_APPSELECTION);
+	drainDelaySelection(PMOD, &id_DRAINDELAY);
+	vacumGenerator(PMOD, &id_VACUMGEN);
+	drainIndicator(PMOD, &id_DRAININDICATOR);
+	leakageIndicator(PMOD, &id_LEAKINDICATOR);
+	pwm_0(PMOD, &id_PWM_0);
+	pwm_1(PMOD, &id_PWM_1);
+	relay_0(PMOD, &id_RELAY_0);
+	relay_1(PMOD, &id_RELAY_1);
+};
+
+#endif /* SYSTEMBOX_HPP_ */

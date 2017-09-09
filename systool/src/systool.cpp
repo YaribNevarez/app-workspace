@@ -11,81 +11,120 @@
 #include <string.h>
 #include <typeinfo>
 #include "systool.hpp"
-#include "framework/zybo.hpp"
 #include "framework/commander.hpp"
+#include "framework/systembox.hpp"
+#include <signal.h>
 
-SystemTool::SystemTool()
-{
-	tcpServerFeature = new TcpServerFeature(&ZYNQ_PMOD_HANDLER, 23);
-}
+using namespace SYSTEMBOX;
 
-SystemTool::TcpServerFeature::TcpServerFeature(DeviceHandler * device_handler, uint16_t host_port):
-		SystemFeature(device_handler),
-		server(host_port),
-		flags(0x00)
+SystemTool::SystemTool(int argc, char * argv[]):
+Application(argc, argv)
 {
 }
 
-int SystemTool::TcpServerFeature::run(void)
+void SystemTool::remote_commander(uint16_t server_port)
 {
+	TcpServer * server;
 	TcpSocket * client;
 	std::string message;
 	std::string answer;
 	bool exit_flag;
 
-	if (server.prepare() != -1)
-	for (;;)
+	server = new TcpServer(server_port);
+	if (server != NULL)
 	{
-		puts("\nWaiting for connection ...");
-		client = server.accept_connection();
-
-		if (client != NULL)
+		if (server->prepare() != -1)
+		for (;;)
 		{
-			do
-			{
-				if (client->receive_buffer(message) > 0)
-				{
-					printf("\nClient: %s", message.c_str());
-					exit_flag = Commander::execute(message, answer);
-					printf("\nServer: %s", answer.c_str());
-					client->send_buffer(answer);
-				}
-				else
-				{
-					exit_flag = true;
-				}
-			} while(!exit_flag);
+			std::cout << "\nWaiting for connection on server port: " << server_port << std::endl;
+			client = server->accept_connection();
 
-			delete client;
+			if (client != NULL)
+			{
+				do
+				{
+					if (client->receive_buffer(message) > 0)
+					{
+						std::cout << "\nClient: " << message.c_str();
+						exit_flag = Commander::execute(message, answer);
+						std::cout << "\nServer: " << answer.c_str();
+						client->send_buffer(answer);
+					}
+					else
+					{
+						exit_flag = true;
+					}
+				} while(!exit_flag);
+
+				delete client;
+			}
 		}
+		delete server;
 	}
 
-	perror("\nError");
+	perror("\nExit");
+}
 
-	return EXIT_SUCCESS;
+void SystemTool::local_commander(void)
+{
+	std::string cmd;
+	std::string answer;
+	bool exit_flag;
+
+	std::cout << "\nWaiting for command ...\n";
+
+	do
+	{
+		std::getline(std::cin, cmd);
+		exit_flag = Commander::execute(cmd, answer);
+		std::cout << answer;
+	} while(!exit_flag);
 }
 
 int SystemTool::run(void)
 {
+	int tcp_port = 0;
 	char op;
-	puts("\n***** Welcome to the local SysTool *****");
-	puts("\n\nOptions:");
-	puts("\n 1   - Start command server");
-	puts("\n 2   - Start command local");
-	puts("\n ESC - Exit");
-	puts("\n\nSelect: ");
 
-	op = std::cin.get();
+	if (argc >= 2)
+	{
+		op = argv[1][0];
+
+		if (argc > 2)
+		{
+			tcp_port = strtoul(argv[2], NULL, 0);
+		}
+	}
+	else
+	{
+		std::cout << "\n***** Welcome to the local SysTool *****";
+		std::cout << "\n\nOptions:";
+		std::cout << "\n 1   - Server commander";
+		std::cout << "\n 2   - Local commander";
+		std::cout << "\n XXX - Exit";
+		std::cout << "\n\nSelect: ";
+
+		op = std::cin.get();
+	}
 
 	switch(op)
 	{
-	case '1': tcpServerFeature->start(); for (;tcpServerFeature->isRunning();); break;
-	case '2': break;
+	case '1':
+		if (tcp_port == 0)
+		{
+			std::cout << "\nTCP/IP port number: ";
+			std::cin >> tcp_port;
+		}
+		remote_commander(tcp_port);
+		break;
+	case '2':
+		local_commander();
+		break;
 	default:;
 	}
 
-	printf("Bye\n");
-    return 0;
+	std::cout << "\nBYE\n";
+    return EXIT_SUCCESS;
 }
 
 SystemTool::~SystemTool()

@@ -1,0 +1,20 @@
+/*
+ * systembox.hpp
+ *
+ *  Created on: Aug 29, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+
+#ifndef SYSTEMBOX_HPP_
+#define SYSTEMBOX_HPP_
+
+#include "thread.hpp"
+#include "devices.hpp"
+#include "deviceid.hpp"
+
+
+namespace SystemBox
+{
+};
+
+#endif /* SYSTEMBOX_HPP_ */

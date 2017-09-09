@@ -1,0 +1,118 @@
+/*
+ * systool.cpp
+ *
+ *  Created on: Aug 30, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <typeinfo>
+#include "systool.hpp"
+#include "framework/commander.hpp"
+#include "framework/systembox.hpp"
+#include <signal.h>
+
+using namespace SYSTEMBOX;
+
+SystemTool::SystemTool()
+{
+}
+
+bool SystemTool::stop_flag = false;
+
+void SystemTool::signal_handler(int signal)
+{
+	stop_flag = true;
+}
+
+void SystemTool::remote_commander(uint16_t server_port)
+{
+	TcpServer * server;
+	TcpSocket * client;
+	std::string message;
+	std::string answer;
+	bool exit_flag;
+
+	server = new TcpServer(server_port);
+	if (server != NULL)
+	{
+		if (server->prepare() != -1)
+		for (;!stop_flag;)
+		{
+			std::cout << "\nWaiting for connection ...";
+			client = server->accept_connection();
+
+			if (client != NULL)
+			{
+				do
+				{
+					if (client->receive_buffer(message) > 0)
+					{
+						std::cout << "\nClient: " << message.c_str();
+						exit_flag = Commander::execute(message, answer);
+						std::cout << "\nServer: " << answer.c_str();
+						client->send_buffer(answer);
+					}
+					else
+					{
+						exit_flag = true;
+					}
+				} while(!exit_flag);
+
+				delete client;
+			}
+		}
+		delete server;
+	}
+
+	perror("\nError");
+}
+
+void SystemTool::local_commander(void)
+{
+	std::string cmd;
+	std::string answer;
+	bool exit_flag;
+
+	std::cout << "\nWaiting for command ...\n";
+
+	do
+	{
+		std::getline(std::cin, cmd);
+		exit_flag = Commander::execute(cmd, answer);
+		std::cout << answer;
+	} while(!exit_flag);
+}
+
+int SystemTool::run(void)
+{
+	signal(SIGINT, SystemTool::signal_handler);
+
+	std::cout << "\n***** Welcome to the local SysTool *****";
+	std::cout << "\n\nOptions:";
+	std::cout << "\n 1   - Server commander";
+	std::cout << "\n 2   - Local commander";
+	std::cout << "\n ESC - Exit";
+	std::cout << "\n\nSelect: ";
+
+	switch(std::cin.get())
+	{
+	case '1':
+		remote_commander();
+		break;
+	case '2':
+		local_commander();
+		break;
+	default:;
+	}
+
+	std::cout << "\nBYE\n";
+    return 0;
+}
+
+SystemTool::~SystemTool()
+{
+}
