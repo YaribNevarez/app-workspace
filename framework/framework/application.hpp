@@ -11,6 +11,7 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <vector>
+#include <string>
 #include "thread.hpp"
 
 class Application: public Runnable
@@ -23,10 +24,14 @@ protected:
 	void register_thread(Thread *);
 	int  start(void);
 
+	bool        passed_arg(std::string);
+	std::string passed_arg(int);
+	int         passed_arg(void);
+
+private:
 	int     argc;
 	char ** argv;
 
-private:
 	std::vector<Thread *> threads;
 };
 

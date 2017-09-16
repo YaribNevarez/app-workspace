@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string>
 #include <typeinfo>
 #include "systool.hpp"
 #include "framework/commander.hpp"
@@ -115,22 +115,22 @@ int SystemTool::run(void)
 
 	system("clear");
 
-	if (argc >= 2)
+	if (passed_arg() >= 2)
 	{
-		op = argv[1][0];
+		op = passed_arg(1)[0];
 
-		if (argc > 2)
+		if (passed_arg() > 2)
 		{
-			tcp_port = strtoul(argv[2], NULL, 0);
+			tcp_port = strtoul(passed_arg(2).c_str(), NULL, 0);
 		}
 	}
 	else
 	{
-		std::cout << "\n***** Welcome to the local SysTool *****";
+		std::cout << "\n***** Local SysTool *****";
 		std::cout << "\n\nOptions:";
 		std::cout << "\n 1   - Server commander";
 		std::cout << "\n 2   - Local commander";
-		std::cout << "\n 3   - Local device scanning";
+		std::cout << "\n 3   - Device scanning";
 		std::cout << "\n XXX - Exit";
 		std::cout << "\n\nSelect: ";
 

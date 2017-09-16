@@ -28,6 +28,30 @@ void Application::register_thread(Thread * thread)
 	threads.push_back(thread);
 }
 
+bool Application::passed_arg(std::string argument)
+{
+	bool flag = false;
+
+	if ((0 < argc) && (argv != NULL))
+		for (signed i = 0; !flag && (i < argc) && (argv[i] != NULL); i ++)
+			flag = argument.compare(argv[i]) == 0;
+
+	return flag;
+}
+
+std::string Application::passed_arg(int i)
+{
+	std::string argument = "";
+	if ((0 < argc) && (argv != NULL) && (argv[i] != NULL))
+		argument = argv[i];
+	return argument;
+}
+
+int Application::passed_arg(void)
+{
+	return argc;
+}
+
 int Application::start(void)
 {
 	int result = EXIT_SUCCESS;
