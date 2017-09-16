@@ -14,6 +14,8 @@
 #include "framework/commander.hpp"
 #include "framework/systembox.hpp"
 #include <signal.h>
+#include <time.h>
+#include <sys/ioctl.h>
 
 using namespace SYSTEMBOX;
 
@@ -81,10 +83,37 @@ void SystemTool::local_commander(void)
 	} while(!exit_flag);
 }
 
+void SystemTool::local_scanning()
+{
+	unsigned int data;
+    int kbhit = 0;
+
+	Device::InstanceVector instances = Device::get_instanceVector();
+
+	fputs("\e[?25l", stdout); /* hide the cursor */
+	system("clear");
+	std::cout << "___ Scanning devices. Press ENTER to stop ___";
+	for(;kbhit == 0;)
+	{
+		for (unsigned i = 0; i < instances.size(); i ++)
+		{
+			instances[i]->read(&data);
+			printf("%c[%d;%df %s = 0x%X         ", 0x1B, i + 2, 10,
+				   instances[i]->get_name().c_str(), data);
+		}
+		ioctl(0, FIONREAD, &kbhit);
+	}
+	getchar();
+	system("clear");
+	fputs("\e[?25h", stdout); /* show the cursor */
+}
+
 int SystemTool::run(void)
 {
 	int tcp_port = 0;
 	char op;
+
+	system("clear");
 
 	if (argc >= 2)
 	{
@@ -101,6 +130,7 @@ int SystemTool::run(void)
 		std::cout << "\n\nOptions:";
 		std::cout << "\n 1   - Server commander";
 		std::cout << "\n 2   - Local commander";
+		std::cout << "\n 3   - Local device scanning";
 		std::cout << "\n XXX - Exit";
 		std::cout << "\n\nSelect: ";
 
@@ -120,10 +150,12 @@ int SystemTool::run(void)
 	case '2':
 		local_commander();
 		break;
+	case '3':
+		local_scanning();
+		break;
 	default:;
 	}
 
-	std::cout << "\nBYE\n";
     return EXIT_SUCCESS;
 }
 

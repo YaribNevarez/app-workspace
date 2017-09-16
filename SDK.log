@@ -19,3 +19,6 @@
 19:57:47 INFO  : XSDB server has started successfully.
 22:03:49 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
 22:03:50 INFO  : XSDB server has started successfully.
+03:23:37 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:09:08 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:09:11 INFO  : XSDB server has started successfully.

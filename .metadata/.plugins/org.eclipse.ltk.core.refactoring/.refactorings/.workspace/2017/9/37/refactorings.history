@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;systool/src/espi_hw.h&apos;" deleteContents="false" description="Delete resource &apos;systool/src/espi_hw.h&apos;" element1="/systool/src/espi_hw.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1505322362380"/>
+</session>

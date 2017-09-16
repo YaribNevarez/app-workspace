@@ -23,6 +23,7 @@ protected:
 
 	void remote_commander(uint16_t server_port = 2323);
 	void local_commander(void);
+	void local_scanning(void);
 };
 
 #endif /* SYSTOOL_HPP_ */

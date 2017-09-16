@@ -15,7 +15,15 @@ Device(device_handler, identity)
 LevelSensor::Status LevelSensor::get_level(void)
 {
 	Status status;
-	read((uint32_t *) & status);
+	uint32_t value;
+
+	read((uint32_t *) & value);
+
+	if (value>0x7FF)
+		status = FULL;
+	else
+		status = LOW;
+
 	return status;
 }
 
@@ -28,7 +36,15 @@ Device(device_handler, identity)
 LeakageSensor::Status LeakageSensor::get_status(void)
 {
 	Status status;
-	read((uint32_t *) & status);
+	uint32_t value;
+
+	read((uint32_t *) & value);
+
+	if (value>0x7FF)
+		status = LEAKING;
+	else
+		status = NO_LEAKING;
+
 	return status;
 }
 

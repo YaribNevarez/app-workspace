@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;systool/src/espi.h&apos; to &apos;espi_api.h&apos;" description="Rename resource &apos;espi.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/espi.h" name="espi_api.h" stamp="1505321889924" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;systool/src/espi_api.h&apos; to &apos;espi_hw.h&apos;" description="Rename resource &apos;espi_api.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/espi_api.h" name="espi_hw.h" stamp="1505322089355" updateReferences="true"/>
+</session>

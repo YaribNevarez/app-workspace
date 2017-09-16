@@ -99,39 +99,42 @@ int ControlApp::FlushFeature::run(void)
 {
 	LevelSensor::Status topSensor;
 	LevelSensor::Status bottomSensor;
-	bool flushFlag = false;
+	bool flushFlag;
 
 	for (;;)
 	{
 		topSensor    = chamberTopSensor.get_level();
 		bottomSensor = chamberBottomSensor.get_level();
 
-		if ((topSensor == LevelSensor::FULL) && (bottomSensor == LevelSensor::FULL))
+		if ((topSensor == LevelSensor::FULL) && (bottomSensor == LevelSensor::FULL)
+			 && (LevelSensor::FULL != wasteTankSensor.get_level()))
 		{	// Chamber is FULL !!!!!
-			if (LevelSensor::FULL != wasteTankSensor.get_level())
+//			if (LevelSensor::FULL != wasteTankSensor.get_level())
 			{
 				vacumGenerator.set_status(OutputPin::ON);
 				flushValve.set_position(Valve::OPEN);
 				flushFlag = true;
 			}
 		}
-		else if ((topSensor == LevelSensor::FULL) && (bottomSensor == LevelSensor::LOW))
-		{
-
-		}
-		else if ((topSensor == LevelSensor::LOW) && (bottomSensor == LevelSensor::FULL))
-		{
-
-		}
+//		else if ((topSensor == LevelSensor::FULL) && (bottomSensor == LevelSensor::LOW))
+//		{
+//
+//		}
+//		else if ((topSensor == LevelSensor::LOW) && (bottomSensor == LevelSensor::FULL))
+//		{
+//
+//		}
 		else // if ((topSensor == LevelSensor::LOW) && (bottomSensor == LevelSensor::LOW))
 		{
 			if (flushFlag)
 			{
-				sleep(5);
+				sleep(1);
 				flushValve.set_position(Valve::CLOSE);
 
-				sleep(20);
+				sleep(5);
 				vacumGenerator.set_status(OutputPin::OFF);
+
+				flushFlag = false;
 			}
 		}
 	}

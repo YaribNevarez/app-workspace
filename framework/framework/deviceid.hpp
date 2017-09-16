@@ -14,14 +14,9 @@ extern "C" {
 
 #include "iodef.hpp"
 
-enum
+typedef enum
 {
-	DEVICE_ID_BEGIN = 0,
-	LEVELSENSOR_0,
-	LEVELSENSOR_1,
-	WASTETLEVEL,
-	LEAKSENSOR_0,
-	LEAKSENSOR_1,
+	CONTROLLER_DEVICE_ID_BEGIN = 0,
 	IRSENSOR,
 	FLUSHVALVE,
 	DRAINVALVE,
@@ -33,12 +28,35 @@ enum
 	VACUMGEN,
 	DRAININDICATOR,
 	LEAKINDICATOR,
-	PWM_0,
-	PWM_1,
 	RELAY_0,
 	RELAY_1,
-	DEVICE_ID_END
-};
+	CONTROLLER_DEVICE_ID_END
+} ControllerDeviceIDs;
+
+typedef enum
+{
+	ADC_DEVICE_ID_BEGIN = 0,
+	LEVELSENSOR_0,
+	LEVELSENSOR_1,
+	WASTETLEVEL,
+	LEAKSENSOR_0,
+	LEAKSENSOR_1,
+	ADC_CHANNEL_5,
+	ADC_CHANNEL_6,
+	ADC_CHANNEL_7,
+	ADC_CHANNEL_8,
+	ADC_CHANNEL_9,
+	ADC_CHANNEL_10,
+	ADC_DEVICE_ID_END
+} ADCDeviceIDs;
+
+typedef enum
+{
+	PWM_DEVICE_ID_BEGIN = 0,
+	PWM_0,
+	PWM_1,
+	PWM_DEVICE_ID_END
+} PWMDeviceIDs;
 
 
 DeviceIdentity id_LEVELSENSOR_0  = {LEVELSENSOR_0,  "LEVELSENSOR_0" };
@@ -61,7 +79,12 @@ DeviceIdentity id_PWM_0          = {PWM_0,          "PWM_0"         };
 DeviceIdentity id_PWM_1          = {PWM_1,          "PWM_1"         };
 DeviceIdentity id_RELAY_0        = {RELAY_0,        "RELAY_0"       };
 DeviceIdentity id_RELAY_1        = {RELAY_1,        "RELAY_1"       };
-
+DeviceIdentity id_ADC_CHANNEL_5  = {ADC_CHANNEL_5,  "ADC_CHANNEL_5" };
+DeviceIdentity id_ADC_CHANNEL_6  = {ADC_CHANNEL_6,  "ADC_CHANNEL_6" };
+DeviceIdentity id_ADC_CHANNEL_7  = {ADC_CHANNEL_7,  "ADC_CHANNEL_7" };
+DeviceIdentity id_ADC_CHANNEL_8  = {ADC_CHANNEL_8,  "ADC_CHANNEL_8" };
+DeviceIdentity id_ADC_CHANNEL_9  = {ADC_CHANNEL_9,  "ADC_CHANNEL_9" };
+DeviceIdentity id_ADC_CHANNEL_10 = {ADC_CHANNEL_10, "ADC_CHANNEL_10"};
 #ifdef __cplusplus
 }
 #endif

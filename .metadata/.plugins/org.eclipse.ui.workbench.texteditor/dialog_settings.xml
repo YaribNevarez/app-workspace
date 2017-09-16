@@ -2,29 +2,33 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="tol" key="selection"/>
+		<item value="strtoul" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="strtoul"/>
+			<item value="PMOD"/>
+			<item value="device_handler"/>
+			<item value="hit"/>
+			<item value="kbhit"/>
+			<item value="htons"/>
+			<item value="inet_addr"/>
 			<item value="atoi"/>
-			<item value="stoi"/>
-			<item value="to"/>
-			<item value="tof"/>
-			<item value="toi"/>
-			<item value="tol"/>
-			<item value="toint"/>
-			<item value="opera"/>
 		</list>
 		<list key="replacehistory">
+			<item value="&amp;PMOD"/>
+			<item value="PMOD"/>
+			<item value="HANDLER::PMOD"/>
+			<item value="ZYBO::HANDLER::PMOD"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="291" key="DIALOG_WIDTH"/>
+		<item value="311" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="432" key="DIALOG_HEIGHT"/>
-		<item value="798" key="DIALOG_X_ORIGIN"/>
-		<item value="254" key="DIALOG_Y_ORIGIN"/>
+		<item value="452" key="DIALOG_HEIGHT"/>
+		<item value="1217" key="DIALOG_X_ORIGIN"/>
+		<item value="306" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

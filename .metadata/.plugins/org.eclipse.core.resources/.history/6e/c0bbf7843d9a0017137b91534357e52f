@@ -1,0 +1,122 @@
+/*
+ * devices.cpp
+ *
+ *  Created on: Aug 7, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+#include "devices.hpp"
+
+///////////////////////////////////////////////////////////////////////////////
+
+LevelSensor::LevelSensor(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
+{}
+
+LevelSensor::Status LevelSensor::get_level(void)
+{
+	Status status;
+	uint32_t value;
+
+	read((uint32_t *) & value);
+
+	if (value>0x7FF)
+		status = FULL;
+	else
+		status = LOW;
+
+	return status;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+LeakageSensor::LeakageSensor(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
+{}
+
+LeakageSensor::Status LeakageSensor::get_status(void)
+{
+	Status status;
+	read((uint32_t *) & status);
+	return status;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+IRSensor::IRSensor(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
+{}
+
+IRSensor::Status IRSensor::get_status(void)
+{
+	Status status;
+	read((uint32_t *) & status);
+	return status;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+Valve::Valve(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
+{}
+
+bool Valve::set_position(Position position)
+{
+	return write((int) position);
+}
+
+Valve::Position Valve::get_position(void)
+{
+	Position position;
+	read((uint32_t *) & position);
+	return position;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+OutputPin::OutputPin(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
+{}
+
+bool OutputPin::set_status(Status status)
+{
+	return write((int) status);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+InputPin::InputPin(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
+{}
+
+InputPin::Status InputPin::get_status(void)
+{
+	Status status;
+	read((uint32_t *) & status);
+	return status;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+OutputVector::OutputVector(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
+{}
+
+bool OutputVector::set_value(int value)
+{
+	return write(value);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+InputVector::InputVector(DeviceHandler * device_handler, DeviceIdentity * identity):
+Device(device_handler, identity)
+{}
+
+int InputVector::get_value(void)
+{
+	int status;
+	read((uint32_t *) & status);
+	return status;
+}
+
+///////////////////////////////////////////////////////////////////////////////
