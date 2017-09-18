@@ -15,18 +15,16 @@ namespace ZYBO
 {
 	namespace DRIVER
 	{
-//		const char * const BTN  = "/proc/zynq_btn";
-//		const char * const LED  = "/proc/zynq_led";
-//		const char * const SW   = "/proc/zynq_sw";
-		const char * const CTRL = "/proc/controller";
-		const char * const ADC = "/proc/adc";
+		const char * const PWM0 = "/proc/pwm_0";
+		const char * const PWM1 = "/proc/pwm_1";
+		const char * const CTRL  = "/proc/controller";
+		const char * const ADC   = "/proc/adc";
 	}
 
 	namespace HANDLER
 	{
-//		DeviceHandler BUTTONS(DRIVER::BTN);
-//		DeviceHandler LEDS(DRIVER::LED);
-//		DeviceHandler SWITCHES(DRIVER::SW);
+		DeviceHandler PWM0(DRIVER::PWM0);
+		DeviceHandler PWM1(DRIVER::PWM1);
 		DeviceHandler CTRL(DRIVER::CTRL);
 		DeviceHandler ADC(DRIVER::ADC);
 	}

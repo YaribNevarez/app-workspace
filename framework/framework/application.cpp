@@ -28,15 +28,15 @@ void Application::register_thread(Thread * thread)
 	threads.push_back(thread);
 }
 
-bool Application::passed_arg(std::string argument)
+int Application::passed_arg(std::string argument)
 {
-	bool flag = false;
+	int index = -1;
 
 	if ((0 < argc) && (argv != NULL))
-		for (signed i = 0; !flag && (i < argc) && (argv[i] != NULL); i ++)
-			flag = argument.compare(argv[i]) == 0;
+		for (signed i = 0; (-1 == index) && (i < argc) && (argv[i] != NULL); i ++)
+			if (argument.compare(argv[i]) == 0) index = i;
 
-	return flag;
+	return index;
 }
 
 std::string Application::passed_arg(int i)

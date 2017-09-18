@@ -34,8 +34,8 @@ namespace SYSTEMBOX
 	OutputPin     vacumGenerator(&CTRL, &id_VACUMGEN);
 	OutputPin     drainIndicator(&CTRL, &id_DRAININDICATOR);
 	OutputPin     leakageIndicator(&CTRL, &id_LEAKINDICATOR);
-	OutputVector  pwm_0(&CTRL, &id_PWM_0);
-	OutputVector  pwm_1(&CTRL, &id_PWM_1);
+	OutputVector  pwm_0(&PWM0, &id_PWM_0);
+	OutputVector  pwm_1(&PWM1, &id_PWM_1);
 	OutputPin     relay_0(&CTRL, &id_RELAY_0);
 	OutputPin     relay_1(&CTRL, &id_RELAY_1);
 	InputVector   adc_channel_5(&ADC, &id_ADC_CHANNEL_5);

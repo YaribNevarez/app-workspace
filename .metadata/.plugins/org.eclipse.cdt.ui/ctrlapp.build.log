@@ -1,21 +1,6 @@
-16:13:42 **** Auto Build of configuration Debug for project ctrlapp ****
+03:02:08 **** Incremental Build of configuration Debug for project ctrlapp ****
 make all 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
- 
-Building target: ctrlapp.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/commander.o ./framework/daemon.o ./framework/devicehandler.o ./framework/devices.o ./framework/tcpserver.o ./framework/tcpsocket.o   
-Finished building target: ctrlapp.elf
- 
-Invoking: ARM Linux Print Size
-arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-1041536	  15048	  40864	1097448	 10bee8	ctrlapp.elf
-Finished building: ctrlapp.elf.size
- 
+make: Nothing to be done for 'all'.
 
-16:13:43 Build Finished (took 923ms)
+03:02:08 Build Finished (took 122ms)
 

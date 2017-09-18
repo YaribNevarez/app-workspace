@@ -1,4 +1,4 @@
-16:17:41 **** Auto Build of configuration Debug for project systool ****
+02:59:56 **** Auto Build of configuration Debug for project systool ****
 make all 
 Building file: ../src/systool.cpp
 Invoking: ARM Linux g++ compiler
@@ -13,9 +13,9 @@ Finished building target: systool.elf
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1041744	  15052	  41152	1097948	 10c0dc	systool.elf
+1041904	  15052	  41272	1098228	 10c1f4	systool.elf
 Finished building: systool.elf.size
  
 
-16:17:42 Build Finished (took 1s.188ms)
+02:59:57 Build Finished (took 872ms)
 

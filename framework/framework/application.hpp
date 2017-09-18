@@ -24,7 +24,7 @@ protected:
 	void register_thread(Thread *);
 	int  start(void);
 
-	bool        passed_arg(std::string);
+	int         passed_arg(std::string);
 	std::string passed_arg(int);
 	int         passed_arg(void);
 

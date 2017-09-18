@@ -23,6 +23,8 @@ public:
 
 protected:
 
+	void server(void);
+
 	class DrainFeature: public Thread
 	{
 	public:

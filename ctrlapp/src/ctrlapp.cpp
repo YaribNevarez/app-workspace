@@ -9,17 +9,29 @@
 #include <iostream>
 #include "ctrlapp.hpp"
 #include "framework/systembox.hpp"
+#include "framework/daemon.hpp"
+#include "framework/commander.hpp"
+#include "framework/tcpserver.hpp"
 
 using namespace SYSTEMBOX;
 
 ControlApp::ControlApp(int argc, char * argv[]):
 Application(argc, argv)
 {
-	register_thread(new DrainFeature());
-	register_thread(new FlushFeature());
-	register_thread(new IRFeature());
-	register_thread(new LeakageFeature());
-	register_thread(new RelayFeature());
+	if (0 < passed_arg("-drain"))
+		register_thread(new DrainFeature());
+
+	if (0 < passed_arg("-flush"))
+		register_thread(new FlushFeature());
+
+	if (0 < passed_arg("-ir"))
+		register_thread(new IRFeature());
+
+	if (0 < passed_arg("-leakage"))
+		register_thread(new LeakageFeature());
+
+	if (0 < passed_arg("-relay"))
+		register_thread(new RelayFeature());
 }
 
 int ControlApp::DrainFeature::run(void)
@@ -219,9 +231,61 @@ int ControlApp::RelayFeature::run(void)
 	return 0;
 }
 
+void ControlApp::server(void)
+{
+	TcpServer * server;
+	TcpSocket * client;
+	std::string message;
+	std::string answer;
+	bool exit_flag;
+
+	server = new TcpServer(23);
+	if (server != NULL)
+	{
+		if (server->prepare() != -1)
+		{
+			for (;;)
+			{
+				client = server->accept_connection(); // Waiting for connection
+
+				if (client != NULL)
+				{
+					do
+					{
+						if (client->receive_buffer(message) > 0)
+						{
+							exit_flag = Commander::execute(message, answer);
+							client->send_buffer(answer);
+						}
+						else
+						{
+							exit_flag = true;
+						}
+					} while(!exit_flag);
+
+					delete client;
+				}
+			}
+		}
+		delete server;
+	}
+
+	perror("\nExit");
+}
+
 int ControlApp::run(void)
 {
-	start();
+	if (0 < passed_arg("-daemon"))
+	{
+		Daemon::become(0);
+	}
+
+	start(); // start all registered worker threads
+
+	if (0 < passed_arg("-server"))
+	{
+		server();
+	}
 
 	for (;;);
 
