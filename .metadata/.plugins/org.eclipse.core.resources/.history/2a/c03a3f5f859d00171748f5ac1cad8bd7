@@ -1,0 +1,38 @@
+/*
+ * joystick.cpp
+ *
+ *  Created on: Sep 19, 2017
+ *      Author: root
+ */
+
+#include "joystick.hpp"
+
+
+Joystick::Joystick(char *)
+{
+}
+
+std::string Joystick::get_name(void)
+{
+
+}
+
+unsigned Joystick::get_number_of_buttons(void)
+{
+
+}
+
+unsigned Joystick::get_number_of_axis(void)
+{
+
+}
+
+int Joystick::get_axis_value(unsigned)
+{
+
+}
+
+int Joystick::get_button_value(unsigned)
+{
+
+}

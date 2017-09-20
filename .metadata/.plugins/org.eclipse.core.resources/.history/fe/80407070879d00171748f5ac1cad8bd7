@@ -1,0 +1,57 @@
+/*
+ * joystick.cpp
+ *
+ *  Created on: Sep 19, 2017
+ *      Author: root
+ */
+
+#include "joystick.hpp"
+
+
+Joystick::Joystick(char * file_name):
+	file_name(file_name),
+	file_descriptor(-1),
+	axis(NULL),
+	buttons(NULL)
+{
+}
+
+bool Joystick::open(void)
+{
+	file_descriptor = open(file_name.c_str(), O_RDONLY);
+	bool (file_descriptor) != -1;
+}
+
+bool Joystick::isOpen(void)
+{
+	return file_descriptor != -1;
+}
+
+void Joystick::close(void)
+{
+}
+
+std::string Joystick::get_name(void)
+{
+
+}
+
+unsigned Joystick::get_number_of_buttons(void)
+{
+
+}
+
+unsigned Joystick::get_number_of_axis(void)
+{
+
+}
+
+int Joystick::get_axis_value(unsigned)
+{
+
+}
+
+int Joystick::get_button_value(unsigned)
+{
+
+}

@@ -13,9 +13,12 @@
 #include "systool.hpp"
 #include "framework/commander.hpp"
 #include "framework/systembox.hpp"
+#include "framework/joystick.hpp"
 #include <signal.h>
 #include <time.h>
 #include <sys/ioctl.h>
+#include <fcntl.h>
+#include <linux/joystick.h>
 
 using namespace SYSTEMBOX;
 
@@ -83,7 +86,7 @@ void SystemTool::local_commander(void)
 	} while(!exit_flag);
 }
 
-void SystemTool::local_scanning()
+void SystemTool::device_scanning()
 {
 	unsigned int data;
     int kbhit = 0;
@@ -103,6 +106,53 @@ void SystemTool::local_scanning()
 		}
 		ioctl(0, FIONREAD, &kbhit);
 	}
+	getchar();
+	system("clear");
+	fputs("\e[?25h", stdout); /* show the cursor */
+}
+
+
+#define JOY_DEV "/dev/input/js0"
+void SystemTool::joystick_controller(void)
+{
+	Joystick js(JOY_DEV);
+	unsigned int buttons, axis;
+    int kbhit = 0;
+
+	fputs("\e[?25l", stdout);
+	system("clear");
+	std::cout << "___ Scanning Joystick. Press ENTER to stop ___";
+
+	js.open_device();
+	buttons = js.get_number_of_buttons();
+	axis = js.get_number_of_axis();
+
+	for(;kbhit == 0;)
+	{
+		for (unsigned i = 0; i < buttons; i ++)
+		{
+			printf("%c[%d;%df B[%d]=%d ", 0x1B, i + 2, 10,
+				   i, js.get_button_value(i));
+		}
+		for (unsigned i = 0; i < axis; i ++)
+		{
+			printf("%c[%d;%df A[%d]=%d     ", 0x1B, i + 2 + buttons, 10,
+				   i, js.get_axis_value(i));
+		}
+		ioctl(0, FIONREAD, &kbhit);
+
+		pwm_0.write(js.get_axis_value(0)>>4);
+		pwm_1.write(js.get_axis_value(2)>>4);
+		flushValve.write(js.get_button_value(0));
+		drainValve.write(js.get_button_value(1));
+		shutOffValve.write(js.get_button_value(2));
+		vacumGenerator.write(js.get_button_value(3));
+		drainIndicator.write(js.get_button_value(4));
+		leakageIndicator.write(js.get_button_value(5));
+		relay_0.write(js.get_button_value(6));
+		relay_1.write(js.get_button_value(7));
+	}
+	js.close_device();
 	getchar();
 	system("clear");
 	fputs("\e[?25h", stdout); /* show the cursor */
@@ -131,6 +181,7 @@ int SystemTool::run(void)
 		std::cout << "\n 1   - Server commander";
 		std::cout << "\n 2   - Local commander";
 		std::cout << "\n 3   - Device scanning";
+		std::cout << "\n 4   - Joystick controller";
 		std::cout << "\n XXX - Exit";
 		std::cout << "\n\nSelect: ";
 
@@ -151,7 +202,10 @@ int SystemTool::run(void)
 		local_commander();
 		break;
 	case '3':
-		local_scanning();
+		device_scanning();
+		break;
+	case '4':
+		joystick_controller();
 		break;
 	default:;
 	}

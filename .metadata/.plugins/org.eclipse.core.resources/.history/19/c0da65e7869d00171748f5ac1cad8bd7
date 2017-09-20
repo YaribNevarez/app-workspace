@@ -1,0 +1,34 @@
+/*
+ * joystick.hpp
+ *
+ *  Created on: Sep 19, 2017
+ *      Author: root
+ */
+
+#ifndef JOYSTICK_HPP_
+#define JOYSTICK_HPP_
+#include <string>
+
+class Joystick
+{
+public:
+	Joystick(char *);
+	bool open(void);
+	void close(void);
+
+	std::string get_name(void);
+	unsigned get_number_of_buttons(void);
+	unsigned get_number_of_axis(void);
+
+	int get_axis_value(unsigned);
+	int get_button_value(unsigned);
+
+private:
+	std::string	file_name;
+	int   fd;
+	int * axis;
+	int * buttons;
+};
+
+
+#endif /* JOYSTICK_HPP_ */

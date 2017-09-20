@@ -1,4 +1,4 @@
-02:59:56 **** Auto Build of configuration Debug for project systool ****
+03:11:09 **** Auto Build of configuration Debug for project systool ****
 make all 
 Building file: ../src/systool.cpp
 Invoking: ARM Linux g++ compiler
@@ -7,15 +7,15 @@ Finished building: ../src/systool.cpp
  
 Building target: systool.elf
 Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/commander.o ./framework/daemon.o ./framework/devicehandler.o ./framework/devices.o ./framework/tcpserver.o ./framework/tcpsocket.o   
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./framework/application.o ./framework/commander.o ./framework/daemon.o ./framework/devicehandler.o ./framework/devices.o ./framework/joystick.o ./framework/tcpserver.o ./framework/tcpsocket.o   
 Finished building target: systool.elf
  
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1041904	  15052	  41272	1098228	 10c1f4	systool.elf
+1045192	  15052	  41272	1101516	 10cecc	systool.elf
 Finished building: systool.elf.size
  
 
-02:59:57 Build Finished (took 872ms)
+03:11:10 Build Finished (took 924ms)
 
