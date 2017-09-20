@@ -1,4 +1,4 @@
-01:56:48 **** Auto Build of configuration Debug for project ctrlapp ****
+03:27:16 **** Auto Build of configuration Debug for project ctrlapp ****
 make all 
 Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/joystick.cpp
 Invoking: ARM Linux g++ compiler
@@ -17,5 +17,5 @@ arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
 Finished building: ctrlapp.elf.size
  
 
-01:56:49 Build Finished (took 978ms)
+03:27:17 Build Finished (took 927ms)
 

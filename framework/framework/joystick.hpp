@@ -2,7 +2,7 @@
  * joystick.hpp
  *
  *  Created on: Sep 19, 2017
- *      Author: root
+ *      Author: Yarib Nevárez <yarib_007@hotmail.com>
  */
 
 #ifndef JOYSTICK_HPP_
