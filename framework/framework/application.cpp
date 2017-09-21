@@ -52,7 +52,7 @@ int Application::passed_arg(void)
 	return argc;
 }
 
-int Application::start(void)
+int Application::start_threads(void)
 {
 	int result = EXIT_SUCCESS;
 

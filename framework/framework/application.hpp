@@ -22,7 +22,7 @@ public:
 
 protected:
 	void register_thread(Thread *);
-	int  start(void);
+	int  start_threads(void);
 
 	int         passed_arg(std::string);
 	std::string passed_arg(int);

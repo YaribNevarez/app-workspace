@@ -25,7 +25,7 @@
 <stringAttribute key="com.xilinx.sdk.tcf.debug.uitarget.peer" value="Linux Agent"/>
 <booleanAttribute key="org.eclipse.tcf.debug.AttachChildren" value="true"/>
 <stringAttribute key="org.eclipse.tcf.debug.LocalProgramFile" value="Debug/ctrlapp.elf"/>
-<stringAttribute key="org.eclipse.tcf.debug.ProgramArguments" value="-server -drain -flush -ir -leakage"/>
+<stringAttribute key="org.eclipse.tcf.debug.ProgramArguments" value="-ir -leakage -server"/>
 <stringAttribute key="org.eclipse.tcf.debug.ProgramFile" value="/etc/controller-manager/ctrlapp"/>
 <stringAttribute key="org.eclipse.tcf.debug.ProjectName" value="ctrlapp"/>
 <booleanAttribute key="org.eclipse.tcf.debug.StopAtEntry" value="false"/>

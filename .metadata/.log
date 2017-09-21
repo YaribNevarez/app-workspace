@@ -12208,3 +12208,35 @@ Binding(HOME,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.tcf.debug 4 1 2017-09-21 02:10:11.493
+!MESSAGE TCF task aborted
+!STACK 0
+java.util.concurrent.ExecutionException: TCF task aborted
+	at org.eclipse.tcf.util.TCFTask.get(TCFTask.java:202)
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.disconnect(TCFLaunch.java:1347)
+	at com.xilinx.sdk.tcf.debug.launch.XilinxTCFLaunch.terminate(XilinxTCFLaunch.java:290)
+	at com.xilinx.sdk.tcf.debug.launch.XilinxTCFLaunchDelegate.cleanup(XilinxTCFLaunchDelegate.java:189)
+	at com.xilinx.sdk.tcf.debug.launch.XilinxTCFLaunchDelegate.launch(XilinxTCFLaunchDelegate.java:85)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.util.concurrent.CancellationException
+	at org.eclipse.tcf.util.TCFTask.cancel(TCFTask.java:179)
+	at org.eclipse.tcf.util.TCFTask$3.run(TCFTask.java:82)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf 4 0 2017-09-21 02:10:24.659
+!MESSAGE Cannot close channel streams
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:116)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at org.eclipse.tcf.core.ChannelTCP.stop(ChannelTCP.java:200)
+	at org.eclipse.tcf.core.AbstractChannel$8.run(AbstractChannel.java:716)

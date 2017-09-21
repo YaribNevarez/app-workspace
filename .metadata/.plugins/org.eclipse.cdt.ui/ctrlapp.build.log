@@ -1,21 +1,6 @@
-03:27:16 **** Auto Build of configuration Debug for project ctrlapp ****
+03:41:39 **** Incremental Build of configuration Debug for project ctrlapp ****
 make all 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/joystick.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/joystick.o" -MMD -MP -MF"framework/joystick.d" -MT"framework/joystick.d" -o "framework/joystick.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/joystick.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/joystick.cpp
- 
-Building target: ctrlapp.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./framework/application.o ./framework/commander.o ./framework/daemon.o ./framework/devicehandler.o ./framework/devices.o ./framework/joystick.o ./framework/tcpserver.o ./framework/tcpsocket.o   
-Finished building target: ctrlapp.elf
- 
-Invoking: ARM Linux Print Size
-arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-1046140	  15048	  40984	1102172	 10d15c	ctrlapp.elf
-Finished building: ctrlapp.elf.size
- 
+make: Nothing to be done for 'all'.
 
-03:27:17 Build Finished (took 927ms)
+03:41:39 Build Finished (took 194ms)
 

@@ -23,23 +23,7 @@ public:
 
 protected:
 
-	void server(void);
-
-	class DrainFeature: public Thread
-	{
-	public:
-		DrainFeature()
-		{}
-		virtual int run(void);
-	};
-
-	class FlushFeature: public Thread
-	{
-	public:
-		FlushFeature()
-		{}
-		virtual int run(void);
-	};
+	void drain_flush(void);
 
 	class IRFeature: public Thread
 	{
@@ -57,10 +41,10 @@ protected:
 		virtual int run(void);
 	};
 
-	class RelayFeature: public Thread
+	class ServerFeature: public Thread
 	{
 	public:
-		RelayFeature()
+		ServerFeature()
 		{}
 		virtual int run(void);
 	};
