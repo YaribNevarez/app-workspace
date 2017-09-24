@@ -143,6 +143,7 @@ void SystemTool::joystick_controller(void)
 
 		pwm_0.write(js.get_axis_value(0)>>4);
 		pwm_1.write(js.get_axis_value(2)>>4);
+		serial_0.write(js.get_axis_value(1)>>4);
 		flushValve.write(js.get_button_value(0));
 		drainValve.write(js.get_button_value(1));
 		shutOffValve.write(js.get_button_value(2));

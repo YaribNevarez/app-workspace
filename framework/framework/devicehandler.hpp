@@ -24,7 +24,7 @@ class DeviceHandler
 		QUERY
 	}IORequestType;
 	DeviceHandler (const char * const);
-	size_t  IORequest(void *, size_t, IORequestType, char = 0);
+	size_t  IORequest(void *, size_t, IORequestType, uint32_t = 0);
 	size_t  write(void *, size_t);
 	size_t  read (void *, size_t);
 	void    set_auto_open(bool);

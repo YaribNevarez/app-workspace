@@ -1,19 +1,9 @@
-03:06:49 **** Auto Build of configuration Debug for project systool ****
+06:16:18 **** Auto Build of configuration Debug for project systool ****
 make all 
-Building file: ../src/main.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
 Building file: ../src/systool.cpp
 Invoking: ARM Linux g++ compiler
 arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
 Finished building: ../src/systool.cpp
- 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/application.o" -MMD -MP -MF"framework/application.d" -MT"framework/application.d" -o "framework/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/application.cpp
  
 Building target: systool.elf
 Invoking: ARM Linux g++ linker
@@ -23,9 +13,9 @@ Finished building target: systool.elf
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1045192	  15052	  41272	1101516	 10cecc	systool.elf
+1045352	  15060	  41376	1101788	 10cfdc	systool.elf
 Finished building: systool.elf.size
  
 
-03:06:53 Build Finished (took 3s.472ms)
+06:16:19 Build Finished (took 1s.284ms)
 

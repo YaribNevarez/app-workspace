@@ -44,6 +44,7 @@ namespace SYSTEMBOX
 	InputVector   adc_channel_8(&ADC, &id_ADC_CHANNEL_8);
 	InputVector   adc_channel_9(&ADC, &id_ADC_CHANNEL_9);
 	InputVector   adc_channel_10(&ADC, &id_ADC_CHANNEL_10);
+	OutputVector  serial_0(&SERIAL0, &id_SERIAL_0);
 };
 
 #endif /* SYSTEMBOX_HPP_ */

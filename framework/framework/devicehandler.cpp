@@ -33,7 +33,7 @@ auto_open(true)
 size_t  DeviceHandler::IORequest(void * buffer,
 								 size_t size,
 								 IORequestType irq,
-								 char query_ID)
+								 uint32_t query_ID)
 {
 	size_t result = 0;
 	pthread_mutex_lock(&ioMutex);
@@ -58,13 +58,9 @@ size_t  DeviceHandler::IORequest(void * buffer,
 			break;
 
 		case QUERY:
-			result = fwrite(&query_ID, sizeof(query_ID), 1, file_handler);
+			fwrite(&query_ID, sizeof(query_ID), 1, file_handler);
 			fflush(file_handler);
-
-			if (result == sizeof(query_ID))
-			{
-				result = fread(buffer, size, 1, file_handler);
-			}
+			result = fread(buffer, size, 1, file_handler);
 			break;
 
 		default:;
@@ -163,7 +159,7 @@ Device * Device::get_instanceByID(DeviceID id)
 	InstanceVector instances = get_instanceVector();
 	for (unsigned i = 0; (i < instances.size()) && (instance == NULL); i ++)
 	{
-		if (instances[i]->get_ID() == id)
+		if ((DeviceID)instances[i]->get_ID() == id)
 		{
 			instance = instances[i];
 		}

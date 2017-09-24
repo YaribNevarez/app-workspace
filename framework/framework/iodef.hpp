@@ -14,7 +14,7 @@ extern "C" {
 
 #define SUCCESS 0
 
-typedef unsigned char DeviceID;
+typedef unsigned int  DeviceID;
 typedef unsigned int  Data;
 
 typedef struct
