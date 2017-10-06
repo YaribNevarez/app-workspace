@@ -1,0 +1,17 @@
+/*
+ * m_network.hpp
+ *
+ *  Created on: Oct 6, 2017
+ *      Author: root
+ */
+
+#ifndef M_NETWORK_HPP_
+#define M_NETWORK_HPP_
+
+#include "application/application.hpp"
+#include "application/daemon.hpp"
+#include "application/thread.hpp"
+
+
+
+#endif /* M_NETWORK_HPP_ */

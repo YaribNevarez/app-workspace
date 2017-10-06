@@ -1,0 +1,43 @@
+/*
+ * portdriver.hpp
+ *
+ *  Created on: Aug 6, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+
+#ifndef PORTDRIVER_HPP_
+#define PORTDRIVER_HPP_
+#include <string>
+#include <vector>
+#include <pthread.h>
+#include "stdint.h"
+#include "iodef.hpp"
+
+
+class DeviceHandler
+{
+	public:
+	typedef enum
+	{
+		READ,
+		WRITE,
+		QUERY
+	}IORequestType;
+	DeviceHandler (const char * const);
+	size_t  IORequest(void *, size_t, IORequestType, uint32_t = 0);
+	size_t  write(void *, size_t);
+	size_t  read (void *, size_t);
+	void    set_auto_open(bool);
+	bool    open(void);
+	bool    is_open(void);
+	bool    close(void);
+	~DeviceHandler();
+private:
+	char * file_name;
+	FILE * file_handler;
+	bool   auto_open;
+	pthread_mutex_t ioMutex;
+	pthread_mutex_t fileMutex;
+};
+
+#endif /* PORTDRIVER_HPP_ */

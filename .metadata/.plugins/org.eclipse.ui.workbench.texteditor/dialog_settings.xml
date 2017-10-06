@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="CONTROLLER" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="CTRL"/>
 			<item value="yeld"/>
 			<item value="memset"/>
 			<item value="strtoul"/>
@@ -15,9 +16,9 @@
 			<item value="device_handler"/>
 			<item value="hit"/>
 			<item value="kbhit"/>
-			<item value="htons"/>
 		</list>
 		<list key="replacehistory">
+			<item value="CONTROLLER"/>
 			<item value="&amp;PMOD"/>
 			<item value="PMOD"/>
 			<item value="HANDLER::PMOD"/>

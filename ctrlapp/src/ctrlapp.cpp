@@ -8,10 +8,11 @@
 #include <unistd.h>
 #include <iostream>
 #include "ctrlapp.hpp"
-#include "framework/systembox.hpp"
-#include "framework/daemon.hpp"
-#include "framework/commander.hpp"
-#include "framework/tcpserver.hpp"
+
+#include "framework/m_application.hpp"
+#include "framework/m_device.hpp"
+#include "framework/m_network.hpp"
+#include "platform/systembox.hpp"
 
 using namespace SYSTEMBOX;
 

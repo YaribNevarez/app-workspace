@@ -25,7 +25,9 @@
 								</outputEntries>
 							</builder>
 							<tool command="arm-xilinx-linux-gnueabi-gcc" commandLinePattern="${COMMAND} -c ${FLAGS} ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="xilinx.gnu.armlinux.c.toolchain.assembler.debug.1722899066" name="ARM Linux gcc assembler" superClass="xilinx.gnu.armlinux.c.toolchain.assembler.debug">
-								<option id="xilinx.gnu.both.asm.option.include.paths.901698733" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath"/>
+								<option id="xilinx.gnu.both.asm.option.include.paths.901698733" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ctrlapp/framework}&quot;"/>
+								</option>
 								<inputType id="xilinx.gnu.assembler.input.1977546621" superClass="xilinx.gnu.assembler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.armlinux.c.toolchain.compiler.debug.1901535616" name="ARM Linux gcc compiler" superClass="xilinx.gnu.armlinux.c.toolchain.compiler.debug">
@@ -36,7 +38,8 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1395778245" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.384922351" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.dircategory.includes.1546115999" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/framework}&quot;"/>
+									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/framework"/>
+									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/platform"/>
 								</option>
 								<inputType id="xilinx.gnu.armlinux.cxx.compiler.input.1196513202" name="C++ source files" superClass="xilinx.gnu.armlinux.cxx.compiler.input"/>
 							</tool>
@@ -44,8 +47,8 @@
 							<tool id="xilinx.gnu.armlinux.c.toolchain.linker.debug.1333752783" name="ARM Linux gcc linker" superClass="xilinx.gnu.armlinux.c.toolchain.linker.debug"/>
 							<tool command="arm-xilinx-linux-gnueabi-g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="xilinx.gnu.armlinux.cxx.toolchain.linker.debug.1784157632" name="ARM Linux g++ linker" superClass="xilinx.gnu.armlinux.cxx.toolchain.linker.debug">
 								<option id="xilinx.gnu.c.link.option.ldflags.243119602" name="Linker Flags" superClass="xilinx.gnu.c.link.option.ldflags" value="-pthread -static" valueType="string"/>
-								<option id="xilinx.gnu.c.link.option.libs.1659542072" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs" valueType="libs"/>
-								<option id="xilinx.gnu.c.link.option.paths.2084162261" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths"/>
+								<option id="xilinx.gnu.c.link.option.libs.1659542072" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs"/>
+								<option id="xilinx.gnu.c.link.option.paths.2084162261" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths"/>
 								<inputType id="xilinx.gnu.linker.input.856767797" superClass="xilinx.gnu.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -56,8 +59,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="framework" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="platform|framework" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="framework"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="platform"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

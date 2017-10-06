@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;systool/framework/ipc&apos; to &apos;network&apos;" description="Rename resource &apos;ipc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="framework/ipc" name="network" stamp="1507305307132" updateReferences="true"/>
+</session>

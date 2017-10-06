@@ -8,7 +8,10 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include framework/subdir.mk
+-include framework/network/subdir.mk
+-include framework/hid/subdir.mk
+-include framework/device/subdir.mk
+-include framework/application/subdir.mk
 -include subdir.mk
 -include objects.mk
 

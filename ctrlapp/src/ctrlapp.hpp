@@ -10,7 +10,7 @@
 
 #include <vector>
 
-#include "framework/application.hpp"
+#include "framework/m_application.hpp"
 
 // Multiple inheritance of two different concepts
 class ControlApp: public Application

@@ -25,7 +25,7 @@
 <stringAttribute key="com.xilinx.sdk.tcf.debug.uitarget.peer" value="Linux Agent"/>
 <booleanAttribute key="org.eclipse.tcf.debug.AttachChildren" value="true"/>
 <stringAttribute key="org.eclipse.tcf.debug.LocalProgramFile" value="Debug/systool.elf"/>
-<stringAttribute key="org.eclipse.tcf.debug.ProgramFile" value="/root/Debug/systool.elf"/>
+<stringAttribute key="org.eclipse.tcf.debug.ProgramFile" value="/bin/systool"/>
 <stringAttribute key="org.eclipse.tcf.debug.ProjectName" value="systool"/>
 <booleanAttribute key="org.eclipse.tcf.debug.StopAtEntry" value="false"/>
 <booleanAttribute key="org.eclipse.tcf.debug.StopAtMain" value="true"/>

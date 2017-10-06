@@ -23,5 +23,8 @@ ELFSIZE :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-framework \
+framework/network \
+framework/hid \
+framework/device \
+framework/application \
 

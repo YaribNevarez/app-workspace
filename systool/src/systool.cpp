@@ -5,20 +5,21 @@
  *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
  */
 
+#include "systool.hpp"
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <string>
 #include <typeinfo>
-#include "systool.hpp"
-#include "framework/commander.hpp"
-#include "framework/systembox.hpp"
-#include "framework/joystick.hpp"
 #include <signal.h>
 #include <time.h>
 #include <sys/ioctl.h>
 #include <fcntl.h>
-#include <linux/joystick.h>
+
+#include "framework/m_device.hpp"
+#include "framework/m_hid.hpp"
+#include "platform/systembox.hpp"
 
 using namespace SYSTEMBOX;
 
@@ -100,9 +101,12 @@ void SystemTool::device_scanning()
 	{
 		for (unsigned i = 0; i < instances.size(); i ++)
 		{
-			instances[i]->read(&data);
-			printf("%c[%d;%df %s = 0x%X         ", 0x1B, i + 2, 10,
-				   instances[i]->get_name().c_str(), data);
+			if (instances[i]->get_ID() != id_SERIAL_0.ID)
+			{
+				instances[i]->read(&data);
+				printf("%c[%d;%df %s = 0x%X         ", 0x1B, i + 2, 10,
+					   instances[i]->get_name().c_str(), data);
+			}
 		}
 		ioctl(0, FIONREAD, &kbhit);
 	}
@@ -155,8 +159,8 @@ void SystemTool::joystick_controller(void)
 	}
 	js.close_device();
 	getchar();
-	system("clear");
 	fputs("\e[?25h", stdout); /* show the cursor */
+	system("clear");
 }
 
 int SystemTool::run(void)

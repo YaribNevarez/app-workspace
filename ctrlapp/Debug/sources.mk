@@ -25,5 +25,18 @@ ELFSIZE :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 src \
-framework \
+platform/platform \
+platform/Debug/platform \
+platform/Debug/framework/network \
+platform/Debug/framework/hid \
+platform/Debug/framework/device \
+platform/Debug/framework/application \
+framework/framework/network \
+framework/framework/hid \
+framework/framework/device \
+framework/framework/application \
+framework/Debug/framework/network \
+framework/Debug/framework/hid \
+framework/Debug/framework/device \
+framework/Debug/framework/application \
 

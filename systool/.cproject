@@ -20,7 +20,7 @@
 							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.armlinux" id="xilinx.armlinux.target.gnu.base.debug.96339010" isAbstract="false" name="Debug Platform" superClass="xilinx.armlinux.target.gnu.base.debug"/>
 							<builder buildPath="${workspace_loc:/systool}/Debug" enableAutoBuild="true" id="xilinx.gnu.armlinux.toolchain.builder.debug.1614695256" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" superClass="xilinx.gnu.armlinux.toolchain.builder.debug"/>
 							<tool id="xilinx.gnu.armlinux.c.toolchain.assembler.debug.2126815260" name="ARM Linux gcc assembler" superClass="xilinx.gnu.armlinux.c.toolchain.assembler.debug">
-								<option id="xilinx.gnu.both.asm.option.include.paths.2130441060" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath"/>
+								<option id="xilinx.gnu.both.asm.option.include.paths.2130441060" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths"/>
 								<inputType id="xilinx.gnu.assembler.input.1622439612" superClass="xilinx.gnu.assembler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.armlinux.c.toolchain.compiler.debug.94692174" name="ARM Linux gcc compiler" superClass="xilinx.gnu.armlinux.c.toolchain.compiler.debug">
@@ -31,7 +31,8 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1906729041" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.755964888" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.dircategory.includes.269646495" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/framework}&quot;"/>
+									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/platform"/>
+									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/framework"/>
 								</option>
 								<inputType id="xilinx.gnu.armlinux.cxx.compiler.input.1592227095" name="C++ source files" superClass="xilinx.gnu.armlinux.cxx.compiler.input"/>
 							</tool>
@@ -39,8 +40,8 @@
 							<tool id="xilinx.gnu.armlinux.c.toolchain.linker.debug.1022563220" name="ARM Linux gcc linker" superClass="xilinx.gnu.armlinux.c.toolchain.linker.debug"/>
 							<tool id="xilinx.gnu.armlinux.cxx.toolchain.linker.debug.1305034161" name="ARM Linux g++ linker" superClass="xilinx.gnu.armlinux.cxx.toolchain.linker.debug">
 								<option id="xilinx.gnu.c.link.option.ldflags.1774890683" name="Linker Flags" superClass="xilinx.gnu.c.link.option.ldflags" value="-pthread -static" valueType="string"/>
-								<option id="xilinx.gnu.c.link.option.paths.1130902267" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths"/>
-								<option id="xilinx.gnu.c.link.option.libs.1554771395" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs" valueType="libs"/>
+								<option id="xilinx.gnu.c.link.option.paths.1130902267" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths"/>
+								<option id="xilinx.gnu.c.link.option.libs.1554771395" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs"/>
 								<inputType id="xilinx.gnu.linker.input.385599439" superClass="xilinx.gnu.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -51,8 +52,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="framework" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="platform|platfrom|framework" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="framework"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="platform"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

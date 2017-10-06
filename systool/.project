@@ -27,7 +27,12 @@
 		<link>
 			<name>framework</name>
 			<type>2</type>
-			<location>/home/yarib/ZYBO_projects/app-workspace/framework/framework</location>
+			<location>/home/yarib/ZYBO_projects/app-workspace/framework</location>
+		</link>
+		<link>
+			<name>platform</name>
+			<type>2</type>
+			<location>/home/yarib/ZYBO_projects/app-workspace/platform</location>
 		</link>
 	</linkedResources>
 </projectDescription>
