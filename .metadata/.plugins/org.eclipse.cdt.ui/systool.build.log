@@ -1,6 +1,6 @@
-21:05:57 **** Incremental Build of configuration Debug for project systool ****
+01:00:11 **** Incremental Build of configuration Debug for project systool ****
 make all 
 make: Nothing to be done for 'all'.
 
-21:05:57 Build Finished (took 183ms)
+01:00:12 Build Finished (took 180ms)
 

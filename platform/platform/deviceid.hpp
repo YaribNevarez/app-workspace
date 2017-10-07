@@ -12,7 +12,9 @@
 extern "C" {
 #endif
 
+#ifndef KERNEL_MODULE
 #include "framework/m_device.hpp"
+#endif
 
 typedef enum
 {
@@ -60,6 +62,15 @@ typedef enum
 
 typedef enum
 {
+	ZYBO_DEVICE_ID_BEGIN = 0,
+	ZYBO_BUTTONS,
+	ZYBO_SWITCHES,
+	ZYBO_LEDS,
+	ZYBO_DEVICE_ID_END
+} ZYBODeviceIDs;
+
+typedef enum
+{
 	SERIAL_DEVICE_ID_BEGIN = 0,
 	SERIAL_0 = 0x80A55A01,
 	SERIAL_DEVICE_ID_END
@@ -91,7 +102,10 @@ DeviceIdentity id_ADC_CHANNEL_7  = {ADC_CHANNEL_7,  "ADC_CHANNEL_7" };
 DeviceIdentity id_ADC_CHANNEL_8  = {ADC_CHANNEL_8,  "ADC_CHANNEL_8" };
 DeviceIdentity id_ADC_CHANNEL_9  = {ADC_CHANNEL_9,  "ADC_CHANNEL_9" };
 DeviceIdentity id_ADC_CHANNEL_10 = {ADC_CHANNEL_10, "ADC_CHANNEL_10"};
-DeviceIdentity id_SERIAL_0       = {SERIAL_0,       "SERIAL_0"};
+DeviceIdentity id_ZYBO_BUTTONS   = {ZYBO_BUTTONS,   "ZYBO_BUTTONS"  };
+DeviceIdentity id_ZYBO_SWITCHES  = {ZYBO_SWITCHES,  "ZYBO_SWITCHES" };
+DeviceIdentity id_ZYBO_LEDS      = {ZYBO_LEDS,      "ZYBO_LEDS"     };
+DeviceIdentity id_SERIAL_0       = {SERIAL_0,       "SERIAL_0"      };
 #ifdef __cplusplus
 }
 #endif

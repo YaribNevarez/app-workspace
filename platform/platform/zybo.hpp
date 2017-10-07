@@ -10,7 +10,7 @@
 
 #include "framework/m_device.hpp"
 
-namespace ZYBO
+namespace ZYBO_PLATFORM
 {
 	namespace DRIVER
 	{
@@ -18,6 +18,7 @@ namespace ZYBO
 		const char * const PWM1    = "/proc/pwm_1";
 		const char * const CTRL    = "/proc/controller";
 		const char * const ADC     = "/proc/adc";
+		const char * const ZYBO    = "/proc/zybo";
 		const char * const SERIAL0 = "/dev/ttyPS1";
 	}
 
@@ -27,6 +28,7 @@ namespace ZYBO
 		DeviceHandler PWM1(DRIVER::PWM1);
 		DeviceHandler CONTROLLER(DRIVER::CTRL);
 		DeviceHandler ADC(DRIVER::ADC);
+		DeviceHandler ZYBO(DRIVER::ZYBO);
 		DeviceHandler SERIAL0(DRIVER::SERIAL0);
 	}
 }

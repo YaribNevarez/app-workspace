@@ -12,39 +12,42 @@
 #include "deviceid.hpp"
 #include "zybo.hpp"
 
-using namespace ZYBO::HANDLER;
+using namespace ZYBO_PLATFORM::HANDLER;
 //using namespace ZEDBOARD::HANDLER;
 //using namespace FLORIDA::HANDLER;
 
 namespace SYSTEMBOX
 {
-	LevelSensor   chamberTopSensor(&ADC, &id_LEVELSENSOR_1);
-	LevelSensor   chamberBottomSensor(&ADC, &id_LEVELSENSOR_0);
-	LevelSensor   wasteTankSensor(&ADC, &id_WASTETLEVEL);
-	LeakageSensor leakageSensor_0(&ADC, &id_LEAKSENSOR_0);
-	LeakageSensor leakageSensor_1(&ADC, &id_LEAKSENSOR_1);
-	IRSensor      irSensor(&CONTROLLER, &id_IRSENSOR);
-	Valve         flushValve(&CONTROLLER, &id_FLUSHVALVE);
-	Valve         drainValve(&CONTROLLER, &id_DRAINVALVE);
-	Valve         shutOffValve(&CONTROLLER, &id_SHUTOFFVALVE);
-	InputPin      drainLocalReq(&CONTROLLER, &id_DRAINLOCAL);
-	InputVector   emergencySwitch(&CONTROLLER, &id_EMERGENCY);
-	InputVector   appSelection(&CONTROLLER, &id_APPSELECTION);
-	InputVector   drainDelaySelection(&CONTROLLER, &id_DRAINDELAY);
-	OutputPin     vacumGenerator(&CONTROLLER, &id_VACUMGEN);
-	OutputPin     drainIndicator(&CONTROLLER, &id_DRAININDICATOR);
-	OutputPin     leakageIndicator(&CONTROLLER, &id_LEAKINDICATOR);
-	OutputVector  pwm_0(&PWM0, &id_PWM_0);
-	OutputVector  pwm_1(&PWM1, &id_PWM_1);
-	OutputPin     relay_0(&CONTROLLER, &id_RELAY_0);
-	OutputPin     relay_1(&CONTROLLER, &id_RELAY_1);
-	InputVector   adc_channel_5(&ADC, &id_ADC_CHANNEL_5);
-//	InputVector   adc_channel_6(&ADC, &id_ADC_CHANNEL_6);
-//	InputVector   adc_channel_7(&ADC, &id_ADC_CHANNEL_7);
-//	InputVector   adc_channel_8(&ADC, &id_ADC_CHANNEL_8);
-//	InputVector   adc_channel_9(&ADC, &id_ADC_CHANNEL_9);
-//	InputVector   adc_channel_10(&ADC, &id_ADC_CHANNEL_10);
-	OutputVector  serial_0(&SERIAL0, &id_SERIAL_0);
+	LevelSensor   chamberTopSensor    (&ADC,        &id_LEVELSENSOR_1  );
+	LevelSensor   chamberBottomSensor (&ADC,        &id_LEVELSENSOR_0  );
+	LevelSensor   wasteTankSensor     (&ADC,        &id_WASTETLEVEL    );
+	LeakageSensor leakageSensor_0     (&ADC,        &id_LEAKSENSOR_0   );
+	LeakageSensor leakageSensor_1     (&ADC,        &id_LEAKSENSOR_1   );
+	IRSensor      irSensor            (&CONTROLLER, &id_IRSENSOR       );
+	Valve         flushValve          (&CONTROLLER, &id_FLUSHVALVE     );
+	Valve         drainValve          (&CONTROLLER, &id_DRAINVALVE     );
+	Valve         shutOffValve        (&CONTROLLER, &id_SHUTOFFVALVE   );
+	InputPin      drainLocalReq       (&CONTROLLER, &id_DRAINLOCAL     );
+	InputVector   emergencySwitch     (&CONTROLLER, &id_EMERGENCY      );
+	InputVector   appSelection        (&CONTROLLER, &id_APPSELECTION   );
+	InputVector   drainDelaySelection (&CONTROLLER, &id_DRAINDELAY     );
+	OutputPin     vacumGenerator      (&CONTROLLER, &id_VACUMGEN       );
+	OutputPin     drainIndicator      (&CONTROLLER, &id_DRAININDICATOR );
+	OutputPin     leakageIndicator    (&CONTROLLER, &id_LEAKINDICATOR  );
+	OutputVector  pwm_0               (&PWM0,       &id_PWM_0          );
+	OutputVector  pwm_1               (&PWM1,       &id_PWM_1          );
+	OutputPin     relay_0             (&CONTROLLER, &id_RELAY_0        );
+	OutputPin     relay_1             (&CONTROLLER, &id_RELAY_1        );
+	InputVector   adc_channel_5       (&ADC,        &id_ADC_CHANNEL_5  );
+//	InputVector   adc_channel_6       (&ADC,        &id_ADC_CHANNEL_6  );
+//	InputVector   adc_channel_7       (&ADC,        &id_ADC_CHANNEL_7  );
+//	InputVector   adc_channel_8       (&ADC,        &id_ADC_CHANNEL_8  );
+//	InputVector   adc_channel_9       (&ADC,        &id_ADC_CHANNEL_9  );
+//	InputVector   adc_channel_10      (&ADC,        &id_ADC_CHANNEL_10 );
+	InputVector   zybo_buttons        (&ZYBO,       &id_ZYBO_BUTTONS   );
+	InputVector   zybo_switches       (&ZYBO,       &id_ZYBO_SWITCHES  );
+	OutputVector  zybo_leds           (&ZYBO,       &id_ZYBO_LEDS      );
+	OutputVector  serial_0            (&SERIAL0,    &id_SERIAL_0       );
 };
 
 #endif /* SYSTEMBOX_HPP_ */
