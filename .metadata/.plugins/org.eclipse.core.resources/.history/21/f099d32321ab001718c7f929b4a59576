@@ -165,19 +165,8 @@ void ControlApp::drain_flush()
 	DrainSequenceState sequence_state;
 	bool flushingFlag;
 
-	zybo_leds.set_value(1);
-
 	for (;;)
 	{
-///////////////////////////////////////////////////////////////////////////////
-////////////////////////////// POWER OFF - BUTTON /////////////////////////////
-		if (zybo_buttons.get_value() & 0x01)
-		{
-			system("poweroff");
-			zybo_leds.set_value(0);
-		}
-///////////////////////////////////////////////////////////////////////////////
-
 		if (LevelSensor::FULL != wasteTankSensor.get_level())
 		{
 			if ((LevelSensor::FULL == chamberTopSensor.get_level()) && (LevelSensor::FULL == chamberBottomSensor.get_level()))

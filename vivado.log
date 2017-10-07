@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sat Oct  7 05:14:42 2017
+# Process ID: 6544
+# Current directory: /home/yarib/ZYBO_projects/app-workspace
+# Command line: vivado
+# Log file: /home/yarib/ZYBO_projects/app-workspace/vivado.log
+# Journal file: /home/yarib/ZYBO_projects/app-workspace/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/yarib/ZYBO_projects/Hardware/ip_repo/ESPI_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 5846.621 ; gain = 125.289 ; free physical = 302 ; free virtual = 6209
+open_bd_design {/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ccc_design.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - pmod
+Adding component instance block -- user.org:user:ESPI:1.0 - ESPI_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - zybo
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <ccc_design> from BD file </home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ccc_design.bd>
+open_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 5979.773 ; gain = 122.148 ; free physical = 427 ; free virtual = 6095
