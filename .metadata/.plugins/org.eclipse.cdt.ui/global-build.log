@@ -3282,3 +3282,48 @@ make: Nothing to be done for 'all'.
 07:46:03 **** Incremental Build of configuration Debug for project ctrlapp ****
 make all 
 make: Nothing to be done for 'all'.
+07:53:34 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/framework -I/home/yarib/ZYBO_projects/app-workspace/platform -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./platform/platform/devices.o  ./framework/framework/network/tcpserver.o ./framework/framework/network/tcpsocket.o  ./framework/framework/hid/joystick.o  ./framework/framework/device/commander.o ./framework/framework/device/device.o ./framework/framework/device/devicehandler.o  ./framework/framework/application/application.o ./framework/framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047036	  15080	  41352	1103468	 10d66c	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+07:55:57 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/framework -I/home/yarib/ZYBO_projects/app-workspace/platform -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./platform/platform/devices.o  ./framework/framework/network/tcpserver.o ./framework/framework/network/tcpsocket.o  ./framework/framework/hid/joystick.o  ./framework/framework/device/commander.o ./framework/framework/device/device.o ./framework/framework/device/devicehandler.o  ./framework/framework/application/application.o ./framework/framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047036	  15080	  41352	1103468	 10d66c	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+07:56:00 **** Incremental Build of configuration Debug for project ctrlapp ****
+make all 
+make: Nothing to be done for 'all'.
+07:56:15 **** Incremental Build of configuration Debug for project ctrlapp ****
+make all 
+make: Nothing to be done for 'all'.
+07:56:32 **** Incremental Build of configuration Debug for project ctrlapp ****
+make all 
+make: Nothing to be done for 'all'.
