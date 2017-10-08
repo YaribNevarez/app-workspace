@@ -1,0 +1,9 @@
+framework/base_framework/network/tcpserver.o \
+ framework/base_framework/network/tcpserver.d: \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpserver.cpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpserver.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpsocket.hpp
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpserver.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpsocket.hpp:

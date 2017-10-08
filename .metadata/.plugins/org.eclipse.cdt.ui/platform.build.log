@@ -1,20 +1,59 @@
-07:27:29 **** Auto Build of configuration Debug for project platform ****
+07:37:23 **** Auto Build of configuration Debug for project platform ****
 make all 
-Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/device/devicehandler.cpp
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpserver.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/framework -c -fmessage-length=0 -MT"framework/device/devicehandler.o" -MMD -MP -MF"framework/device/devicehandler.d" -MT"framework/device/devicehandler.d" -o "framework/device/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/device/devicehandler.cpp"
-Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/device/devicehandler.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/base_framework/network/tcpserver.o" -MMD -MP -MF"framework/base_framework/network/tcpserver.d" -MT"framework/base_framework/network/tcpserver.d" -o "framework/base_framework/network/tcpserver.o" "/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpserver.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpserver.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpsocket.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/base_framework/network/tcpsocket.o" -MMD -MP -MF"framework/base_framework/network/tcpsocket.d" -MT"framework/base_framework/network/tcpsocket.d" -o "framework/base_framework/network/tcpsocket.o" "/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpsocket.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpsocket.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/hid/joystick.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/base_framework/hid/joystick.o" -MMD -MP -MF"framework/base_framework/hid/joystick.d" -MT"framework/base_framework/hid/joystick.d" -o "framework/base_framework/hid/joystick.o" "/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/hid/joystick.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/hid/joystick.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/commander.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/base_framework/device/commander.o" -MMD -MP -MF"framework/base_framework/device/commander.d" -MT"framework/base_framework/device/commander.d" -o "framework/base_framework/device/commander.o" "/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/commander.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/commander.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/base_framework/device/device.o" -MMD -MP -MF"framework/base_framework/device/device.d" -MT"framework/base_framework/device/device.d" -o "framework/base_framework/device/device.o" "/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/base_framework/device/devicehandler.o" -MMD -MP -MF"framework/base_framework/device/devicehandler.d" -MT"framework/base_framework/device/devicehandler.d" -o "framework/base_framework/device/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/base_framework/application/application.o" -MMD -MP -MF"framework/base_framework/application/application.d" -MT"framework/base_framework/application/application.d" -o "framework/base_framework/application/application.o" "/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/application.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/application.cpp
+ 
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/daemon.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"framework/base_framework/application/daemon.o" -MMD -MP -MF"framework/base_framework/application/daemon.d" -MT"framework/base_framework/application/daemon.d" -o "framework/base_framework/application/daemon.o" "/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/daemon.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/daemon.cpp
+ 
+Building file: ../extension_framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"extension_framework/devices.o" -MMD -MP -MF"extension_framework/devices.d" -MT"extension_framework/devices.d" -o "extension_framework/devices.o" "../extension_framework/devices.cpp"
+Finished building: ../extension_framework/devices.cpp
  
 Building target: libplatform.elf
 Invoking: ARM Linux archiver
-arm-xilinx-linux-gnueabi-ar -r  "libplatform.elf"  ./platform/devices.o  ./framework/network/tcpserver.o ./framework/network/tcpsocket.o  ./framework/hid/joystick.o  ./framework/device/commander.o ./framework/device/device.o ./framework/device/devicehandler.o  ./framework/application/application.o ./framework/application/daemon.o   
+arm-xilinx-linux-gnueabi-ar -r  "libplatform.elf"  ./framework/base_framework/network/tcpserver.o ./framework/base_framework/network/tcpsocket.o  ./framework/base_framework/hid/joystick.o  ./framework/base_framework/device/commander.o ./framework/base_framework/device/device.o ./framework/base_framework/device/devicehandler.o  ./framework/base_framework/application/application.o ./framework/base_framework/application/daemon.o  ./extension_framework/devices.o   
 arm-xilinx-linux-gnueabi-ar: creating libplatform.elf
 Finished building target: libplatform.elf
  
 Invoking: ARM Linux Print Size
 arm-xilinx-linux-gnueabi-size libplatform.elf  |tee "libplatform.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   3160	      0	      0	   3160	    c58	devices.o (ex libplatform.elf)
    1144	      4	      4	   1152	    480	tcpserver.o (ex libplatform.elf)
   11328	      4	      4	  11336	   2c48	tcpsocket.o (ex libplatform.elf)
    2176	      0	      0	   2176	    880	joystick.o (ex libplatform.elf)
@@ -23,8 +62,9 @@ arm-xilinx-linux-gnueabi-size libplatform.elf  |tee "libplatform.elf.size"
    1484	      0	      0	   1484	    5cc	devicehandler.o (ex libplatform.elf)
    7556	      0	      0	   7556	   1d84	application.o (ex libplatform.elf)
     516	      0	      0	    516	    204	daemon.o (ex libplatform.elf)
+   3160	      0	      0	   3160	    c58	devices.o (ex libplatform.elf)
 Finished building: libplatform.elf.size
  
 
-07:27:29 Build Finished (took 321ms)
+07:37:25 Build Finished (took 1s.718ms)
 

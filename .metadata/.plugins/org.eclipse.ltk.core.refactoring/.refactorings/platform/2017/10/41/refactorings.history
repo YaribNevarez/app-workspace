@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;platform/framework&apos; to &apos;base_framework&apos;" description="Rename resource &apos;framework&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="framework" name="base_framework" stamp="1507440721412" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;platform/platform&apos; to &apos;extension_framework&apos;" description="Rename resource &apos;platform&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="platform" name="extension_framework" stamp="1507440834238" updateReferences="true"/>
+</session>

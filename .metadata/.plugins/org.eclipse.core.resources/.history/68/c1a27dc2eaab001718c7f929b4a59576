@@ -1,0 +1,12 @@
+framework/base_framework/device/device.o \
+ framework/base_framework/device/device.d: \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.cpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp:

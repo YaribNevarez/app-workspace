@@ -1,0 +1,25 @@
+platform/devices.o platform/devices.d: ../platform/devices.cpp \
+ ../platform/devices.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/m_device.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/commander.hpp
+
+../platform/devices.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/m_device.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/commander.hpp:

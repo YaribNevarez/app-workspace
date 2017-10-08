@@ -1,0 +1,6 @@
+framework/base_framework/hid/joystick.o \
+ framework/base_framework/hid/joystick.d: \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/hid/joystick.cpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/hid/joystick.hpp
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/hid/joystick.hpp:

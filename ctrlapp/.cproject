@@ -26,7 +26,9 @@
 							</builder>
 							<tool command="arm-xilinx-linux-gnueabi-gcc" commandLinePattern="${COMMAND} -c ${FLAGS} ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="xilinx.gnu.armlinux.c.toolchain.assembler.debug.1722899066" name="ARM Linux gcc assembler" superClass="xilinx.gnu.armlinux.c.toolchain.assembler.debug">
 								<option id="xilinx.gnu.both.asm.option.include.paths.901698733" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ctrlapp/framework}&quot;"/>
+									<listOptionValue builtIn="false" value="../ctrlapp/framework"/>
+									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/framework"/>
+									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/platform"/>
 								</option>
 								<inputType id="xilinx.gnu.assembler.input.1977546621" superClass="xilinx.gnu.assembler.input"/>
 							</tool>
@@ -38,8 +40,8 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1395778245" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.384922351" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.dircategory.includes.1546115999" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/framework"/>
-									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/platform"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/base_framework}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/extension_framework}&quot;"/>
 								</option>
 								<inputType id="xilinx.gnu.armlinux.cxx.compiler.input.1196513202" name="C++ source files" superClass="xilinx.gnu.armlinux.cxx.compiler.input"/>
 							</tool>
@@ -59,9 +61,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="platform|framework" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="framework"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="platform"/>
+						<entry excluding="extension_framework|base_framework|platform|framework" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="base_framework"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="extension_framework"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

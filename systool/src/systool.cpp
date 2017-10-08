@@ -17,9 +17,9 @@
 #include <sys/ioctl.h>
 #include <fcntl.h>
 
-#include "framework/m_device.hpp"
-#include "framework/m_hid.hpp"
-#include "platform/systembox.hpp"
+#include "m_device.hpp"
+#include "m_hid.hpp"
+#include "systembox.hpp"
 
 using namespace SYSTEMBOX;
 

@@ -9,10 +9,10 @@
 #include <iostream>
 #include "ctrlapp.hpp"
 
-#include "framework/m_application.hpp"
-#include "framework/m_device.hpp"
-#include "framework/m_network.hpp"
-#include "platform/systembox.hpp"
+#include "m_application.hpp"
+#include "m_device.hpp"
+#include "m_network.hpp"
+#include "systembox.hpp"
 
 using namespace SYSTEMBOX;
 

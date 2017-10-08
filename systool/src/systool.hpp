@@ -8,8 +8,8 @@
 #ifndef SYSTOOL_HPP_
 #define SYSTOOL_HPP_
 
-#include "framework/m_application.hpp"
-#include "framework/m_network.hpp"
+#include "m_application.hpp"
+#include "m_network.hpp"
 
 class SystemTool: public Application
 {

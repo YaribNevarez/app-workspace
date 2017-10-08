@@ -1,0 +1,12 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+O_SRCS += \
+/home/yarib/ZYBO_projects/app-workspace/framework/Debug/base_framework/network/tcpserver.o \
+/home/yarib/ZYBO_projects/app-workspace/framework/Debug/base_framework/network/tcpsocket.o 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+

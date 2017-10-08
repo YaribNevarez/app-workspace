@@ -1,0 +1,9 @@
+framework/base_framework/application/application.o \
+ framework/base_framework/application/application.d: \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/application.cpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/application.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/thread.hpp
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/application.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/application/thread.hpp:

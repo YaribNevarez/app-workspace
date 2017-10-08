@@ -9,20 +9,20 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/subdir.mk
--include platform/platform/subdir.mk
--include platform/Debug/platform/subdir.mk
--include platform/Debug/framework/network/subdir.mk
--include platform/Debug/framework/hid/subdir.mk
--include platform/Debug/framework/device/subdir.mk
--include platform/Debug/framework/application/subdir.mk
--include framework/framework/network/subdir.mk
--include framework/framework/hid/subdir.mk
--include framework/framework/device/subdir.mk
--include framework/framework/application/subdir.mk
--include framework/Debug/framework/network/subdir.mk
--include framework/Debug/framework/hid/subdir.mk
--include framework/Debug/framework/device/subdir.mk
--include framework/Debug/framework/application/subdir.mk
+-include extension_framework/Debug/base_framework/network/subdir.mk
+-include extension_framework/Debug/base_framework/hid/subdir.mk
+-include extension_framework/Debug/base_framework/device/subdir.mk
+-include extension_framework/Debug/base_framework/application/subdir.mk
+-include extension_framework/Debug/subdir.mk
+-include extension_framework/subdir.mk
+-include base_framework/network/subdir.mk
+-include base_framework/hid/subdir.mk
+-include base_framework/device/subdir.mk
+-include base_framework/application/subdir.mk
+-include base_framework/Debug/network/subdir.mk
+-include base_framework/Debug/hid/subdir.mk
+-include base_framework/Debug/device/subdir.mk
+-include base_framework/Debug/application/subdir.mk
 -include subdir.mk
 -include objects.mk
 

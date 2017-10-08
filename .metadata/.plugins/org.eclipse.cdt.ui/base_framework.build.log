@@ -1,0 +1,24 @@
+07:54:48 **** Auto Build of configuration Debug for project base_framework ****
+make all 
+Building target: libbase_framework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libbase_framework.elf"  ./network/tcpserver.o ./network/tcpsocket.o  ./hid/joystick.o  ./device/commander.o ./device/device.o ./device/devicehandler.o  ./application/application.o ./application/daemon.o   
+arm-xilinx-linux-gnueabi-ar: creating libbase_framework.elf
+Finished building target: libbase_framework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libbase_framework.elf  |tee "libbase_framework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1144	      4	      4	   1152	    480	tcpserver.o (ex libbase_framework.elf)
+  11328	      4	      4	  11336	   2c48	tcpsocket.o (ex libbase_framework.elf)
+   2176	      0	      0	   2176	    880	joystick.o (ex libbase_framework.elf)
+   6768	      0	      0	   6768	   1a70	commander.o (ex libbase_framework.elf)
+  10360	      0	     16	  10376	   2888	device.o (ex libbase_framework.elf)
+   1484	      0	      0	   1484	    5cc	devicehandler.o (ex libbase_framework.elf)
+   7556	      0	      0	   7556	   1d84	application.o (ex libbase_framework.elf)
+    516	      0	      0	    516	    204	daemon.o (ex libbase_framework.elf)
+Finished building: libbase_framework.elf.size
+ 
+
+07:54:48 Build Finished (took 165ms)
+

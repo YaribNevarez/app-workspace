@@ -1,0 +1,9 @@
+framework/base_framework/device/devicehandler.o \
+ framework/base_framework/device/devicehandler.d: \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.cpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp:

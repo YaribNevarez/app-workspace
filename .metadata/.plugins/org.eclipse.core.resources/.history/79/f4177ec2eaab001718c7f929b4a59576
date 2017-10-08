@@ -1,0 +1,10 @@
+   text	   data	    bss	    dec	    hex	filename
+   1144	      4	      4	   1152	    480	tcpserver.o (ex libplatform.elf)
+  11328	      4	      4	  11336	   2c48	tcpsocket.o (ex libplatform.elf)
+   2176	      0	      0	   2176	    880	joystick.o (ex libplatform.elf)
+   6768	      0	      0	   6768	   1a70	commander.o (ex libplatform.elf)
+  10360	      0	     16	  10376	   2888	device.o (ex libplatform.elf)
+   1484	      0	      0	   1484	    5cc	devicehandler.o (ex libplatform.elf)
+   7556	      0	      0	   7556	   1d84	application.o (ex libplatform.elf)
+    516	      0	      0	    516	    204	daemon.o (ex libplatform.elf)
+   3160	      0	      0	   3160	    c58	devices.o (ex libplatform.elf)

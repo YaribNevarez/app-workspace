@@ -3,9 +3,9 @@
 	<item value="Default C++ source template" key="LastUsedSourceTemplate"/>
 	<item value="Default C++ header template" key="LastUsedHeaderTemplate"/>
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
-		<item value="544" key="DIALOG_WIDTH"/>
+		<item value="564" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="585" key="DIALOG_HEIGHT"/>
+		<item value="605" key="DIALOG_HEIGHT"/>
 		<item value="721" key="DIALOG_X_ORIGIN"/>
 		<item value="219" key="DIALOG_Y_ORIGIN"/>
 	</section>

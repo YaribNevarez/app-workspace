@@ -1,0 +1,34 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpserver.cpp \
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpsocket.cpp 
+
+OBJS += \
+./framework/base_framework/network/tcpserver.o \
+./framework/base_framework/network/tcpsocket.o 
+
+CPP_DEPS += \
+./framework/base_framework/network/tcpserver.d \
+./framework/base_framework/network/tcpsocket.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+framework/base_framework/network/tcpserver.o: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpserver.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Linux g++ compiler'
+	arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"$@" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+framework/base_framework/network/tcpsocket.o: /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/network/tcpsocket.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Linux g++ compiler'
+	arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/framework" -c -fmessage-length=0 -MT"$@" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

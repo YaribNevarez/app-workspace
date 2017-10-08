@@ -1,0 +1,15 @@
+framework/base_framework/device/commander.o \
+ framework/base_framework/device/commander.d: \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/commander.cpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/commander.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp \
+ /home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/commander.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/device.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/iodef.hpp:
+
+/home/yarib/ZYBO_projects/app-workspace/framework/base_framework/device/devicehandler.hpp:

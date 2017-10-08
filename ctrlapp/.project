@@ -25,14 +25,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>framework</name>
+			<name>base_framework</name>
 			<type>2</type>
-			<location>/home/yarib/ZYBO_projects/app-workspace/framework</location>
+			<location>/home/yarib/ZYBO_projects/app-workspace/base_framework</location>
 		</link>
 		<link>
-			<name>platform</name>
+			<name>extension_framework</name>
 			<type>2</type>
-			<location>/home/yarib/ZYBO_projects/app-workspace/platform</location>
+			<location>/home/yarib/ZYBO_projects/app-workspace/extension_framework</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -20,7 +20,7 @@ CPP_DEPS += \
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM Linux g++ compiler'
-	arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/platform -I/home/yarib/ZYBO_projects/app-workspace/framework -c -fmessage-length=0 -MT"$@" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"$@" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

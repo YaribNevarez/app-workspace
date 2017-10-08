@@ -1,0 +1,15 @@
+07:40:11 **** Auto Build of configuration Debug for project extension ****
+make all 
+Building file: ../extension_framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"extension_framework/devices.o" -MMD -MP -MF"extension_framework/devices.d" -MT"extension_framework/devices.d" -o "extension_framework/devices.o" "../extension_framework/devices.cpp"
+In file included from ../extension_framework/devices.cpp:7:0:
+../extension_framework/devices.hpp:11:39: fatal error: base_framework/m_device.hpp: No such file or directory
+ #include "base_framework/m_device.hpp"
+                                       ^
+compilation terminated.
+extension_framework/subdir.mk:18: recipe for target 'extension_framework/devices.o' failed
+make: *** [extension_framework/devices.o] Error 1
+
+07:40:11 Build Finished (took 194ms)
+
