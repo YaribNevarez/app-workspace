@@ -1,0 +1,124 @@
+/*
+ * TcpServer.cpp
+ *
+ *  Created on: Sep 3, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+
+#include "tcpserver.hpp"
+
+TcpServer::TcpServer(uint16_t host_port):
+host_port(host_port),
+server_socket(-1),
+bound(false)
+{
+	memset(&server_address, 0, sizeof(server_address));
+}
+
+TcpSocket * TcpServer::accept_connection(void)
+{
+	TcpSocket * client = NULL;
+
+	if (server_socket != -1)
+	{
+		int                client_socket;
+		struct sockaddr_in client_address;
+		int                addr_len;
+
+		listen(server_socket , 1);
+
+		addr_len = sizeof(struct sockaddr_in);
+
+		client_socket = accept(server_socket,
+							  (struct sockaddr *) &client_address,
+							  (socklen_t*)&addr_len);
+
+		if (client_socket != -1)
+		{
+			client = new TcpSocket(client_socket, client_address);
+		}
+	}
+
+	return client;
+}
+#include <stdio.h>
+#include <sys/ioctl.h>
+#include <sys/socket.h>
+#include <net/if.h>
+#include <netinet/in.h>
+int TcpServer::prepare(void)
+{
+	int result = EXIT_FAILURE;
+
+	if (server_socket == -1)
+	{
+		server_socket = socket(AF_INET , SOCK_STREAM , 0);
+	}
+
+	if (server_socket != -1)
+	{
+		if (!bound)
+		{
+			server_address.sin_family = AF_INET;
+			server_address.sin_addr.s_addr = INADDR_ANY;
+			server_address.sin_port = htons(host_port);
+
+			result = bind(server_socket,
+						  (struct sockaddr *)&server_address,
+						  sizeof(server_address));
+
+			bound = result != -1;
+		}
+		else
+		{
+			result = EXIT_SUCCESS;
+		}
+	}
+
+	if (bound)
+	{
+	      struct ifreq   buffer[32];
+	      struct ifconf  intfc;
+	      struct ifreq  *pIntfc;
+	      int            i, fd, num_intfc;
+
+	      intfc.ifc_len = sizeof(buffer);
+	      intfc.ifc_buf = (char*) buffer;
+
+	      fd = server_socket;
+
+	      if (ioctl(fd, SIOCGIFCONF, &intfc) < 0)
+	      {
+	          perror("ioctl SIOCGIFCONF failed");
+	          return 1;
+	      }
+
+	      pIntfc    = intfc.ifc_req;
+	      num_intfc = intfc.ifc_len / sizeof(struct ifreq);
+
+	      for (i = 0; i < num_intfc; i++)
+	      {
+	          struct ifreq *item = &(pIntfc[i]);
+	          printf("Interface # %d -> %s: IP %s\n",
+	               i, item->ifr_name,
+	                 inet_ntoa(((struct sockaddr_in *)&item->ifr_addr)->sin_addr));
+	      }
+	}
+
+    return result;
+}
+
+void TcpServer::close_connection(void)
+{
+	if (server_socket != -1)
+	{
+		shutdown(server_socket, SHUT_RDWR);
+		close(server_socket);
+		server_socket = -1;
+	}
+}
+
+TcpServer::~TcpServer()
+{
+	close_connection();
+}

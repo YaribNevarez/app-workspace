@@ -12,7 +12,7 @@
 class Joystick
 {
 public:
-	Joystick(const char *);
+	Joystick(const char * file_name);
 	virtual ~Joystick(void);
 
 	bool open_device(void);
@@ -22,8 +22,8 @@ public:
 	std::string get_name(void);
 	unsigned get_number_of_axis(void);
 	unsigned get_number_of_buttons(void);
-	int get_axis_value(int);
-	int get_button_value(int);
+	int get_axis_value(int axis);
+	int get_button_value(int button);
 
 protected:
 	void update_info(void);

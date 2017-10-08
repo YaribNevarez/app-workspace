@@ -17,18 +17,18 @@
 class Device
 {
 public:
-	Device(DeviceHandler *, DeviceIdentity *);
+	Device(DeviceHandler * device_handler, DeviceIdentity * identity);
 
 	typedef std::vector<Device *> InstanceVector;
 
-	static Device *         get_instanceByID(DeviceID);
+	static Device *         get_instanceByID(DeviceID id);
 	static InstanceVector & get_instanceVector(void);
 
 	DeviceID		get_ID(void);
 	std::string     get_name(void);
 
-	bool			write(uint32_t);
-	bool			read(uint32_t *);
+	bool			write(uint32_t data);
+	bool			read(uint32_t * data);
 
 	virtual 		~Device();
 protected:

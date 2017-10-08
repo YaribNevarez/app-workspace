@@ -1,6 +1,21 @@
-01:00:11 **** Incremental Build of configuration Debug for project systool ****
+07:27:29 **** Auto Build of configuration Debug for project systool ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: /home/yarib/ZYBO_projects/app-workspace/framework/framework/device/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/platform -I/home/yarib/ZYBO_projects/app-workspace/framework -c -fmessage-length=0 -MT"framework/framework/device/devicehandler.o" -MMD -MP -MF"framework/framework/device/devicehandler.d" -MT"framework/framework/device/devicehandler.d" -o "framework/framework/device/devicehandler.o" "/home/yarib/ZYBO_projects/app-workspace/framework/framework/device/devicehandler.cpp"
+Finished building: /home/yarib/ZYBO_projects/app-workspace/framework/framework/device/devicehandler.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./platform/platform/devices.o  ./framework/framework/network/tcpserver.o ./framework/framework/network/tcpsocket.o  ./framework/framework/hid/joystick.o  ./framework/framework/device/commander.o ./framework/framework/device/device.o ./framework/framework/device/devicehandler.o  ./framework/framework/application/application.o ./framework/framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045424	  15084	  41352	1101860	 10d024	systool.elf
+Finished building: systool.elf.size
+ 
 
-01:00:12 Build Finished (took 180ms)
+07:27:30 Build Finished (took 770ms)
 

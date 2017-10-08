@@ -23,10 +23,13 @@ class DeviceHandler
 		WRITE,
 		QUERY
 	}IORequestType;
-	DeviceHandler (const char * const);
-	size_t  IORequest(void *, size_t, IORequestType, uint32_t = 0);
-	size_t  write(void *, size_t);
-	size_t  read (void *, size_t);
+	DeviceHandler (const char * const file_name);
+	size_t  IORequest(void * buffer,
+			 size_t size,
+			 IORequestType irq,
+			 uint32_t query_ID = 0);
+	size_t  write(void * buffer, size_t size);
+	size_t  read (void * buffer, size_t size);
 	void    set_auto_open(bool);
 	bool    open(void);
 	bool    is_open(void);

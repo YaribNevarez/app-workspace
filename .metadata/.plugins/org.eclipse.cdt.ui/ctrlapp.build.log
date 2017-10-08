@@ -1,6 +1,6 @@
-07:56:32 **** Incremental Build of configuration Debug for project ctrlapp ****
+07:27:31 **** Auto Build of configuration Debug for project ctrlapp ****
 make all 
 make: Nothing to be done for 'all'.
 
-07:56:32 Build Finished (took 230ms)
+07:27:32 Build Finished (took 182ms)
 

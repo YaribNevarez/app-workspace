@@ -21,11 +21,11 @@ public:
 	virtual ~Application();
 
 protected:
-	void register_thread(Thread *);
+	void register_thread(Thread * thread);
 	int  start_threads(void);
 
-	int         passed_arg(std::string);
-	std::string passed_arg(int);
+	int         passed_arg(std::string argument);
+	std::string passed_arg(int i);
 	int         passed_arg(void);
 
 private:
