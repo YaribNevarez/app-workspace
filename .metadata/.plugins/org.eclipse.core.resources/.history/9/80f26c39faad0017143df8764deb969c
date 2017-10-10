@@ -22,8 +22,8 @@
 
 namespace SYSTEMBOX
 {
-	LevelSensor   chamberBottomSensor (&ADC,        &id_LEVELSENSOR_0  );
 	LevelSensor   chamberTopSensor    (&ADC,        &id_LEVELSENSOR_1  );
+	LevelSensor   chamberBottomSensor (&ADC,        &id_LEVELSENSOR_0  );
 	LevelSensor   wasteTankSensor     (&ADC,        &id_WASTETLEVEL    );
 	LeakageSensor leakageSensor_0     (&ADC,        &id_LEAKSENSOR_0   );
 	LeakageSensor leakageSensor_1     (&ADC,        &id_LEAKSENSOR_1   );
@@ -43,13 +43,11 @@ namespace SYSTEMBOX
 	OutputPin     relay_0             (&CONTROLLER, &id_RELAY_0        );
 	OutputPin     relay_1             (&CONTROLLER, &id_RELAY_1        );
 	InputVector   adc_channel_5       (&ADC,        &id_ADC_CHANNEL_5  );
-#ifdef ADC_CHANNELS_6_TO_10
 	InputVector   adc_channel_6       (&ADC,        &id_ADC_CHANNEL_6  );
 	InputVector   adc_channel_7       (&ADC,        &id_ADC_CHANNEL_7  );
 	InputVector   adc_channel_8       (&ADC,        &id_ADC_CHANNEL_8  );
 	InputVector   adc_channel_9       (&ADC,        &id_ADC_CHANNEL_9  );
 	InputVector   adc_channel_10      (&ADC,        &id_ADC_CHANNEL_10 );
-#endif
 	InputVector   zybo_buttons        (&ZYBO,       &id_ZYBO_BUTTONS   );
 	InputVector   zybo_switches       (&ZYBO,       &id_ZYBO_SWITCHES  );
 	OutputVector  zybo_leds           (&ZYBO,       &id_ZYBO_LEDS      );

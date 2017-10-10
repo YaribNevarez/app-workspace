@@ -22,8 +22,8 @@
 
 namespace SYSTEMBOX
 {
-	LevelSensor   chamberBottomSensor (&ADC,        &id_LEVELSENSOR_0  );
 	LevelSensor   chamberTopSensor    (&ADC,        &id_LEVELSENSOR_1  );
+	LevelSensor   chamberBottomSensor (&ADC,        &id_LEVELSENSOR_0  );
 	LevelSensor   wasteTankSensor     (&ADC,        &id_WASTETLEVEL    );
 	LeakageSensor leakageSensor_0     (&ADC,        &id_LEAKSENSOR_0   );
 	LeakageSensor leakageSensor_1     (&ADC,        &id_LEAKSENSOR_1   );
