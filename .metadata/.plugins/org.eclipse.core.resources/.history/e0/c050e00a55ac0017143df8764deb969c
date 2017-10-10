@@ -1,0 +1,56 @@
+/*
+ * systembox.hpp
+ *
+ *  Created on: Aug 29, 2017
+ *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
+ */
+
+#ifndef SYSTEMBOX_HPP_
+#define SYSTEMBOX_HPP_
+
+#include "devices.hpp"
+#include "deviceid.hpp"
+#include "zybo.hpp"
+
+using namespace ZYBO_PLATFORM::HANDLER;
+//using namespace ZEDBOARD::HANDLER;
+//using namespace FLORIDA::HANDLER;
+
+class SYSTEMBOX
+{
+public:
+	SYSTEMBOX():
+{}
+	static LevelSensor   chamberTopSensor    (&ADC,        &id_LEVELSENSOR_1  );
+	static LevelSensor   chamberBottomSensor (&ADC,        &id_LEVELSENSOR_0  );
+	static LevelSensor   wasteTankSensor     (&ADC,        &id_WASTETLEVEL    );
+	static LeakageSensor leakageSensor_0     (&ADC,        &id_LEAKSENSOR_0   );
+	static LeakageSensor leakageSensor_1     (&ADC,        &id_LEAKSENSOR_1   );
+	static IRSensor      irSensor            (&CONTROLLER, &id_IRSENSOR       );
+	static Valve         flushValve          (&CONTROLLER, &id_FLUSHVALVE     );
+	static Valve         drainValve          (&CONTROLLER, &id_DRAINVALVE     );
+	static Valve         shutOffValve        (&CONTROLLER, &id_SHUTOFFVALVE   );
+	static InputPin      drainLocalReq       (&CONTROLLER, &id_DRAINLOCAL     );
+	static InputVector   emergencySwitch     (&CONTROLLER, &id_EMERGENCY      );
+	static InputVector   appSelection        (&CONTROLLER, &id_APPSELECTION   );
+	static InputVector   drainDelaySelection (&CONTROLLER, &id_DRAINDELAY     );
+	static OutputPin     vacumGenerator      (&CONTROLLER, &id_VACUMGEN       );
+	static OutputPin     drainIndicator      (&CONTROLLER, &id_DRAININDICATOR );
+	static OutputPin     leakageIndicator    (&CONTROLLER, &id_LEAKINDICATOR  );
+	static OutputVector  pwm_0               (&PWM0,       &id_PWM_0          );
+	static OutputVector  pwm_1               (&PWM1,       &id_PWM_1          );
+	static OutputPin     relay_0             (&CONTROLLER, &id_RELAY_0        );
+	static OutputPin     relay_1             (&CONTROLLER, &id_RELAY_1        );
+	static InputVector   adc_channel_5       (&ADC,        &id_ADC_CHANNEL_5  );
+//	static InputVector   adc_channel_6       (&ADC,        &id_ADC_CHANNEL_6  );
+//	static InputVector   adc_channel_7       (&ADC,        &id_ADC_CHANNEL_7  );
+//	static InputVector   adc_channel_8       (&ADC,        &id_ADC_CHANNEL_8  );
+//	static InputVector   adc_channel_9       (&ADC,        &id_ADC_CHANNEL_9  );
+//	static InputVector   adc_channel_10      (&ADC,        &id_ADC_CHANNEL_10 );
+	static InputVector   zybo_buttons        (&ZYBO,       &id_ZYBO_BUTTONS   );
+	static InputVector   zybo_switches       (&ZYBO,       &id_ZYBO_SWITCHES  );
+	static OutputVector  zybo_leds           (&ZYBO,       &id_ZYBO_LEDS      );
+	static OutputVector  serial_0            (&SERIAL0,    &id_SERIAL_0       );
+};
+
+#endif /* SYSTEMBOX_HPP_ */

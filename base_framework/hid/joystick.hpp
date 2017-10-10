@@ -26,8 +26,8 @@ public:
 	int get_button_value(int button);
 
 protected:
-	void update_info(void);
-	void poll_events(void);
+	void features_info(void);
+	void event_handler(void);
 
 	std::string	file_name;
 	int   file_descriptor;

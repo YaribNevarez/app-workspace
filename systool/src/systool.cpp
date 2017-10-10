@@ -17,9 +17,12 @@
 #include <sys/ioctl.h>
 #include <fcntl.h>
 
+#define ZYBO_HARDWARE
+
 #include "m_device.hpp"
 #include "m_hid.hpp"
 #include "systembox.hpp"
+
 
 using namespace SYSTEMBOX;
 

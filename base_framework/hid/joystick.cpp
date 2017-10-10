@@ -35,12 +35,12 @@ bool Joystick::open_device(void)
 	if (!is_open())
 	{
 		file_descriptor = open((const char *)file_name.c_str(), O_RDONLY);
-		update_info();
+		features_info();
 	}
 	return is_open();
 }
 
-void Joystick::update_info(void)
+void Joystick::features_info(void)
 {
 	if (is_open())
 	{
@@ -110,7 +110,7 @@ unsigned Joystick::get_number_of_buttons(void)
 	return number_of_buttons;
 }
 
-void Joystick::poll_events(void)
+void Joystick::event_handler(void)
 {
 	struct js_event js;
 	struct js_event js_diff;
@@ -139,7 +139,7 @@ void Joystick::poll_events(void)
 int Joystick::get_axis_value(int a)
 {
 	int value = 0;
-	poll_events();
+	event_handler();
 	if ((a < number_of_axis) && (axis != NULL))
 	{
 		value = axis[a];
@@ -151,7 +151,7 @@ int Joystick::get_axis_value(int a)
 int Joystick::get_button_value(int b)
 {
 	int value = 0;
-	poll_events();
+	event_handler();
 	if ((b < number_of_buttons) && (buttons != NULL))
 	{
 		value = buttons[b];

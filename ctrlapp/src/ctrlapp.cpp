@@ -1,5 +1,5 @@
 /*
- * cccapp.cpp
+ * ctrlapp.cpp
  *
  *  Created on: Aug 7, 2017
  *      Author: Yarib Nevárez (yarib_007@hotmail.com) - root
@@ -9,6 +9,7 @@
 #include <iostream>
 #include "ctrlapp.hpp"
 
+#define ZYBO_HARDWARE
 #include "m_application.hpp"
 #include "m_device.hpp"
 #include "m_network.hpp"

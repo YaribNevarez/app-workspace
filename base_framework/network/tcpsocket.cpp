@@ -130,7 +130,7 @@ void TcpSocket::set_buffer_length(size_t length)
 	buffer_length = length;
 }
 
-size_t TcpSocket::get_buffer_length()
+size_t TcpSocket::get_buffer_length(void)
 {
 	return buffer_length;
 }

@@ -27,17 +27,17 @@ public:
 	virtual int  open_connection(char * host_address, uint16_t port);
 	virtual void close_connection(void);
 
-	virtual int  receive_buffer(void *, size_t);
-	virtual int  receive_buffer(std::string &);
-	virtual int  receive_buffer(ByteVector &);
+	virtual int  receive_buffer(void * buffer, size_t length);
+	virtual int  receive_buffer(std::string & string);
+	virtual int  receive_buffer(ByteVector & vector);
 
-	virtual int  send_buffer(void *, size_t);
-	virtual int  send_buffer(const char *);
-	virtual int  send_buffer(std::string &);
-	virtual int  send_buffer(ByteVector &);
+	virtual int  send_buffer(void * buffer, size_t length);
+	virtual int  send_buffer(const char * array);
+	virtual int  send_buffer(std::string & string);
+	virtual int  send_buffer(ByteVector &vector);
 
-	void         set_buffer_length(size_t);
-	size_t       get_buffer_length();
+	void         set_buffer_length(size_t length);
+	size_t       get_buffer_length(void);
 
 protected:
 	enum

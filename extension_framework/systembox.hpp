@@ -12,9 +12,13 @@
 #include "deviceid.hpp"
 #include "zybo.hpp"
 
-using namespace ZYBO_PLATFORM::HANDLER;
-//using namespace ZEDBOARD::HANDLER;
-//using namespace FLORIDA::HANDLER;
+#ifdef ZYBO_HARDWARE
+    using namespace ZYBO_PLATFORM::HANDLER;
+#elif ZEDBOARD_HARDWARE
+    using namespace ZEDBOARD::HANDLER;
+#elif FLORIDA_HARDWARE
+    using namespace FLORIDA::HANDLER;
+#endif
 
 namespace SYSTEMBOX
 {

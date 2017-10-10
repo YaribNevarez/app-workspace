@@ -86,7 +86,7 @@ bool Commander::execute(std::string command, std::string & answer)
 		}
 	}
 
-	if (answer.empty())
+	if (answer.empty() && (0 < devices.size()))
 	{
 		answer = "_________________ HELP _________________\n";
 		answer += "List of devices:\n\n";
