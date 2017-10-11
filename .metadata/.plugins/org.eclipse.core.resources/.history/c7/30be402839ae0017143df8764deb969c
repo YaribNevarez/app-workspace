@@ -21,16 +21,16 @@ ControlApp::ControlApp(int argc, char * argv[]):
 Application(argc, argv)
 {
 	if (0 < passed_arg("-ir"))
-		register_thread(new IRProcess());
+		register_thread(new IRFeature());
 
 	if (0 < passed_arg("-leakage"))
-		register_thread(new LeakageProcess());
+		register_thread(new LeakageFeature());
 
 	if (0 < passed_arg("-server"))
-		register_thread(new ServerProcess());
+		register_thread(new ServerFeature());
 }
 
-int ControlApp::IRProcess::run(void)
+int ControlApp::IRFeature::run(void)
 {
 	typedef enum
 	{
@@ -86,7 +86,7 @@ int ControlApp::IRProcess::run(void)
 	return 0;
 }
 
-int ControlApp::LeakageProcess::run(void)
+int ControlApp::LeakageFeature::run(void)
 {
 	for (;;)
 	{
@@ -104,7 +104,7 @@ int ControlApp::LeakageProcess::run(void)
 	return 0;
 }
 
-int ControlApp::ServerProcess::run(void)
+int ControlApp::ServerFeature::run(void)
 {
 	TcpServer * server;
 	TcpSocket * client;
@@ -150,7 +150,7 @@ int ControlApp::ServerProcess::run(void)
 	return 0;
 }
 
-void ControlApp::drainFlushProcess()
+void ControlApp::drain_flush()
 {
 	typedef enum
 	{
@@ -264,7 +264,7 @@ int ControlApp::run(void)
 
 	start_threads();
 
-	drainFlushProcess();
+	drain_flush();
 
 	return 0;
 }

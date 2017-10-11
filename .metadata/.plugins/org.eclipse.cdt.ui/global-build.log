@@ -19268,3 +19268,90 @@ Finished building: systool.elf.size
 22:36:15 **** Auto Build of configuration Debug for project ctrlapp ****
 make all 
 make: Nothing to be done for 'all'.
+06:03:37 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+../src/ctrlapp.cpp: In constructor 'ControlApp::ControlApp(int, char**)':
+../src/ctrlapp.cpp:24:23: error: expected type-specifier before 'IRProcess'
+   register_thread(new IRProcess());
+                       ^
+../src/ctrlapp.cpp:27:23: error: expected type-specifier before 'LeakageProcess'
+   register_thread(new LeakageProcess());
+                       ^
+../src/ctrlapp.cpp:30:23: error: expected type-specifier before 'ServerProcess'
+   register_thread(new ServerProcess());
+                       ^
+../src/ctrlapp.cpp: At global scope:
+../src/ctrlapp.cpp:33:17: error: 'ControlApp::IRProcess' has not been declared
+ int ControlApp::IRProcess::run(void)
+                 ^
+../src/ctrlapp.cpp: In function 'int run()':
+../src/ctrlapp.cpp:84:8: error: 'yeld' was not declared in this scope
+   yeld();
+        ^
+../src/ctrlapp.cpp: At global scope:
+../src/ctrlapp.cpp:89:17: error: 'ControlApp::LeakageProcess' has not been declared
+ int ControlApp::LeakageProcess::run(void)
+                 ^
+../src/ctrlapp.cpp: In function 'int run()':
+../src/ctrlapp.cpp:89:5: error: redefinition of 'int run()'
+ int ControlApp::LeakageProcess::run(void)
+     ^
+../src/ctrlapp.cpp:33:5: note: 'int run()' previously defined here
+ int ControlApp::IRProcess::run(void)
+     ^
+../src/ctrlapp.cpp:102:8: error: 'yeld' was not declared in this scope
+   yeld();
+        ^
+../src/ctrlapp.cpp: At global scope:
+../src/ctrlapp.cpp:107:17: error: 'ControlApp::ServerProcess' has not been declared
+ int ControlApp::ServerProcess::run(void)
+                 ^
+../src/ctrlapp.cpp: In function 'int run()':
+../src/ctrlapp.cpp:107:5: error: redefinition of 'int run()'
+ int ControlApp::ServerProcess::run(void)
+     ^
+../src/ctrlapp.cpp:33:5: note: 'int run()' previously defined here
+ int ControlApp::IRProcess::run(void)
+     ^
+../src/ctrlapp.cpp:137:12: error: 'yeld' was not declared in this scope
+       yeld();
+            ^
+../src/ctrlapp.cpp:143:10: error: 'yeld' was not declared in this scope
+     yeld();
+          ^
+../src/ctrlapp.cpp: At global scope:
+../src/ctrlapp.cpp:153:36: error: no 'void ControlApp::drainFlushProcess()' member function declared in class 'ControlApp'
+ void ControlApp::drainFlushProcess()
+                                    ^
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::run()':
+../src/ctrlapp.cpp:267:20: error: 'drainFlushProcess' was not declared in this scope
+  drainFlushProcess();
+                    ^
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+06:03:39 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047100	  15080	  41352	1103532	 10d6ac	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 

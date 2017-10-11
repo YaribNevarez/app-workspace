@@ -22,28 +22,28 @@ public:
 
 protected:
 
-	void drainFlushProcess(void);
+	void drain_flush(void);
 
-	class IRProcess: public Thread
+	class IRFeature: public Thread
 	{
 	public:
-		IRProcess()
+		IRFeature()
 		{}
 		virtual int run(void);
 	};
 
-	class LeakageProcess: public Thread
+	class LeakageFeature: public Thread
 	{
 	public:
-		LeakageProcess()
+		LeakageFeature()
 		{}
 		virtual int run(void);
 	};
 
-	class ServerProcess: public Thread
+	class ServerFeature: public Thread
 	{
 	public:
-		ServerProcess()
+		ServerFeature()
 		{}
 		virtual int run(void);
 	};
