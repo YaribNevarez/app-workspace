@@ -43,7 +43,7 @@ bool Commander::execute(std::string command, std::string & answer)
 	{
 		Device * device = NULL;
 
-		for (unsigned i = 0; (device == NULL) && (i < devices.size()); i ++)
+		for (unsigned i = 0; i < devices.size(); i ++)
 		{
 			if (command.compare(0,
 								devices[i]->get_name().size(),

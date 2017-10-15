@@ -1,44 +1,9 @@
-09:23:35 **** Build of configuration Debug for project base_framework ****
+21:15:10 **** Auto Build of configuration Debug for project base_framework ****
 make all 
-Building file: ../network/tcpserver.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"network/tcpserver.o" -MMD -MP -MF"network/tcpserver.d" -MT"network/tcpserver.d" -o "network/tcpserver.o" "../network/tcpserver.cpp"
-Finished building: ../network/tcpserver.cpp
- 
-Building file: ../network/tcpsocket.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"network/tcpsocket.o" -MMD -MP -MF"network/tcpsocket.d" -MT"network/tcpsocket.d" -o "network/tcpsocket.o" "../network/tcpsocket.cpp"
-Finished building: ../network/tcpsocket.cpp
- 
-Building file: ../hid/joystick.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"hid/joystick.o" -MMD -MP -MF"hid/joystick.d" -MT"hid/joystick.d" -o "hid/joystick.o" "../hid/joystick.cpp"
-Finished building: ../hid/joystick.cpp
- 
 Building file: ../device/commander.cpp
 Invoking: ARM Linux g++ compiler
 arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"device/commander.o" -MMD -MP -MF"device/commander.d" -MT"device/commander.d" -o "device/commander.o" "../device/commander.cpp"
 Finished building: ../device/commander.cpp
- 
-Building file: ../device/device.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"device/device.o" -MMD -MP -MF"device/device.d" -MT"device/device.d" -o "device/device.o" "../device/device.cpp"
-Finished building: ../device/device.cpp
- 
-Building file: ../device/devicehandler.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"device/devicehandler.o" -MMD -MP -MF"device/devicehandler.d" -MT"device/devicehandler.d" -o "device/devicehandler.o" "../device/devicehandler.cpp"
-Finished building: ../device/devicehandler.cpp
- 
-Building file: ../application/application.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"application/application.o" -MMD -MP -MF"application/application.d" -MT"application/application.d" -o "application/application.o" "../application/application.cpp"
-Finished building: ../application/application.cpp
- 
-Building file: ../application/daemon.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"application/daemon.o" -MMD -MP -MF"application/daemon.d" -MT"application/daemon.d" -o "application/daemon.o" "../application/daemon.cpp"
-Finished building: ../application/daemon.cpp
  
 Building target: libbase_framework.elf
 Invoking: ARM Linux archiver
@@ -52,7 +17,7 @@ arm-xilinx-linux-gnueabi-size libbase_framework.elf  |tee "libbase_framework.elf
    1144	      4	      4	   1152	    480	tcpserver.o (ex libbase_framework.elf)
   11328	      4	      4	  11336	   2c48	tcpsocket.o (ex libbase_framework.elf)
    2176	      0	      0	   2176	    880	joystick.o (ex libbase_framework.elf)
-   6812	      0	      0	   6812	   1a9c	commander.o (ex libbase_framework.elf)
+   6828	      0	      0	   6828	   1aac	commander.o (ex libbase_framework.elf)
   10360	      0	     16	  10376	   2888	device.o (ex libbase_framework.elf)
    1484	      0	      0	   1484	    5cc	devicehandler.o (ex libbase_framework.elf)
    7556	      0	      0	   7556	   1d84	application.o (ex libbase_framework.elf)
@@ -60,5 +25,5 @@ arm-xilinx-linux-gnueabi-size libbase_framework.elf  |tee "libbase_framework.elf
 Finished building: libbase_framework.elf.size
  
 
-09:23:37 Build Finished (took 1s.649ms)
+21:15:10 Build Finished (took 372ms)
 
