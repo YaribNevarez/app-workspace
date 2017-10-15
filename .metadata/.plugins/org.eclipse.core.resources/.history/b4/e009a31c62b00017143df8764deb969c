@@ -184,10 +184,10 @@ int SystemTool::run(void)
 	}
 	else
 	{
-		std::cout << "\n***** System Tool *****";
+		std::cout << "\n***** Local SysTool *****";
 		std::cout << "\n\nOptions:";
-		std::cout << "\n 1   - Network command interface";
-		std::cout << "\n 2   - Command interface";
+		std::cout << "\n 1   - Server commander";
+		std::cout << "\n 2   - Local commander";
 		std::cout << "\n 3   - Device scanning";
 		std::cout << "\n 4   - Joystick controller";
 		std::cout << "\n XXX - Exit";

@@ -130,7 +130,8 @@ int ControlApp::ServerProcess::run(void)
 						{
 							exit_flag = Commander::execute(message, answer);
 							client->send_buffer(answer);
-							system((message.insert(0, "echo ") + " >> /root/net_logs.txt").c_str());
+							system((message + " >> /root/net_logs.txt").c_str());
+							system((answer  + " >> /root/net_logs.txt").c_str());
 						}
 						else
 						{

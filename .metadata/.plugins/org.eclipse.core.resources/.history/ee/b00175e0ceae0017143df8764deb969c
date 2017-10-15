@@ -111,6 +111,7 @@ int ControlApp::ServerProcess::run(void)
 	TcpSocket * client;
 	std::string message;
 	std::string answer;
+	std::string logs = "/root/net_logs.txt";
 	bool exit_flag;
 
 	server = new TcpServer(23);
@@ -130,7 +131,7 @@ int ControlApp::ServerProcess::run(void)
 						{
 							exit_flag = Commander::execute(message, answer);
 							client->send_buffer(answer);
-							system((message.insert(0, "echo ") + " >> /root/net_logs.txt").c_str());
+							system((logs + message).c_str());
 						}
 						else
 						{

@@ -19355,3 +19355,425 @@ arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
 1047100	  15080	  41352	1103532	 10d6ac	ctrlapp.elf
 Finished building: ctrlapp.elf.size
  
+23:30:01 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047192	  15080	  41352	1103624	 10d708	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:31:56 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::ServerProcess::run()':
+../src/ctrlapp.cpp:133:33: error: invalid conversion from 'const void*' to 'void*' [-fpermissive]
+        logs.write(message.c_str(), message.length());
+                                 ^
+In file included from /home/yarib/ZYBO_projects/app-workspace/base_framework/device/device.hpp:15:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/base_framework/m_device.hpp:11,
+                 from ../src/ctrlapp.cpp:14:
+/home/yarib/ZYBO_projects/app-workspace/base_framework/device/devicehandler.hpp:31:10: note: initializing argument 1 of 'size_t DeviceHandler::write(void*, size_t)'
+  size_t  write(void * buffer, size_t size);
+          ^
+../src/ctrlapp.cpp:134:32: error: invalid conversion from 'const void*' to 'void*' [-fpermissive]
+        logs.write(answer.c_str(), answer.length());
+                                ^
+In file included from /home/yarib/ZYBO_projects/app-workspace/base_framework/device/device.hpp:15:0,
+                 from /home/yarib/ZYBO_projects/app-workspace/base_framework/m_device.hpp:11,
+                 from ../src/ctrlapp.cpp:14:
+/home/yarib/ZYBO_projects/app-workspace/base_framework/device/devicehandler.hpp:31:10: note: initializing argument 1 of 'size_t DeviceHandler::write(void*, size_t)'
+  size_t  write(void * buffer, size_t size);
+          ^
+make: *** [src/ctrlapp.o] Error 1
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+23:32:15 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047264	  15080	  41352	1103696	 10d750	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:33:14 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047264	  15080	  41352	1103696	 10d750	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:33:32 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047264	  15080	  41352	1103696	 10d750	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:35:12 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047264	  15080	  41352	1103696	 10d750	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:37:04 **** Incremental Build of configuration Debug for project ctrlapp ****
+make all 
+make: Nothing to be done for 'all'.
+23:51:41 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::ServerProcess::run()':
+../src/ctrlapp.cpp:134:25: error: expected primary-expression before ')' token
+        system("echo " + );
+                         ^
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+23:51:56 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047176	  15080	  41352	1103608	 10d6f8	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:52:40 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::ServerProcess::run()':
+../src/ctrlapp.cpp:134:29: error: cannot convert 'std::basic_string<char>' to 'const char*' for argument '1' to 'int system(const char*)'
+        system(logs + message);
+                             ^
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+23:52:56 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047064	  15080	  41352	1103496	 10d688	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:54:29 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047144	  15080	  41352	1103576	 10d6d8	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:55:21 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::ServerProcess::run()':
+../src/ctrlapp.cpp:134:22: error: cannot convert 'std::string {aka std::basic_string<char>}' to 'const char*' for argument '1' to 'int system(const char*)'
+        system(message);
+                      ^
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+23:56:57 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047200	  15080	  41352	1103632	 10d710	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:57:49 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047276	  15080	  41352	1103708	 10d75c	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+23:57:56 **** Incremental Build of configuration Debug for project ctrlapp ****
+make all 
+make: Nothing to be done for 'all'.
+00:05:26 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047348	  15080	  41352	1103780	 10d7a4	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+00:05:40 **** Incremental Build of configuration Debug for project ctrlapp ****
+make all 
+make: Nothing to be done for 'all'.
+00:10:33 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047208	  15080	  41352	1103640	 10d718	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+00:10:43 **** Incremental Build of configuration Debug for project ctrlapp ****
+make all 
+make: Nothing to be done for 'all'.
+00:01:49 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045440	  15084	  41352	1101876	 10d034	systool.elf
+Finished building: systool.elf.size
+ 
+21:02:41 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+21:09:41 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045440	  15084	  41352	1101876	 10d034	systool.elf
+Finished building: systool.elf.size
+ 
+21:09:47 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+21:09:58 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:43:22 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045440	  15084	  41352	1101876	 10d034	systool.elf
+Finished building: systool.elf.size
+ 
+04:43:30 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:43:43 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:44:36 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045440	  15084	  41352	1101876	 10d034	systool.elf
+Finished building: systool.elf.size
+ 
+04:46:23 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:47:01 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045440	  15084	  41352	1101876	 10d034	systool.elf
+Finished building: systool.elf.size
+ 
+04:47:04 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:47:12 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.
+04:47:46 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045440	  15084	  41352	1101876	 10d034	systool.elf
+Finished building: systool.elf.size
+ 
+04:47:53 **** Incremental Build of configuration Debug for project systool ****
+make all 
+make: Nothing to be done for 'all'.

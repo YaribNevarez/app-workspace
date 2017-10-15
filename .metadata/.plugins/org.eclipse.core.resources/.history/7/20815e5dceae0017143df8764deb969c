@@ -15,6 +15,8 @@
 #include "m_network.hpp"
 #include "systembox.hpp"
 
+typedef DeviceHandler FileHandler;
+
 using namespace SYSTEMBOX;
 
 
@@ -109,6 +111,7 @@ int ControlApp::ServerProcess::run(void)
 {
 	TcpServer * server;
 	TcpSocket * client;
+	FileHandler logs("/root/network_logs.txt");
 	std::string message;
 	std::string answer;
 	bool exit_flag;
@@ -130,7 +133,8 @@ int ControlApp::ServerProcess::run(void)
 						{
 							exit_flag = Commander::execute(message, answer);
 							client->send_buffer(answer);
-							system((message.insert(0, "echo ") + " >> /root/net_logs.txt").c_str());
+							logs.write((void *)message.c_str(), message.length());
+							logs.write((void *)answer.c_str(), answer.length());
 						}
 						else
 						{

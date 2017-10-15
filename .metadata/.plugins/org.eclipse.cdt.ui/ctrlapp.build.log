@@ -1,26 +1,6 @@
-06:03:39 **** Auto Build of configuration Debug for project ctrlapp ****
+00:10:43 **** Incremental Build of configuration Debug for project ctrlapp ****
 make all 
-Building file: ../src/ctrlapp.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
-Finished building: ../src/ctrlapp.cpp
- 
-Building file: ../src/main.cpp
-Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: ctrlapp.elf
-Invoking: ARM Linux g++ linker
-arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
-Finished building target: ctrlapp.elf
- 
-Invoking: ARM Linux Print Size
-arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-1047100	  15080	  41352	1103532	 10d6ac	ctrlapp.elf
-Finished building: ctrlapp.elf.size
- 
+make: Nothing to be done for 'all'.
 
-06:03:40 Build Finished (took 1s.174ms)
+00:10:43 Build Finished (took 178ms)
 

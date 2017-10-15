@@ -148,8 +148,8 @@ void SystemTool::joystick_controller(void)
 		}
 		ioctl(0, FIONREAD, &kbhit);
 
-		pwm_0.write(js.get_axis_value(0)>>4);
-		pwm_1.write(js.get_axis_value(2)>>4);
+		pwm_0.write(js.get_axis_value(0)>>5);
+		pwm_1.write(js.get_axis_value(2)>>5);
 		serial_0.write(js.get_axis_value(1)>>4);
 		flushValve.write(js.get_button_value(0));
 		drainValve.write(js.get_button_value(1));

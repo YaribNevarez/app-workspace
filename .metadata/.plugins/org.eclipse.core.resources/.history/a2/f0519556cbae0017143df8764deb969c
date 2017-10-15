@@ -17,7 +17,6 @@
 
 using namespace SYSTEMBOX;
 
-
 ControlApp::ControlApp(int argc, char * argv[]):
 Application(argc, argv)
 {
@@ -130,7 +129,6 @@ int ControlApp::ServerProcess::run(void)
 						{
 							exit_flag = Commander::execute(message, answer);
 							client->send_buffer(answer);
-							system((message.insert(0, "echo ") + " >> /root/net_logs.txt").c_str());
 						}
 						else
 						{
