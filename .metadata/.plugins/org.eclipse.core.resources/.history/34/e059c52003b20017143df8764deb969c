@@ -35,7 +35,7 @@ namespace SYSTEMBOX
 	InputVector   emergencySwitch     (&CONTROLLER, &id_EMERGENCY      );
 	InputVector   appSelection        (&CONTROLLER, &id_APPSELECTION   );
 	InputVector   drainDelaySelection (&CONTROLLER, &id_DRAINDELAY     );
-	OutputPin     vacumGenerator      (&CONTROLLER, &id_VACUUMGEN      );
+	OutputPin     vacumGenerator      (&CONTROLLER, &id_VACUMGEN       );
 	OutputPin     drainIndicator      (&CONTROLLER, &id_DRAININDICATOR );
 	OutputPin     leakageIndicator    (&CONTROLLER, &id_LEAKINDICATOR  );
 	OutputVector  pwm_0               (&PWM0,       &id_PWM_0          );

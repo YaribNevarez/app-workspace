@@ -27,7 +27,7 @@ typedef enum
 	EMERGENCY,
 	APPSELECTION,
 	DRAINDELAY,
-	VACUUMGEN,
+	VACUMGEN,
 	DRAININDICATOR,
 	LEAKINDICATOR,
 	RELAY_0,
@@ -89,7 +89,7 @@ DeviceIdentity id_DRAINLOCAL     = {DRAINLOCAL,     "DRAINLOCAL"    };
 DeviceIdentity id_EMERGENCY      = {EMERGENCY,      "EMERGENCY"     };
 DeviceIdentity id_APPSELECTION   = {APPSELECTION,   "APPSELECTION"  };
 DeviceIdentity id_DRAINDELAY     = {DRAINDELAY,     "DRAINDELAY"    };
-DeviceIdentity id_VACUUMGEN      = {VACUUMGEN,      "VACUUMGEN"     };
+DeviceIdentity id_VACUMGEN       = {VACUMGEN,       "VACUMGEN"      };
 DeviceIdentity id_DRAININDICATOR = {DRAININDICATOR, "DRAININDICATOR"};
 DeviceIdentity id_LEAKINDICATOR  = {LEAKINDICATOR,  "LEAKINDICATOR" };
 DeviceIdentity id_PWM_0          = {PWM_0,          "PWM_0"         };
