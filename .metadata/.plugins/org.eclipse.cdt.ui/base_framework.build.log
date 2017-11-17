@@ -1,9 +1,9 @@
-21:15:10 **** Auto Build of configuration Debug for project base_framework ****
+21:33:49 **** Auto Build of configuration Debug for project base_framework ****
 make all 
-Building file: ../device/commander.cpp
+Building file: ../application/application.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"device/commander.o" -MMD -MP -MF"device/commander.d" -MT"device/commander.d" -o "device/commander.o" "../device/commander.cpp"
-Finished building: ../device/commander.cpp
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"application/application.o" -MMD -MP -MF"application/application.d" -MT"application/application.d" -o "application/application.o" "../application/application.cpp"
+Finished building: ../application/application.cpp
  
 Building target: libbase_framework.elf
 Invoking: ARM Linux archiver
@@ -25,5 +25,5 @@ arm-xilinx-linux-gnueabi-size libbase_framework.elf  |tee "libbase_framework.elf
 Finished building: libbase_framework.elf.size
  
 
-21:15:10 Build Finished (took 372ms)
+21:33:49 Build Finished (took 378ms)
 

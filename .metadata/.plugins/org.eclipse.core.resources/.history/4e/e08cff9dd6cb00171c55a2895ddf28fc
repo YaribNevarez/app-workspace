@@ -56,7 +56,7 @@ public:
 		return result;
 	}
 
-	virtual int yield(void)
+	virtual int yeld(void)
 	{
 		return pthread_yield();
 	}

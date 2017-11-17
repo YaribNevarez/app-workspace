@@ -82,7 +82,7 @@ int ControlApp::IRProcess::run(void)
 		default:;
 			timer = 0;
 		}
-		yield();
+		yeld();
 	}
 	return 0;
 }
@@ -100,7 +100,7 @@ int ControlApp::LeakageProcess::run(void)
 		{
 			leakageIndicator.set_status(OutputPin::OFF);
 		}
-		yield();
+		yeld();
 	}
 	return 0;
 }
@@ -136,13 +136,13 @@ int ControlApp::ServerProcess::run(void)
 						{
 							exit_flag = true;
 						}
-						yield();
+						yeld();
 					}
 					while(!exit_flag);
 
 					delete client;
 				}
-				yield();
+				yeld();
 			}
 		}
 		delete server;

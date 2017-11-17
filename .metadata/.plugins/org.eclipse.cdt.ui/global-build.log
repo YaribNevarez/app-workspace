@@ -20105,3 +20105,1626 @@ make: Nothing to be done for 'all'.
 01:48:18 **** Incremental Build of configuration Debug for project ctrlapp ****
 make all 
 make: Nothing to be done for 'all'.
+21:17:48 **** Build of configuration Debug for project base_framework ****
+make all 
+Building file: ../network/tcpserver.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"network/tcpserver.o" -MMD -MP -MF"network/tcpserver.d" -MT"network/tcpserver.d" -o "network/tcpserver.o" "../network/tcpserver.cpp"
+Finished building: ../network/tcpserver.cpp
+ 
+Building file: ../network/tcpsocket.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"network/tcpsocket.o" -MMD -MP -MF"network/tcpsocket.d" -MT"network/tcpsocket.d" -o "network/tcpsocket.o" "../network/tcpsocket.cpp"
+Finished building: ../network/tcpsocket.cpp
+ 
+Building file: ../hid/joystick.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"hid/joystick.o" -MMD -MP -MF"hid/joystick.d" -MT"hid/joystick.d" -o "hid/joystick.o" "../hid/joystick.cpp"
+Finished building: ../hid/joystick.cpp
+ 
+Building file: ../device/commander.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"device/commander.o" -MMD -MP -MF"device/commander.d" -MT"device/commander.d" -o "device/commander.o" "../device/commander.cpp"
+Finished building: ../device/commander.cpp
+ 
+Building file: ../device/device.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"device/device.o" -MMD -MP -MF"device/device.d" -MT"device/device.d" -o "device/device.o" "../device/device.cpp"
+Finished building: ../device/device.cpp
+ 
+Building file: ../device/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"device/devicehandler.o" -MMD -MP -MF"device/devicehandler.d" -MT"device/devicehandler.d" -o "device/devicehandler.o" "../device/devicehandler.cpp"
+Finished building: ../device/devicehandler.cpp
+ 
+Building file: ../application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"application/application.o" -MMD -MP -MF"application/application.d" -MT"application/application.d" -o "application/application.o" "../application/application.cpp"
+Finished building: ../application/application.cpp
+ 
+Building file: ../application/daemon.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"application/daemon.o" -MMD -MP -MF"application/daemon.d" -MT"application/daemon.d" -o "application/daemon.o" "../application/daemon.cpp"
+Finished building: ../application/daemon.cpp
+ 
+Building target: libbase_framework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libbase_framework.elf"  ./network/tcpserver.o ./network/tcpsocket.o  ./hid/joystick.o  ./device/commander.o ./device/device.o ./device/devicehandler.o  ./application/application.o ./application/daemon.o   
+arm-xilinx-linux-gnueabi-ar: creating libbase_framework.elf
+Finished building target: libbase_framework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libbase_framework.elf  |tee "libbase_framework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1144	      4	      4	   1152	    480	tcpserver.o (ex libbase_framework.elf)
+  11328	      4	      4	  11336	   2c48	tcpsocket.o (ex libbase_framework.elf)
+   2176	      0	      0	   2176	    880	joystick.o (ex libbase_framework.elf)
+   6828	      0	      0	   6828	   1aac	commander.o (ex libbase_framework.elf)
+  10360	      0	     16	  10376	   2888	device.o (ex libbase_framework.elf)
+   1484	      0	      0	   1484	    5cc	devicehandler.o (ex libbase_framework.elf)
+   7556	      0	      0	   7556	   1d84	application.o (ex libbase_framework.elf)
+    516	      0	      0	    516	    204	daemon.o (ex libbase_framework.elf)
+Finished building: libbase_framework.elf.size
+ 
+21:17:52 **** Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o   
+./src/ctrlapp.o: In function `ControlApp::ControlApp(int, char**)':
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:22: undefined reference to `Application::Application(int, char**)'
+makefile:48: recipe for target 'ctrlapp.elf' failed
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:24: undefined reference to `Application::passed_arg(std::string)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:25: undefined reference to `Application::register_thread(Thread*)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:27: undefined reference to `Application::passed_arg(std::string)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:28: undefined reference to `Application::register_thread(Thread*)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:30: undefined reference to `Application::passed_arg(std::string)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:31: undefined reference to `Application::register_thread(Thread*)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:22: undefined reference to `Application::~Application()'
+./src/ctrlapp.o: In function `ControlApp::IRProcess::run()':
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:49: undefined reference to `InputVector::get_value()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:53: undefined reference to `IRSensor::get_status()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:56: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:62: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:66: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:75: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:79: undefined reference to `Valve::set_position(Valve::Position)'
+./src/ctrlapp.o: In function `ControlApp::LeakageProcess::run()':
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:94: undefined reference to `LeakageSensor::get_status()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:95: undefined reference to `LeakageSensor::get_status()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:97: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:101: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+./src/ctrlapp.o: In function `ControlApp::ServerProcess::run()':
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:116: undefined reference to `TcpServer::TcpServer(unsigned short)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:119: undefined reference to `TcpServer::prepare()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:123: undefined reference to `TcpServer::accept_connection()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:131: undefined reference to `Commander::execute(std::string, std::string&)'
+./src/ctrlapp.o: In function `ControlApp::drainFlushProcess()':
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:171: undefined reference to `OutputVector::set_value(int)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:177: undefined reference to `InputVector::get_value()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:183: undefined reference to `LevelSensor::get_level()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:185: undefined reference to `LevelSensor::get_level()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:185: undefined reference to `LevelSensor::get_level()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:187: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:188: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:194: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:197: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:201: undefined reference to `InputPin::get_status()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:211: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:212: undefined reference to `InputVector::get_value()'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:220: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:229: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:238: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:242: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:244: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:254: undefined reference to `Valve::set_position(Valve::Position)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:255: undefined reference to `OutputPin::set_status(OutputPin::Status)'
+./src/ctrlapp.o: In function `ControlApp::run()':
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:262: undefined reference to `Application::passed_arg(std::string)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:264: undefined reference to `Daemon::become(int)'
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:267: undefined reference to `Application::start_threads()'
+./src/ctrlapp.o: In function `ControlApp::~ControlApp()':
+/home/yarib/RPI3/app-workspace/ctrlapp/Debug/../src/ctrlapp.cpp:274: undefined reference to `Application::~Application()'
+./src/ctrlapp.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+./src/ctrlapp.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:25: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:26: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:27: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:28: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:29: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:30: undefined reference to `IRSensor::IRSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:31: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:32: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:33: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:34: undefined reference to `InputPin::InputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:35: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:36: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:37: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:38: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:39: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:40: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:41: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:42: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:43: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:44: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:45: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:53: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:54: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:55: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:56: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+./src/ctrlapp.o: In function `.LC37':
+ctrlapp.cpp:(.rodata+0x284): undefined reference to `typeinfo for Application'
+./src/ctrlapp.o: In function `LevelSensor::~LevelSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:15: undefined reference to `Device::~Device()'
+./src/ctrlapp.o: In function `LeakageSensor::~LeakageSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:31: undefined reference to `Device::~Device()'
+./src/ctrlapp.o: In function `IRSensor::~IRSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:47: undefined reference to `Device::~Device()'
+./src/ctrlapp.o: In function `Valve::~Valve()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:63: undefined reference to `Device::~Device()'
+./src/ctrlapp.o: In function `InputPin::~InputPin()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:96: undefined reference to `Device::~Device()'
+./src/ctrlapp.o:/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:122: more undefined references to `Device::~Device()' follow
+./src/ctrlapp.o:(.rodata._ZTI13LeakageSensor[_ZTI13LeakageSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/ctrlapp.o:(.rodata._ZTI11LevelSensor[_ZTI11LevelSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/ctrlapp.o:(.rodata._ZTI11InputVector[_ZTI11InputVector]+0x8): undefined reference to `typeinfo for Device'
+./src/ctrlapp.o:(.rodata._ZTI12OutputVector[_ZTI12OutputVector]+0x8): undefined reference to `typeinfo for Device'
+./src/ctrlapp.o:(.rodata._ZTI8InputPin[_ZTI8InputPin]+0x8): undefined reference to `typeinfo for Device'
+./src/ctrlapp.o:(.rodata._ZTI9OutputPin[_ZTI9OutputPin]+0x8): more undefined references to `typeinfo for Device' follow
+collect2: error: ld returned 1 exit status
+make: *** [ctrlapp.elf] Error 1
+21:17:56 **** Build of configuration Debug for project extension_framework ****
+make all 
+Building file: ../devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"devices.o" -MMD -MP -MF"devices.d" -MT"devices.d" -o "devices.o" "../devices.cpp"
+Finished building: ../devices.cpp
+ 
+Building target: libextension_framework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libextension_framework.elf"  ./devices.o   
+arm-xilinx-linux-gnueabi-ar: creating libextension_framework.elf
+Finished building target: libextension_framework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libextension_framework.elf  |tee "libextension_framework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3160	      0	      0	   3160	    c58	devices.o (ex libextension_framework.elf)
+Finished building: libextension_framework.elf.size
+ 
+21:17:57 **** Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   
+./src/systool.o: In function `SystemTool::SystemTool(int, char**)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:30: undefined reference to `Application::Application(int, char**)'
+./src/systool.o: In function `SystemTool::remote_commander(unsigned short)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:42: undefined reference to `TcpServer::TcpServer(unsigned short)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:45: undefined reference to `TcpServer::prepare()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:49: undefined reference to `TcpServer::accept_connection()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:58: undefined reference to `Commander::execute(std::string, std::string&)'
+./src/systool.o: In function `SystemTool::local_commander()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:88: undefined reference to `Commander::execute(std::string, std::string&)'
+makefile:48: recipe for target 'systool.elf' failed
+./src/systool.o: In function `SystemTool::device_scanning()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:98: undefined reference to `Device::get_instanceVector()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:107: undefined reference to `Device::get_ID()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:109: undefined reference to `Device::read(unsigned int*)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:111: undefined reference to `Device::get_name()'
+./src/systool.o: In function `SystemTool::joystick_controller()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:125: undefined reference to `Joystick::Joystick(char const*)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:133: undefined reference to `Joystick::open_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:134: undefined reference to `Joystick::get_number_of_buttons()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:135: undefined reference to `Joystick::get_number_of_axis()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:142: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:147: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:163: undefined reference to `Joystick::close_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+./src/systool.o: In function `SystemTool::run()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:176: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:178: undefined reference to `Application::passed_arg(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:180: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:182: undefined reference to `Application::passed_arg(int)'
+./src/systool.o: In function `SystemTool::~SystemTool()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:224: undefined reference to `Application::~Application()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:25: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:26: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:27: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:28: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:29: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:30: undefined reference to `IRSensor::IRSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:31: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:32: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:33: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:34: undefined reference to `InputPin::InputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:35: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:36: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:37: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:38: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:39: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:40: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:41: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:42: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:43: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:44: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:45: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:53: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:54: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:55: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:56: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+./src/systool.o: In function `.LC52':
+systool.cpp:(.rodata+0x3c4): undefined reference to `typeinfo for Application'
+./src/systool.o: In function `LevelSensor::~LevelSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:15: undefined reference to `Device::~Device()'
+./src/systool.o: In function `LeakageSensor::~LeakageSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:31: undefined reference to `Device::~Device()'
+./src/systool.o: In function `IRSensor::~IRSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:47: undefined reference to `Device::~Device()'
+./src/systool.o: In function `Valve::~Valve()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:63: undefined reference to `Device::~Device()'
+./src/systool.o: In function `InputPin::~InputPin()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:96: undefined reference to `Device::~Device()'
+./src/systool.o:/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:122: more undefined references to `Device::~Device()' follow
+./src/systool.o:(.rodata._ZTI9OutputPin[_ZTI9OutputPin]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI5Valve[_ZTI5Valve]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI8IRSensor[_ZTI8IRSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI13LeakageSensor[_ZTI13LeakageSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11LevelSensor[_ZTI11LevelSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11InputVector[_ZTI11InputVector]+0x8): more undefined references to `typeinfo for Device' follow
+collect2: error: ld returned 1 exit status
+make: *** [systool.elf] Error 1
+21:18:38 **** Clean-only build of configuration Debug for project extension_framework ****
+make clean 
+rm -rf  ./devices.o  ./devices.d  libextension_framework.elf.size  libextension_framework.elf
+ 
+21:18:38 **** Auto Build of configuration Debug for project extension_framework ****
+make all 
+Building file: ../devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/RPI3/app-workspace/extension_framework/extension_framework/base_framework -c -fmessage-length=0 -MT"devices.o" -MMD -MP -MF"devices.d" -MT"devices.d" -o "devices.o" "../devices.cpp"
+In file included from ../devices.cpp:7:0:
+../devices.hpp:11:24: fatal error: m_device.hpp: No such file or directory
+ #include "m_device.hpp"
+                        ^
+compilation terminated.
+subdir.mk:18: recipe for target 'devices.o' failed
+make: *** [devices.o] Error 1
+21:19:52 **** Auto Build of configuration Debug for project extension_framework ****
+make all 
+Building file: ../devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/RPI3/app-workspace/extension_framework/extension_framework/base_framework -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"devices.o" -MMD -MP -MF"devices.d" -MT"devices.d" -o "devices.o" "../devices.cpp"
+Finished building: ../devices.cpp
+ 
+Building target: libextension_framework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libextension_framework.elf"  ./devices.o   
+arm-xilinx-linux-gnueabi-ar: creating libextension_framework.elf
+Finished building target: libextension_framework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libextension_framework.elf  |tee "libextension_framework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3160	      0	      0	   3160	    c58	devices.o (ex libextension_framework.elf)
+Finished building: libextension_framework.elf.size
+ 
+21:20:04 **** Clean-only build of configuration Debug for project extension_framework ****
+make clean 
+rm -rf  ./devices.o  ./devices.d  libextension_framework.elf.size  libextension_framework.elf
+ 
+21:20:04 **** Auto Build of configuration Debug for project extension_framework ****
+make all 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpserver.o" -MMD -MP -MF"base_framework/network/tcpserver.d" -MT"base_framework/network/tcpserver.d" -o "base_framework/network/tcpserver.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpsocket.o" -MMD -MP -MF"base_framework/network/tcpsocket.d" -MT"base_framework/network/tcpsocket.d" -o "base_framework/network/tcpsocket.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/hid/joystick.o" -MMD -MP -MF"base_framework/hid/joystick.d" -MT"base_framework/hid/joystick.d" -o "base_framework/hid/joystick.o" "/home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/device/commander.o" -MMD -MP -MF"base_framework/device/commander.d" -MT"base_framework/device/commander.d" -o "base_framework/device/commander.o" "/home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/device/device.o" -MMD -MP -MF"base_framework/device/device.d" -MT"base_framework/device/device.d" -o "base_framework/device/device.o" "/home/yarib/RPI3/app-workspace/base_framework/device/device.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/device/devicehandler.o" -MMD -MP -MF"base_framework/device/devicehandler.d" -MT"base_framework/device/devicehandler.d" -o "base_framework/device/devicehandler.o" "/home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/application/daemon.o" -MMD -MP -MF"base_framework/application/daemon.d" -MT"base_framework/application/daemon.d" -o "base_framework/application/daemon.o" "/home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+ 
+Building file: ../devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"devices.o" -MMD -MP -MF"devices.d" -MT"devices.d" -o "devices.o" "../devices.cpp"
+Finished building: ../devices.cpp
+ 
+Building target: libextension_framework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libextension_framework.elf"  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o  ./devices.o   
+arm-xilinx-linux-gnueabi-ar: creating libextension_framework.elf
+Finished building target: libextension_framework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libextension_framework.elf  |tee "libextension_framework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1144	      4	      4	   1152	    480	tcpserver.o (ex libextension_framework.elf)
+  11328	      4	      4	  11336	   2c48	tcpsocket.o (ex libextension_framework.elf)
+   2176	      0	      0	   2176	    880	joystick.o (ex libextension_framework.elf)
+   6828	      0	      0	   6828	   1aac	commander.o (ex libextension_framework.elf)
+  10360	      0	     16	  10376	   2888	device.o (ex libextension_framework.elf)
+   1484	      0	      0	   1484	    5cc	devicehandler.o (ex libextension_framework.elf)
+   7556	      0	      0	   7556	   1d84	application.o (ex libextension_framework.elf)
+    516	      0	      0	    516	    204	daemon.o (ex libextension_framework.elf)
+   3160	      0	      0	   3160	    c58	devices.o (ex libextension_framework.elf)
+Finished building: libextension_framework.elf.size
+ 
+21:20:09 **** Clean-only build of configuration Debug for project extension_framework ****
+make clean 
+rm -rf  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o  ./devices.o  ./base_framework/network/tcpserver.d ./base_framework/network/tcpsocket.d  ./base_framework/hid/joystick.d  ./base_framework/device/commander.d ./base_framework/device/device.d ./base_framework/device/devicehandler.d  ./base_framework/application/application.d ./base_framework/application/daemon.d  ./devices.d  libextension_framework.elf.size  libextension_framework.elf
+ 
+21:20:10 **** Auto Build of configuration Debug for project extension_framework ****
+make all 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpserver.o" -MMD -MP -MF"base_framework/network/tcpserver.d" -MT"base_framework/network/tcpserver.d" -o "base_framework/network/tcpserver.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpsocket.o" -MMD -MP -MF"base_framework/network/tcpsocket.d" -MT"base_framework/network/tcpsocket.d" -o "base_framework/network/tcpsocket.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/hid/joystick.o" -MMD -MP -MF"base_framework/hid/joystick.d" -MT"base_framework/hid/joystick.d" -o "base_framework/hid/joystick.o" "/home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/device/commander.o" -MMD -MP -MF"base_framework/device/commander.d" -MT"base_framework/device/commander.d" -o "base_framework/device/commander.o" "/home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/device/device.o" -MMD -MP -MF"base_framework/device/device.d" -MT"base_framework/device/device.d" -o "base_framework/device/device.o" "/home/yarib/RPI3/app-workspace/base_framework/device/device.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/device/devicehandler.o" -MMD -MP -MF"base_framework/device/devicehandler.d" -MT"base_framework/device/devicehandler.d" -o "base_framework/device/devicehandler.o" "/home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/application/daemon.o" -MMD -MP -MF"base_framework/application/daemon.d" -MT"base_framework/application/daemon.d" -o "base_framework/application/daemon.o" "/home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+ 
+Building file: ../devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"devices.o" -MMD -MP -MF"devices.d" -MT"devices.d" -o "devices.o" "../devices.cpp"
+Finished building: ../devices.cpp
+ 
+Building target: libextension_framework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libextension_framework.elf"  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o  ./devices.o   
+arm-xilinx-linux-gnueabi-ar: creating libextension_framework.elf
+Finished building target: libextension_framework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libextension_framework.elf  |tee "libextension_framework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1144	      4	      4	   1152	    480	tcpserver.o (ex libextension_framework.elf)
+  11328	      4	      4	  11336	   2c48	tcpsocket.o (ex libextension_framework.elf)
+   2176	      0	      0	   2176	    880	joystick.o (ex libextension_framework.elf)
+   6828	      0	      0	   6828	   1aac	commander.o (ex libextension_framework.elf)
+  10360	      0	     16	  10376	   2888	device.o (ex libextension_framework.elf)
+   1484	      0	      0	   1484	    5cc	devicehandler.o (ex libextension_framework.elf)
+   7556	      0	      0	   7556	   1d84	application.o (ex libextension_framework.elf)
+    516	      0	      0	    516	    204	daemon.o (ex libextension_framework.elf)
+   3160	      0	      0	   3160	    c58	devices.o (ex libextension_framework.elf)
+Finished building: libextension_framework.elf.size
+ 
+21:20:29 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./src/ctrlapp.d ./src/main.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+21:20:29 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/RPI3/app-workspace/ctrlapp/ctrlapp/framework -I/home/yarib/ZYBO_projects/app-workspace/framework -I/home/yarib/ZYBO_projects/app-workspace/platform -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:29: fatal error: m_application.hpp: No such file or directory
+ #include "m_application.hpp"
+                             ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+21:20:32 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./src/ctrlapp.d ./src/main.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+21:20:32 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/RPI3/app-workspace/ctrlapp/ctrlapp/framework -I/home/yarib/ZYBO_projects/app-workspace/framework -I/home/yarib/ZYBO_projects/app-workspace/platform -I../ctrlapp/base_framework -I../ctrlapp/extension_framework -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:29: fatal error: m_application.hpp: No such file or directory
+ #include "m_application.hpp"
+                             ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+21:20:36 **** Clean-only build of configuration Debug for project systool ****
+make clean 
+rm -rf  ./src/main.o ./src/systool.o  ./src/main.d ./src/systool.d  systool.elf.size  systool.elf
+ 
+21:20:36 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/platform -I/home/yarib/ZYBO_projects/app-workspace/framework -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:5:0:
+../src/systool.hpp:11:29: fatal error: m_application.hpp: No such file or directory
+ #include "m_application.hpp"
+                             ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+21:20:39 **** Clean-only build of configuration Debug for project systool ****
+make clean 
+rm -rf  ./src/main.o ./src/systool.o  ./src/main.d ./src/systool.d  systool.elf.size  systool.elf
+ 
+21:20:39 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/ZYBO_projects/app-workspace/platform -I/home/yarib/ZYBO_projects/app-workspace/framework -I../systool/base_framework -I../systool/extension_framework -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:5:0:
+../src/systool.hpp:11:29: fatal error: m_application.hpp: No such file or directory
+ #include "m_application.hpp"
+                             ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+21:21:48 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/RPI3/app-workspace/ctrlapp/ctrlapp/framework -I/home/yarib/ZYBO_projects/app-workspace/framework -I/home/yarib/ZYBO_projects/app-workspace/platform -I../ctrlapp/base_framework -I../ctrlapp/extension_framework -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:29: fatal error: m_application.hpp: No such file or directory
+ #include "m_application.hpp"
+                             ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+21:21:59 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I/home/yarib/RPI3/app-workspace/ctrlapp/ctrlapp/framework -I/home/yarib/ZYBO_projects/app-workspace/framework -I/home/yarib/ZYBO_projects/app-workspace/platform -I../ctrlapp/base_framework -I../ctrlapp/extension_framework -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+In file included from ../src/ctrlapp.cpp:10:0:
+../src/ctrlapp.hpp:13:29: fatal error: m_application.hpp: No such file or directory
+ #include "m_application.hpp"
+                             ^
+compilation terminated.
+make: *** [src/ctrlapp.o] Error 1
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+21:22:17 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./src/ctrlapp.d ./src/main.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+21:22:17 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/extension_framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"extension_framework/devices.o" -MMD -MP -MF"extension_framework/devices.d" -MT"extension_framework/devices.d" -o "extension_framework/devices.o" "/home/yarib/RPI3/app-workspace/extension_framework/devices.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/extension_framework/devices.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpserver.o" -MMD -MP -MF"base_framework/network/tcpserver.d" -MT"base_framework/network/tcpserver.d" -o "base_framework/network/tcpserver.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpsocket.o" -MMD -MP -MF"base_framework/network/tcpsocket.d" -MT"base_framework/network/tcpsocket.d" -o "base_framework/network/tcpsocket.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/hid/joystick.o" -MMD -MP -MF"base_framework/hid/joystick.d" -MT"base_framework/hid/joystick.d" -o "base_framework/hid/joystick.o" "/home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/commander.o" -MMD -MP -MF"base_framework/device/commander.d" -MT"base_framework/device/commander.d" -o "base_framework/device/commander.o" "/home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/device.o" -MMD -MP -MF"base_framework/device/device.d" -MT"base_framework/device/device.d" -o "base_framework/device/device.o" "/home/yarib/RPI3/app-workspace/base_framework/device/device.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/devicehandler.o" -MMD -MP -MF"base_framework/device/devicehandler.d" -MT"base_framework/device/devicehandler.d" -o "base_framework/device/devicehandler.o" "/home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/daemon.o" -MMD -MP -MF"base_framework/application/daemon.d" -MT"base_framework/application/daemon.d" -o "base_framework/application/daemon.o" "/home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047272	  15080	  41352	1103704	 10d758	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+21:22:24 **** Clean-only build of configuration Debug for project ctrlapp ****
+make clean 
+rm -rf  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o  ./src/ctrlapp.d ./src/main.d  ./extension_framework/devices.d  ./base_framework/network/tcpserver.d ./base_framework/network/tcpsocket.d  ./base_framework/hid/joystick.d  ./base_framework/device/commander.d ./base_framework/device/device.d ./base_framework/device/devicehandler.d  ./base_framework/application/application.d ./base_framework/application/daemon.d  ctrlapp.elf.size  ctrlapp.elf
+ 
+21:22:24 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/extension_framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"extension_framework/devices.o" -MMD -MP -MF"extension_framework/devices.d" -MT"extension_framework/devices.d" -o "extension_framework/devices.o" "/home/yarib/RPI3/app-workspace/extension_framework/devices.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/extension_framework/devices.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpserver.o" -MMD -MP -MF"base_framework/network/tcpserver.d" -MT"base_framework/network/tcpserver.d" -o "base_framework/network/tcpserver.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpsocket.o" -MMD -MP -MF"base_framework/network/tcpsocket.d" -MT"base_framework/network/tcpsocket.d" -o "base_framework/network/tcpsocket.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/hid/joystick.o" -MMD -MP -MF"base_framework/hid/joystick.d" -MT"base_framework/hid/joystick.d" -o "base_framework/hid/joystick.o" "/home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/commander.o" -MMD -MP -MF"base_framework/device/commander.d" -MT"base_framework/device/commander.d" -o "base_framework/device/commander.o" "/home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/device.o" -MMD -MP -MF"base_framework/device/device.d" -MT"base_framework/device/device.d" -o "base_framework/device/device.o" "/home/yarib/RPI3/app-workspace/base_framework/device/device.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/devicehandler.o" -MMD -MP -MF"base_framework/device/devicehandler.d" -MT"base_framework/device/devicehandler.d" -o "base_framework/device/devicehandler.o" "/home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/daemon.o" -MMD -MP -MF"base_framework/application/daemon.d" -MT"base_framework/application/daemon.d" -o "base_framework/application/daemon.o" "/home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047272	  15080	  41352	1103704	 10d758	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 
+21:24:39 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   
+./src/systool.o: In function `SystemTool::SystemTool(int, char**)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:30: undefined reference to `Application::Application(int, char**)'
+./src/systool.o: In function `SystemTool::remote_commander(unsigned short)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:42: undefined reference to `TcpServer::TcpServer(unsigned short)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:45: undefined reference to `TcpServer::prepare()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:49: undefined reference to `TcpServer::accept_connection()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:58: undefined reference to `Commander::execute(std::string, std::string&)'
+./src/systool.o: In function `SystemTool::local_commander()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:88: undefined reference to `Commander::execute(std::string, std::string&)'
+./src/systool.o: In function `SystemTool::device_scanning()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:98: undefined reference to `Device::get_instanceVector()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:107: undefined reference to `Device::get_ID()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:109: undefined reference to `Device::read(unsigned int*)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:111: undefined reference to `Device::get_name()'
+makefile:48: recipe for target 'systool.elf' failed
+./src/systool.o: In function `SystemTool::joystick_controller()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:125: undefined reference to `Joystick::Joystick(char const*)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:133: undefined reference to `Joystick::open_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:134: undefined reference to `Joystick::get_number_of_buttons()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:135: undefined reference to `Joystick::get_number_of_axis()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:142: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:147: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:163: undefined reference to `Joystick::close_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+./src/systool.o: In function `SystemTool::run()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:176: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:178: undefined reference to `Application::passed_arg(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:180: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:182: undefined reference to `Application::passed_arg(int)'
+./src/systool.o: In function `SystemTool::~SystemTool()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:224: undefined reference to `Application::~Application()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:25: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:26: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:27: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:28: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:29: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:30: undefined reference to `IRSensor::IRSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:31: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:32: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:33: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:34: undefined reference to `InputPin::InputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:35: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:36: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:37: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:38: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:39: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:40: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:41: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:42: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:43: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:44: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:45: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:53: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:54: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:55: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:56: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+./src/systool.o: In function `.LC52':
+systool.cpp:(.rodata+0x3c4): undefined reference to `typeinfo for Application'
+./src/systool.o: In function `LevelSensor::~LevelSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:15: undefined reference to `Device::~Device()'
+./src/systool.o: In function `LeakageSensor::~LeakageSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:31: undefined reference to `Device::~Device()'
+./src/systool.o: In function `IRSensor::~IRSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:47: undefined reference to `Device::~Device()'
+./src/systool.o: In function `Valve::~Valve()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:63: undefined reference to `Device::~Device()'
+./src/systool.o: In function `InputPin::~InputPin()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:96: undefined reference to `Device::~Device()'
+./src/systool.o:/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:122: more undefined references to `Device::~Device()' follow
+./src/systool.o:(.rodata._ZTI9OutputPin[_ZTI9OutputPin]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI5Valve[_ZTI5Valve]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI8IRSensor[_ZTI8IRSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI13LeakageSensor[_ZTI13LeakageSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11LevelSensor[_ZTI11LevelSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11InputVector[_ZTI11InputVector]+0x8): more undefined references to `typeinfo for Device' follow
+collect2: error: ld returned 1 exit status
+make: *** [systool.elf] Error 1
+21:24:43 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   
+./src/systool.o: In function `SystemTool::SystemTool(int, char**)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:30: undefined reference to `Application::Application(int, char**)'
+./src/systool.o: In function `SystemTool::remote_commander(unsigned short)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:42: undefined reference to `TcpServer::TcpServer(unsigned short)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:45: undefined reference to `TcpServer::prepare()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:49: undefined reference to `TcpServer::accept_connection()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:58: undefined reference to `Commander::execute(std::string, std::string&)'
+./src/systool.o: In function `SystemTool::local_commander()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:88: undefined reference to `Commander::execute(std::string, std::string&)'
+makefile:48: recipe for target 'systool.elf' failed
+./src/systool.o: In function `SystemTool::device_scanning()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:98: undefined reference to `Device::get_instanceVector()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:107: undefined reference to `Device::get_ID()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:109: undefined reference to `Device::read(unsigned int*)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:111: undefined reference to `Device::get_name()'
+./src/systool.o: In function `SystemTool::joystick_controller()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:125: undefined reference to `Joystick::Joystick(char const*)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:133: undefined reference to `Joystick::open_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:134: undefined reference to `Joystick::get_number_of_buttons()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:135: undefined reference to `Joystick::get_number_of_axis()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:142: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:147: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:163: undefined reference to `Joystick::close_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+./src/systool.o: In function `SystemTool::run()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:176: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:178: undefined reference to `Application::passed_arg(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:180: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:182: undefined reference to `Application::passed_arg(int)'
+./src/systool.o: In function `SystemTool::~SystemTool()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:224: undefined reference to `Application::~Application()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:25: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:26: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:27: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:28: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:29: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:30: undefined reference to `IRSensor::IRSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:31: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:32: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:33: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:34: undefined reference to `InputPin::InputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:35: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:36: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:37: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:38: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:39: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:40: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:41: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:42: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:43: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:44: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:45: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:53: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:54: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:55: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:56: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+./src/systool.o: In function `.LC52':
+systool.cpp:(.rodata+0x3c4): undefined reference to `typeinfo for Application'
+./src/systool.o: In function `LevelSensor::~LevelSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:15: undefined reference to `Device::~Device()'
+./src/systool.o: In function `LeakageSensor::~LeakageSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:31: undefined reference to `Device::~Device()'
+./src/systool.o: In function `IRSensor::~IRSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:47: undefined reference to `Device::~Device()'
+./src/systool.o: In function `Valve::~Valve()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:63: undefined reference to `Device::~Device()'
+./src/systool.o: In function `InputPin::~InputPin()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:96: undefined reference to `Device::~Device()'
+./src/systool.o:/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:122: more undefined references to `Device::~Device()' follow
+./src/systool.o:(.rodata._ZTI9OutputPin[_ZTI9OutputPin]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI5Valve[_ZTI5Valve]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI8IRSensor[_ZTI8IRSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI13LeakageSensor[_ZTI13LeakageSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11LevelSensor[_ZTI11LevelSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11InputVector[_ZTI11InputVector]+0x8): more undefined references to `typeinfo for Device' follow
+collect2: error: ld returned 1 exit status
+make: *** [systool.elf] Error 1
+21:25:11 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   
+./src/systool.o: In function `SystemTool::SystemTool(int, char**)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:30: undefined reference to `Application::Application(int, char**)'
+./src/systool.o: In function `SystemTool::remote_commander(unsigned short)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:42: undefined reference to `TcpServer::TcpServer(unsigned short)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:45: undefined reference to `TcpServer::prepare()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:49: undefined reference to `TcpServer::accept_connection()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:58: undefined reference to `Commander::execute(std::string, std::string&)'
+./src/systool.o: In function `SystemTool::local_commander()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:88: undefined reference to `Commander::execute(std::string, std::string&)'
+./src/systool.o: In function `SystemTool::device_scanning()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:98: undefined reference to `Device::get_instanceVector()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:107: undefined reference to `Device::get_ID()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:109: undefined reference to `Device::read(unsigned int*)'
+makefile:48: recipe for target 'systool.elf' failed
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:111: undefined reference to `Device::get_name()'
+./src/systool.o: In function `SystemTool::joystick_controller()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:125: undefined reference to `Joystick::Joystick(char const*)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:133: undefined reference to `Joystick::open_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:134: undefined reference to `Joystick::get_number_of_buttons()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:135: undefined reference to `Joystick::get_number_of_axis()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:142: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:147: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:163: undefined reference to `Joystick::close_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+./src/systool.o: In function `SystemTool::run()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:176: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:178: undefined reference to `Application::passed_arg(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:180: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:182: undefined reference to `Application::passed_arg(int)'
+./src/systool.o: In function `SystemTool::~SystemTool()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:224: undefined reference to `Application::~Application()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:25: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:26: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:27: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:28: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:29: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:30: undefined reference to `IRSensor::IRSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:31: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:32: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:33: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:34: undefined reference to `InputPin::InputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:35: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:36: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:37: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:38: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:39: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:40: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:41: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:42: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:43: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:44: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:45: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:53: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:54: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:55: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:56: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+./src/systool.o: In function `.LC52':
+systool.cpp:(.rodata+0x3c4): undefined reference to `typeinfo for Application'
+./src/systool.o: In function `LevelSensor::~LevelSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:15: undefined reference to `Device::~Device()'
+./src/systool.o: In function `LeakageSensor::~LeakageSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:31: undefined reference to `Device::~Device()'
+./src/systool.o: In function `IRSensor::~IRSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:47: undefined reference to `Device::~Device()'
+./src/systool.o: In function `Valve::~Valve()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:63: undefined reference to `Device::~Device()'
+./src/systool.o: In function `InputPin::~InputPin()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:96: undefined reference to `Device::~Device()'
+./src/systool.o:/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:122: more undefined references to `Device::~Device()' follow
+./src/systool.o:(.rodata._ZTI9OutputPin[_ZTI9OutputPin]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI5Valve[_ZTI5Valve]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI8IRSensor[_ZTI8IRSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI13LeakageSensor[_ZTI13LeakageSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11LevelSensor[_ZTI11LevelSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11InputVector[_ZTI11InputVector]+0x8): more undefined references to `typeinfo for Device' follow
+collect2: error: ld returned 1 exit status
+make: *** [systool.elf] Error 1
+21:25:31 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o   
+./src/systool.o: In function `SystemTool::SystemTool(int, char**)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:30: undefined reference to `Application::Application(int, char**)'
+makefile:48: recipe for target 'systool.elf' failed
+./src/systool.o: In function `SystemTool::remote_commander(unsigned short)':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:42: undefined reference to `TcpServer::TcpServer(unsigned short)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:45: undefined reference to `TcpServer::prepare()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:49: undefined reference to `TcpServer::accept_connection()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:58: undefined reference to `Commander::execute(std::string, std::string&)'
+./src/systool.o: In function `SystemTool::local_commander()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:88: undefined reference to `Commander::execute(std::string, std::string&)'
+./src/systool.o: In function `SystemTool::device_scanning()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:98: undefined reference to `Device::get_instanceVector()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:107: undefined reference to `Device::get_ID()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:109: undefined reference to `Device::read(unsigned int*)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:111: undefined reference to `Device::get_name()'
+./src/systool.o: In function `SystemTool::joystick_controller()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:125: undefined reference to `Joystick::Joystick(char const*)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:133: undefined reference to `Joystick::open_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:134: undefined reference to `Joystick::get_number_of_buttons()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:135: undefined reference to `Joystick::get_number_of_axis()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:142: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:147: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:151: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:152: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Joystick::get_axis_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:153: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:154: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:155: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:156: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:157: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:158: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:159: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:160: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Joystick::get_button_value(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:161: undefined reference to `Device::write(unsigned int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:163: undefined reference to `Joystick::close_device()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:166: undefined reference to `Joystick::~Joystick()'
+./src/systool.o: In function `SystemTool::run()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:176: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:178: undefined reference to `Application::passed_arg(int)'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:180: undefined reference to `Application::passed_arg()'
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:182: undefined reference to `Application::passed_arg(int)'
+./src/systool.o: In function `SystemTool::~SystemTool()':
+/home/yarib/RPI3/app-workspace/systool/Debug/../src/systool.cpp:224: undefined reference to `Application::~Application()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:27: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:28: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:29: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:30: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:31: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::DeviceHandler(char const*)'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+/home/yarib/RPI3/app-workspace/extension_framework/zybo.hpp:32: undefined reference to `DeviceHandler::~DeviceHandler()'
+./src/systool.o: In function `__static_initialization_and_destruction_0':
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:25: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:26: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:27: undefined reference to `LevelSensor::LevelSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:28: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:29: undefined reference to `LeakageSensor::LeakageSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:30: undefined reference to `IRSensor::IRSensor(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:31: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:32: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:33: undefined reference to `Valve::Valve(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:34: undefined reference to `InputPin::InputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:35: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:36: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:37: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:38: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:39: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:40: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:41: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:42: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:43: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:44: undefined reference to `OutputPin::OutputPin(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:45: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:53: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:54: undefined reference to `InputVector::InputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:55: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+/home/yarib/RPI3/app-workspace/extension_framework/systembox.hpp:56: undefined reference to `OutputVector::OutputVector(DeviceHandler*, DeviceIdentity*)'
+./src/systool.o: In function `.LC52':
+systool.cpp:(.rodata+0x3c4): undefined reference to `typeinfo for Application'
+./src/systool.o: In function `LevelSensor::~LevelSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:15: undefined reference to `Device::~Device()'
+./src/systool.o: In function `LeakageSensor::~LeakageSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:31: undefined reference to `Device::~Device()'
+./src/systool.o: In function `IRSensor::~IRSensor()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:47: undefined reference to `Device::~Device()'
+./src/systool.o: In function `Valve::~Valve()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:63: undefined reference to `Device::~Device()'
+./src/systool.o: In function `InputPin::~InputPin()':
+/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:96: undefined reference to `Device::~Device()'
+./src/systool.o:/home/yarib/RPI3/app-workspace/extension_framework/devices.hpp:122: more undefined references to `Device::~Device()' follow
+./src/systool.o:(.rodata._ZTI9OutputPin[_ZTI9OutputPin]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI5Valve[_ZTI5Valve]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI8IRSensor[_ZTI8IRSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI13LeakageSensor[_ZTI13LeakageSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11LevelSensor[_ZTI11LevelSensor]+0x8): undefined reference to `typeinfo for Device'
+./src/systool.o:(.rodata._ZTI11InputVector[_ZTI11InputVector]+0x8): more undefined references to `typeinfo for Device' follow
+collect2: error: ld returned 1 exit status
+make: *** [systool.elf] Error 1
+21:25:33 **** Clean-only build of configuration Debug for project systool ****
+make clean 
+rm -rf  ./src/main.o ./src/systool.o  ./src/main.d ./src/systool.d  systool.elf.size  systool.elf
+ 
+21:25:33 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/extension_framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"extension_framework/devices.o" -MMD -MP -MF"extension_framework/devices.d" -MT"extension_framework/devices.d" -o "extension_framework/devices.o" "/home/yarib/RPI3/app-workspace/extension_framework/devices.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/extension_framework/devices.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpserver.o" -MMD -MP -MF"base_framework/network/tcpserver.d" -MT"base_framework/network/tcpserver.d" -o "base_framework/network/tcpserver.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpsocket.o" -MMD -MP -MF"base_framework/network/tcpsocket.d" -MT"base_framework/network/tcpsocket.d" -o "base_framework/network/tcpsocket.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/hid/joystick.o" -MMD -MP -MF"base_framework/hid/joystick.d" -MT"base_framework/hid/joystick.d" -o "base_framework/hid/joystick.o" "/home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/commander.o" -MMD -MP -MF"base_framework/device/commander.d" -MT"base_framework/device/commander.d" -o "base_framework/device/commander.o" "/home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/device.o" -MMD -MP -MF"base_framework/device/device.d" -MT"base_framework/device/device.d" -o "base_framework/device/device.o" "/home/yarib/RPI3/app-workspace/base_framework/device/device.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/devicehandler.o" -MMD -MP -MF"base_framework/device/devicehandler.d" -MT"base_framework/device/devicehandler.d" -o "base_framework/device/devicehandler.o" "/home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/daemon.o" -MMD -MP -MF"base_framework/application/daemon.d" -MT"base_framework/application/daemon.d" -o "base_framework/application/daemon.o" "/home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045504	  15084	  41352	1101940	 10d074	systool.elf
+Finished building: systool.elf.size
+ 
+21:25:37 **** Clean-only build of configuration Debug for project systool ****
+make clean 
+rm -rf  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o  ./src/main.d ./src/systool.d  ./extension_framework/devices.d  ./base_framework/network/tcpserver.d ./base_framework/network/tcpsocket.d  ./base_framework/hid/joystick.d  ./base_framework/device/commander.d ./base_framework/device/device.d ./base_framework/device/devicehandler.d  ./base_framework/application/application.d ./base_framework/application/daemon.d  systool.elf.size  systool.elf
+ 
+21:25:38 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/extension_framework/devices.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"extension_framework/devices.o" -MMD -MP -MF"extension_framework/devices.d" -MT"extension_framework/devices.d" -o "extension_framework/devices.o" "/home/yarib/RPI3/app-workspace/extension_framework/devices.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/extension_framework/devices.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpserver.o" -MMD -MP -MF"base_framework/network/tcpserver.d" -MT"base_framework/network/tcpserver.d" -o "base_framework/network/tcpserver.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpserver.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/network/tcpsocket.o" -MMD -MP -MF"base_framework/network/tcpsocket.d" -MT"base_framework/network/tcpsocket.d" -o "base_framework/network/tcpsocket.o" "/home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/network/tcpsocket.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/hid/joystick.o" -MMD -MP -MF"base_framework/hid/joystick.d" -MT"base_framework/hid/joystick.d" -o "base_framework/hid/joystick.o" "/home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/hid/joystick.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/commander.o" -MMD -MP -MF"base_framework/device/commander.d" -MT"base_framework/device/commander.d" -o "base_framework/device/commander.o" "/home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/commander.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/device.o" -MMD -MP -MF"base_framework/device/device.d" -MT"base_framework/device/device.d" -o "base_framework/device/device.o" "/home/yarib/RPI3/app-workspace/base_framework/device/device.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/device.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/device/devicehandler.o" -MMD -MP -MF"base_framework/device/devicehandler.d" -MT"base_framework/device/devicehandler.d" -o "base_framework/device/devicehandler.o" "/home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/device/devicehandler.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/daemon.o" -MMD -MP -MF"base_framework/application/daemon.d" -MT"base_framework/application/daemon.d" -o "base_framework/application/daemon.o" "/home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/daemon.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045504	  15084	  41352	1101940	 10d074	systool.elf
+Finished building: systool.elf.size
+ 
+21:33:49 **** Auto Build of configuration Debug for project base_framework ****
+make all 
+Building file: ../application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"application/application.o" -MMD -MP -MF"application/application.d" -MT"application/application.d" -o "application/application.o" "../application/application.cpp"
+Finished building: ../application/application.cpp
+ 
+Building target: libbase_framework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libbase_framework.elf"  ./network/tcpserver.o ./network/tcpsocket.o  ./hid/joystick.o  ./device/commander.o ./device/device.o ./device/devicehandler.o  ./application/application.o ./application/daemon.o   
+arm-xilinx-linux-gnueabi-ar: creating libbase_framework.elf
+Finished building target: libbase_framework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libbase_framework.elf  |tee "libbase_framework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1144	      4	      4	   1152	    480	tcpserver.o (ex libbase_framework.elf)
+  11328	      4	      4	  11336	   2c48	tcpsocket.o (ex libbase_framework.elf)
+   2176	      0	      0	   2176	    880	joystick.o (ex libbase_framework.elf)
+   6828	      0	      0	   6828	   1aac	commander.o (ex libbase_framework.elf)
+  10360	      0	     16	  10376	   2888	device.o (ex libbase_framework.elf)
+   1484	      0	      0	   1484	    5cc	devicehandler.o (ex libbase_framework.elf)
+   7556	      0	      0	   7556	   1d84	application.o (ex libbase_framework.elf)
+    516	      0	      0	    516	    204	daemon.o (ex libbase_framework.elf)
+Finished building: libbase_framework.elf.size
+ 
+21:33:50 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::IRProcess::run()':
+../src/ctrlapp.cpp:85:8: error: 'yeld' was not declared in this scope
+   yeld();
+        ^
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::LeakageProcess::run()':
+../src/ctrlapp.cpp:103:8: error: 'yeld' was not declared in this scope
+   yeld();
+        ^
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::ServerProcess::run()':
+../src/ctrlapp.cpp:139:12: error: 'yeld' was not declared in this scope
+       yeld();
+            ^
+../src/ctrlapp.cpp:145:10: error: 'yeld' was not declared in this scope
+     yeld();
+          ^
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+21:33:50 **** Auto Build of configuration Debug for project extension_framework ****
+make all 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building target: libextension_framework.elf
+Invoking: ARM Linux archiver
+arm-xilinx-linux-gnueabi-ar -r  "libextension_framework.elf"  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o  ./devices.o   
+arm-xilinx-linux-gnueabi-ar: creating libextension_framework.elf
+Finished building target: libextension_framework.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size libextension_framework.elf  |tee "libextension_framework.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1144	      4	      4	   1152	    480	tcpserver.o (ex libextension_framework.elf)
+  11328	      4	      4	  11336	   2c48	tcpsocket.o (ex libextension_framework.elf)
+   2176	      0	      0	   2176	    880	joystick.o (ex libextension_framework.elf)
+   6828	      0	      0	   6828	   1aac	commander.o (ex libextension_framework.elf)
+  10360	      0	     16	  10376	   2888	device.o (ex libextension_framework.elf)
+   1484	      0	      0	   1484	    5cc	devicehandler.o (ex libextension_framework.elf)
+   7556	      0	      0	   7556	   1d84	application.o (ex libextension_framework.elf)
+    516	      0	      0	    516	    204	daemon.o (ex libextension_framework.elf)
+   3160	      0	      0	   3160	    c58	devices.o (ex libextension_framework.elf)
+Finished building: libextension_framework.elf.size
+ 
+21:33:51 **** Auto Build of configuration Debug for project systool ****
+make all 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/systool.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+Finished building: ../src/systool.cpp
+ 
+Building target: systool.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "systool.elf"  ./src/main.o ./src/systool.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: systool.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1045504	  15084	  41352	1101940	 10d074	systool.elf
+Finished building: systool.elf.size
+ 
+21:33:53 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::IRProcess::run()':
+../src/ctrlapp.cpp:85:8: error: 'yeld' was not declared in this scope
+   yeld();
+        ^
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::LeakageProcess::run()':
+../src/ctrlapp.cpp:103:8: error: 'yeld' was not declared in this scope
+   yeld();
+        ^
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::ServerProcess::run()':
+../src/ctrlapp.cpp:139:12: error: 'yeld' was not declared in this scope
+       yeld();
+            ^
+../src/ctrlapp.cpp:145:10: error: 'yeld' was not declared in this scope
+     yeld();
+          ^
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+21:34:19 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::LeakageProcess::run()':
+../src/ctrlapp.cpp:103:8: error: 'yeld' was not declared in this scope
+   yeld();
+        ^
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::ServerProcess::run()':
+../src/ctrlapp.cpp:139:12: error: 'yeld' was not declared in this scope
+       yeld();
+            ^
+../src/ctrlapp.cpp:145:10: error: 'yeld' was not declared in this scope
+     yeld();
+          ^
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+21:34:22 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+../src/ctrlapp.cpp: In member function 'virtual int ControlApp::ServerProcess::run()':
+../src/ctrlapp.cpp:139:12: error: 'yeld' was not declared in this scope
+       yeld();
+            ^
+../src/ctrlapp.cpp:145:10: error: 'yeld' was not declared in this scope
+     yeld();
+          ^
+src/subdir.mk:21: recipe for target 'src/ctrlapp.o' failed
+make: *** [src/ctrlapp.o] Error 1
+21:34:30 **** Auto Build of configuration Debug for project ctrlapp ****
+make all 
+Building file: ../src/ctrlapp.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/ctrlapp.o" -MMD -MP -MF"src/ctrlapp.d" -MT"src/ctrlapp.d" -o "src/ctrlapp.o" "../src/ctrlapp.cpp"
+Finished building: ../src/ctrlapp.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building target: ctrlapp.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++ -pthread -static -o "ctrlapp.elf"  ./src/ctrlapp.o ./src/main.o  ./extension_framework/devices.o  ./base_framework/network/tcpserver.o ./base_framework/network/tcpsocket.o  ./base_framework/hid/joystick.o  ./base_framework/device/commander.o ./base_framework/device/device.o ./base_framework/device/devicehandler.o  ./base_framework/application/application.o ./base_framework/application/daemon.o   
+Finished building target: ctrlapp.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size ctrlapp.elf  |tee "ctrlapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1047272	  15080	  41352	1103704	 10d758	ctrlapp.elf
+Finished building: ctrlapp.elf.size
+ 

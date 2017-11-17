@@ -1,8 +1,18 @@
-01:46:57 **** Auto Build of configuration Debug for project systool ****
+21:33:51 **** Auto Build of configuration Debug for project systool ****
 make all 
+Building file: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"base_framework/application/application.o" -MMD -MP -MF"base_framework/application/application.d" -MT"base_framework/application/application.d" -o "base_framework/application/application.o" "/home/yarib/RPI3/app-workspace/base_framework/application/application.cpp"
+Finished building: /home/yarib/RPI3/app-workspace/base_framework/application/application.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
 Building file: ../src/systool.cpp
 Invoking: ARM Linux g++ compiler
-arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/ZYBO_projects/app-workspace/base_framework" -I"/home/yarib/ZYBO_projects/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -I"/home/yarib/RPI3/app-workspace/base_framework" -I"/home/yarib/RPI3/app-workspace/extension_framework" -c -fmessage-length=0 -MT"src/systool.o" -MMD -MP -MF"src/systool.d" -MT"src/systool.d" -o "src/systool.o" "../src/systool.cpp"
 Finished building: ../src/systool.cpp
  
 Building target: systool.elf
@@ -17,5 +27,5 @@ arm-xilinx-linux-gnueabi-size systool.elf  |tee "systool.elf.size"
 Finished building: systool.elf.size
  
 
-01:46:58 Build Finished (took 927ms)
+21:33:52 Build Finished (took 1s.363ms)
 

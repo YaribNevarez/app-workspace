@@ -28,6 +28,8 @@
 								<option id="xilinx.gnu.both.asm.option.include.paths.2130441060" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/platform"/>
 									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/framework"/>
+									<listOptionValue builtIn="false" value="../systool/base_framework"/>
+									<listOptionValue builtIn="false" value="../systool/extension_framework"/>
 								</option>
 								<inputType id="xilinx.gnu.assembler.input.1622439612" superClass="xilinx.gnu.assembler.input"/>
 							</tool>

@@ -27,12 +27,12 @@
 		<link>
 			<name>base_framework</name>
 			<type>2</type>
-			<location>/home/yarib/ZYBO_projects/app-workspace/base_framework</location>
+			<location>/home/yarib/RPI3/app-workspace/base_framework</location>
 		</link>
 		<link>
 			<name>extension_framework</name>
 			<type>2</type>
-			<location>/home/yarib/ZYBO_projects/app-workspace/extension_framework</location>
+			<location>/home/yarib/RPI3/app-workspace/extension_framework</location>
 		</link>
 	</linkedResources>
 </projectDescription>

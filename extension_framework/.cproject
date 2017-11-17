@@ -31,7 +31,8 @@
 							</builder>
 							<tool id="xilinx.gnu.armlinux.c.toolchain.assembler.debug.831786478" name="ARM Linux gcc assembler" superClass="xilinx.gnu.armlinux.c.toolchain.assembler.debug">
 								<option id="xilinx.gnu.both.asm.option.include.paths.630159568" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="../extension_framework/base_framework"/>
+									<listOptionValue builtIn="false" value="/home/yarib/RPI3/app-workspace/extension_framework/extension_framework/base_framework"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/extension_framework/base_framework}&quot;"/>
 								</option>
 								<inputType id="xilinx.gnu.assembler.input.48315235" superClass="xilinx.gnu.assembler.input"/>
 							</tool>

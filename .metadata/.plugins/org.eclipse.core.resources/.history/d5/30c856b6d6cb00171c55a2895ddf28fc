@@ -136,13 +136,13 @@ int ControlApp::ServerProcess::run(void)
 						{
 							exit_flag = true;
 						}
-						yield();
+						yeld();
 					}
 					while(!exit_flag);
 
 					delete client;
 				}
-				yield();
+				yeld();
 			}
 		}
 		delete server;

@@ -26,9 +26,11 @@
 							</builder>
 							<tool command="arm-xilinx-linux-gnueabi-gcc" commandLinePattern="${COMMAND} -c ${FLAGS} ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="xilinx.gnu.armlinux.c.toolchain.assembler.debug.1722899066" name="ARM Linux gcc assembler" superClass="xilinx.gnu.armlinux.c.toolchain.assembler.debug">
 								<option id="xilinx.gnu.both.asm.option.include.paths.901698733" name="Include Paths (-I)" superClass="xilinx.gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="../ctrlapp/framework"/>
+									<listOptionValue builtIn="false" value="/home/yarib/RPI3/app-workspace/ctrlapp/ctrlapp/framework"/>
 									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/framework"/>
 									<listOptionValue builtIn="false" value="/home/yarib/ZYBO_projects/app-workspace/platform"/>
+									<listOptionValue builtIn="false" value="../ctrlapp/base_framework"/>
+									<listOptionValue builtIn="false" value="../ctrlapp/extension_framework"/>
 								</option>
 								<inputType id="xilinx.gnu.assembler.input.1977546621" superClass="xilinx.gnu.assembler.input"/>
 							</tool>
